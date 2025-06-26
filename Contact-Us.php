@@ -292,7 +292,7 @@
                                             <p>For general questions and comments, email us at&nbsp;<a href="mailto: <?php echo $email; ?>"> <?php echo $email; ?></a></p>
                                             <p>For general online/mobile banking questions and comments, email us at&nbsp;<a href="mailto: <?php echo $email; ?>"> <?php echo $email; ?></a><a href="mailto:ebanking@<?php echo $domain; ?>"></a></p>
                                             <p>For information regarding your property insurance, visit <a href=""></a></p>
-                                            <p><strong>Siam Bank does not discuss customer or account information via email.&nbsp; You may email a question or comment, along with a contact phone number, to one of the above email addresses and a Siam Bank employee will respond within 72 hours.&nbsp;</strong></p>
+                                            <p><strong><?php echo $name; ?> does not discuss customer or account information via email.&nbsp; You may email a question or comment, along with a contact phone number, to one of the above email addresses and a <?php echo $name; ?> employee will respond within 72 hours.&nbsp;</strong></p>
                                             <p><strong>Please do not submit personal, confidential or account information via email.&nbsp; This includes your social security number and account number.</strong></p>
                                         </td>
                                     </tr>

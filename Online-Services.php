@@ -46,8 +46,8 @@
     <link type="text/css" rel="stylesheet" href="css/style6654.css?v1">
     <link type="text/plain" rel="author" href="humans.txt">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    <title>Online Services | <?php echo $name; ?> (GB)</title>
-    <meta name="description" content="Online Services | <?php echo $name; ?> (GB)">
+    <title>Online Services | <?php echo $name; ?> <?php echo $country; ?></title>
+    <meta name="description" content="Online Services | <?php echo $name; ?> <?php echo $country; ?>">
     <meta name="keywords" content="">
 </head>
 
@@ -324,7 +324,7 @@
                     <tr>
                         <td>
                             <h2><a id="Mobile-Banking"></a>Mobile Banking</h2>
-                            <p>Access your accounts 24/7 anytime, anywhere with Siam Bank &rsquo;s FREE TouchBanking app! Check balances, view transaction history, transfer money and pay bills from the palm of your hand.</p>
+                            <p>Access your accounts 24/7 anytime, anywhere with <?php echo $name; ?> &rsquo;s FREE TouchBanking app! Check balances, view transaction history, transfer money and pay bills from the palm of your hand.</p>
                             <ol>
                                 <li>Download the TouchBanking App in your cell phones app store</li>
                                 <li>Use the app code GoMobile0443</li>
@@ -341,7 +341,7 @@
                     <tr>
                         <td>
                             <h2><a id="Bill-Pay"></a>Bill Pay</h2>
-                            <p>Buying stamps and writing checks to pay bills is&nbsp; thing of the past.&nbsp; Simplify the process and pay all your bills in one place with Siam Bank 's Bill Pay.</p>
+                            <p>Buying stamps and writing checks to pay bills is&nbsp; thing of the past.&nbsp; Simplify the process and pay all your bills in one place with <?php echo $name; ?> 's Bill Pay.</p>
                             <ul>
                                 <li>Make one-time payments or schedule recurring payments</li>
                                 <li>View payment history and set payment reminders</li>
@@ -359,8 +359,8 @@
                             <h2><a id="TransferNow"></a>TransferNow</h2>
                             <p>An easy and secure way to transfer funds between financial institutions.</p>
                             <ul>
-                                <li>Transfer between your accounts at Siam Bank and your accounts at other financial institutions</li>
-                                <li>Pay your Siam Bank loan from your personal account at another bank</li>
+                                <li>Transfer between your accounts at <?php echo $name; ?> and your accounts at other financial institutions</li>
+                                <li>Pay your <?php echo $name; ?> loan from your personal account at another bank</li>
                                 <li>Next day and standard transfer options available</li>
                             </ul>
                         </td>

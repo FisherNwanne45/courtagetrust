@@ -45,8 +45,8 @@
     <link type="text/css" rel="stylesheet" href="css/style6654.css?v1">
     <link type="text/plain" rel="author" href="humans.txt">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    <title>Mortgage Loans | Siam Bank Saving & Loan (GB)</title>
-    <meta name="description" content="Mortgage Loans | Siam  Bank  Saving & Loan (GB)">
+    <title>Mortgage Loans | <?php echo $name; ?> Saving & Loan <?php echo $country; ?></title>
+    <meta name="description" content="Mortgage Loans |<?php echo $name; ?> <?php echo $country; ?>">
     <meta name="keywords" content="">
 </head>
 
@@ -263,7 +263,7 @@
                                     <tr>
                                         <td width="50%">
                                             <h1>Mortgage Loans</h1>
-                                            <h3>&ldquo;A major reason we chose Siam Bank was knowing that they would always service our loan.&rdquo; <span style="font-size: 14pt;">-Christie and Keith W.</span></h3>
+                                            <h3>&ldquo;A major reason we chose <?php echo $name; ?> was knowing that they would always service our loan.&rdquo; <span style="font-size: 14pt;">-Christie and Keith W.</span></h3>
                                         </td>
                                         <td>&nbsp;</td>
                                     </tr>
@@ -278,9 +278,9 @@
                     <tr>
                         <td>
                             <h2>Not your typical mortgage lender.</h2>
-                            <p>Siam Bank is run by people you know and trust who live right here in Jackson County. Local decision making and processing makes financing your home easy. We offer a variety of Fixed Rate and Adjustable Rate Mortgage Loans with various terms and down payment options. Plus, you&rsquo;ll enjoy the convenience of having your mortgage here for the life of your loan.</p>
+                            <p><?php echo $name; ?> is run by people you know and trust who live right here in Jackson County. Local decision making and processing makes financing your home easy. We offer a variety of Fixed Rate and Adjustable Rate Mortgage Loans with various terms and down payment options. Plus, you&rsquo;ll enjoy the convenience of having your mortgage here for the life of your loan.</p>
                             <ul class="List-Checkmark">
-                                <li>Tailor-made lending allows Siam Bank to offer conventional in-house loans to fit your needs.</li>
+                                <li>Tailor-made lending allows <?php echo $name; ?> to offer conventional in-house loans to fit your needs.</li>
                                 <li>You can count on a clear path to closing knowing that your mortgage is processed, closed and serviced right here in Jackson County.</li>
                                 <li>We care about your home buying experience and will offer you the best loan options to meet your needs.</li>
                                 <li><a href="Mortgage%20Loan%20Application6070.pdf?documentId=57412" target="_blank">Print a downloadable version</a>&nbsp;of the mortgage application or apply below.</li>

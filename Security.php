@@ -45,8 +45,8 @@
     <link type="text/css" rel="stylesheet" href="css/style6654.css?v1">
     <link type="text/plain" rel="author" href="humans.txt">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    <title>Security Statement | <?php echo $name; ?> (GB)</title>
-    <meta name="description" content="Security Statement | <?php echo $name; ?> (GB)">
+    <title>Security Statement | <?php echo $name; ?> <?php echo $country; ?></title>
+    <meta name="description" content="Security Statement | <?php echo $name; ?> <?php echo $country; ?>">
     <meta name="keywords" content="">
 </head>
 
@@ -276,8 +276,8 @@
                 <tbody>
                     <tr>
                         <td>
-                            <p>The safety and security of our customers&rsquo; accounts and account information is extremely important to Siam Bank . Whether you choose to bank with us through our branches, ATMs, telephone, or the Internet, we want our customers to be confident in knowing that the confidential information they share with us will be safeguarded.</p>
-                            <p>Siam Bank utilizes industry accepted security practices that are appropriate for the way you choose to bank with us. For your protection, no matter which channel you choose, we verify you are who you say you are before granting you access to your accounts. Additionally, Siam Bank &rsquo;s Internet banking provides layered security. This adds even a greater level of protection against fraudulent attacks such as phishing, spoofing, key logging and identify theft. Please feel free to take a look at our Enhanced Online Security video in the <a href="Online-Education.php">Online Education Center</a>.</p>
+                            <p>The safety and security of our customers&rsquo; accounts and account information is extremely important to <?php echo $name; ?> . Whether you choose to bank with us through our branches, ATMs, telephone, or the Internet, we want our customers to be confident in knowing that the confidential information they share with us will be safeguarded.</p>
+                            <p><?php echo $name; ?> utilizes industry accepted security practices that are appropriate for the way you choose to bank with us. For your protection, no matter which channel you choose, we verify you are who you say you are before granting you access to your accounts. Additionally, <?php echo $name; ?> &rsquo;s Internet banking provides layered security. This adds even a greater level of protection against fraudulent attacks such as phishing, spoofing, key logging and identify theft. Please feel free to take a look at our Enhanced Online Security video in the <a href="Online-Education.php">Online Education Center</a>.</p>
                             <p>Remember that security is everyone&rsquo;s responsibility; therefore, we encourage you, the customer, to take steps in protecting your personal information. An excellent source of information on how to prevent identity theft and what to do if you are a victim of identity theft is the <a href="speedbumpc954.php?link=https://www.ftc.gov/">Federal Trade Commission</a>.</p>
                             <p>For more information on how we protect your information please see our <a href="Privacy%20Policy5954.pdf?documentId=57416" target="_blank">Privacy Policy</a>.</p>
                         </td>

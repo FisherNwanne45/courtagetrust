@@ -45,8 +45,8 @@
     <link type="text/css" rel="stylesheet" href="css/style6654.css?v1">
     <link type="text/plain" rel="author" href="humans.txt">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    <title>Card Services | <?php echo $name; ?> (GB)</title>
-    <meta name="description" content="Card Services | <?php echo $name; ?> (GB)">
+    <title>Card Services | <?php echo $name; ?> <?php echo $country; ?></title>
+    <meta name="description" content="Card Services | <?php echo $name; ?> <?php echo $country; ?>">
     <meta name="keywords" content="">
 </head>
 
@@ -278,13 +278,13 @@
                     <tr>
                         <td>
                             <h2><a id="CardValet"></a><img src="ContentImageHandler3d9b.png?ImageId=127236" alt="CardValet Small" width="216" height="39" border="0"></h2>
-                            <p>Show fraud who&rsquo;s boss.&nbsp; Gain peace of mind knowing you control the cards in your wallet with the phone in your pocket.&nbsp; To register your Siam Bank debit cards, go to your phone's app store and download the CardValet app.&nbsp; Once downloaded, open the app and select new user.&nbsp; Enter your 16 digit card number, then enter the additional details as requested.&nbsp; Log in and select your card from the home screen and you are ready to begin.</p>
+                            <p>Show fraud who&rsquo;s boss.&nbsp; Gain peace of mind knowing you control the cards in your wallet with the phone in your pocket.&nbsp; To register your <?php echo $name; ?> debit cards, go to your phone's app store and download the CardValet app.&nbsp; Once downloaded, open the app and select new user.&nbsp; Enter your 16 digit card number, then enter the additional details as requested.&nbsp; Log in and select your card from the home screen and you are ready to begin.</p>
                             <ul>
                                 <li>Get instant purchase alerts</li>
                                 <li>Turn your debit card on or off</li>
                                 <li>Set spending limits</li>
                                 <li>Limit transactions to certain geographical areas</li>
-                                <li>Manage multiple Siam Bank cards from one phone</li>
+                                <li>Manage multiple <?php echo $name; ?> cards from one phone</li>
                             </ul>
                             <p><a class="Button1" href="Online-Education.php#Card-Valet">Learn More</a></p>
                         </td>
@@ -296,7 +296,7 @@
                     <tr>
                         <td>
                             <h2><a id="ATM-Cash-Card"></a>ATM Cash Card</h2>
-                            <p>Access your savings 24/7 at an ATM with Siam Bank &rsquo;s First Cash Card.&nbsp; Available with regular savings accounts only.</p>
+                            <p>Access your savings 24/7 at an ATM with <?php echo $name; ?> &rsquo;s First Cash Card.&nbsp; Available with regular savings accounts only.</p>
                             <h2><a id="Debit-Card"></a>Personalized Debit Card</h2>
                             <p>My Card, My Way is the perfect way to personalize your debit card.&nbsp; Simply upload your favorite picture, and use it as the background on your card.&nbsp; For more information, view our <a href="My%20Card%20My%20Way%20FAQsd3bc.pdf?documentId=58620">Frequently Asked Questions</a>.&nbsp;</p>
                             <ul>

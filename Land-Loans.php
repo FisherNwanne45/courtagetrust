@@ -45,8 +45,8 @@
     <link type="text/css" rel="stylesheet" href="css/style6654.css?v1">
     <link type="text/plain" rel="author" href="humans.txt">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    <title>Land & Lot Loans | <?php echo $name; ?> (GB)</title>
-    <meta name="description" content="Land & Lot Loans | <?php echo $name; ?> (GB)">
+    <title>Land & Lot Loans | <?php echo $name; ?> <?php echo $country; ?></title>
+    <meta name="description" content="Land & Lot Loans | <?php echo $name; ?> <?php echo $country; ?>">
     <meta name="keywords" content="">
 </head>
 
@@ -278,7 +278,7 @@
                     <tr>
                         <td>
                             <h2>Before you build, talk to us about financing your lot.</h2>
-                            <p>Siam Bank &rsquo;s Lot and Land Loans help you finance the purchase of property so you&rsquo;re ready to build your new home in the near future. Whether you have plans to start building now or have not yet set a date, we have the loan for you. Our loans are the perfect solution to building equity in your property prior to building your home.</p>
+                            <p><?php echo $name; ?> &rsquo;s Lot and Land Loans help you finance the purchase of property so you&rsquo;re ready to build your new home in the near future. Whether you have plans to start building now or have not yet set a date, we have the loan for you. Our loans are the perfect solution to building equity in your property prior to building your home.</p>
                             <p>If you are purchasing your lot and building at the same time, our Construction-Permanent Loan might be your perfect solution.&nbsp;</p>
                         </td>
                     </tr>

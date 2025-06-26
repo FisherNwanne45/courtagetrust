@@ -76,8 +76,8 @@
     <link type="text/css" rel="stylesheet" href="css/style.css?v1">
     <link type="text/plain" rel="author" href="humans.txt">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    <title>Online Education Center | Allied Trust Bank Savings & Loan (GB)</title>
-    <meta name="description" content="Online Education Center | Allied Trust Bank Savings & Loan (GB)">
+    <title>Online Education Center | Allied Trust Bank Savings & Loan <?php echo $country; ?></title>
+    <meta name="description" content="Online Education Center | Allied Trust Bank Savings & Loan <?php echo $country; ?>">
     <meta name="keywords" content="">
 </head>
 

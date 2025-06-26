@@ -45,8 +45,8 @@
     <link type="text/css" rel="stylesheet" href="css/style6654.css?v1">
     <link type="text/plain" rel="author" href="humans.txt">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    <title>Calculators | <?php echo $name; ?> (GB)</title>
-    <meta name="description" content="Calculators | <?php echo $name; ?> (GB)">
+    <title>Calculators | <?php echo $name; ?> <?php echo $country; ?></title>
+    <meta name="description" content="Calculators | <?php echo $name; ?> <?php echo $country; ?>">
     <meta name="keywords" content="">
 </head>
 

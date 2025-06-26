@@ -45,8 +45,8 @@
     <link type="text/css" rel="stylesheet" href="css/style6654.css?v1">
     <link type="text/plain" rel="author" href="humans.txt">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    <title>Refinance & HELOC | <?php echo $name; ?> (GB)</title>
-    <meta name="description" content="Refinance & HELOC | <?php echo $name; ?> (GB)">
+    <title>Refinance & HELOC | <?php echo $name; ?> <?php echo $country; ?></title>
+    <meta name="description" content="Refinance & HELOC | <?php echo $name; ?> <?php echo $country; ?>">
     <meta name="keywords" content="">
 </head>
 
@@ -278,7 +278,7 @@
                     <tr>
                         <td>
                             <h2>Refinance</h2>
-                            <p>Refinancing is the process of&nbsp;obtaining a new mortgage to pay off an existing mortgage.&nbsp; A new loan means new terms, which are typically better for the home owner.&nbsp; Refinancing is the perfect opportunity to move your mortgage to Siam Bank and discover the benefits of working with us.&nbsp;</p>
+                            <p>Refinancing is the process of&nbsp;obtaining a new mortgage to pay off an existing mortgage.&nbsp; A new loan means new terms, which are typically better for the home owner.&nbsp; Refinancing is the perfect opportunity to move your mortgage to <?php echo $name; ?> and discover the benefits of working with us.&nbsp;</p>
                             <p>Refinancing can also allow you to access the equity in your home.&nbsp; Equity is the difference between the value of your home and what you owe.&nbsp; Obtaining this equity can help:&nbsp;</p>
                             <ul>
                                 <li>Make home improvements</li>

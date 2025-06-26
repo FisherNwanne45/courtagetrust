@@ -45,7 +45,7 @@
     <link type="text/css" rel="stylesheet" href="css/style6654.css?v1">
     <link type="text/plain" rel="author" href="humans.txt">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    <title>Mortgage Team | <?php echo $name; ?> (GB)</title>
+    <title>Mortgage Team | <?php echo $name; ?> <?php echo $country; ?></title>
     <meta name="description" content="Mortgage Team <?php echo $name; ?>">
     <meta name="keywords" content="Mortgage Team ">
 </head>
@@ -260,7 +260,7 @@
                         <td>
                             <h1>Meet the Team</h1>
                             <h3>Some of the best lenders on the gulf coast work for us!</h3>
-                            <p>Siam Bank has dedicated itself to the well-being of our community and employee team.&nbsp; We take pride in having loan officers who can provide advice and answer questions on how to make the most of your mortgage.&nbsp; Our passion for responsible lending is what we've built our reputation on and why we've been successful with mortgage lending for over 65 years.&nbsp; Whether you apply online or in-person, you'll be working with a local loan officer.&nbsp; We want the very best for you and your family, and we're honored to assist you with your mortgage needs.&nbsp;</p>
+                            <p><?php echo $name; ?> has dedicated itself to the well-being of our community and employee team.&nbsp; We take pride in having loan officers who can provide advice and answer questions on how to make the most of your mortgage.&nbsp; Our passion for responsible lending is what we've built our reputation on and why we've been successful with mortgage lending for over 65 years.&nbsp; Whether you apply online or in-person, you'll be working with a local loan officer.&nbsp; We want the very best for you and your family, and we're honored to assist you with your mortgage needs.&nbsp;</p>
                             <p><a href="#Apply-Now" class="Button1">Apply Now</a></p>
                             <h2>Our Mortgage Team</h2>
                         </td>

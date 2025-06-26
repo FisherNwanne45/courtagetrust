@@ -44,8 +44,8 @@
     <link type="text/css" rel="stylesheet" href="css/style6654.css?v1">
     <link type="text/plain" rel="author" href="humans.txt">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    <title>Buying a Home | <?php echo $name; ?> (GB)</title>
-    <meta name="description" content="Buying a Home | <?php echo $name; ?> (GB)">
+    <title>Buying a Home | <?php echo $name; ?> <?php echo $country; ?></title>
+    <meta name="description" content="Buying a Home | <?php echo $name; ?> <?php echo $country; ?>">
     <meta name="keywords" content="">
 </head>
 
@@ -262,7 +262,7 @@
                                     <tr>
                                         <td width="50%">
                                             <h1>Buying a Home</h1>
-                                            <h3>"Siam Bank made buying a home simple.&nbsp; We always feel like we're more than just a customer." <span style="font-size: 14pt;">-Caleb and Dara T.</span></h3>
+                                            <h3>"<?php echo $name; ?> made buying a home simple.&nbsp; We always feel like we're more than just a customer." <span style="font-size: 14pt;">-Caleb and Dara T.</span></h3>
                                         </td>
                                         <td>&nbsp;</td>
                                     </tr>
@@ -276,7 +276,7 @@
                 <tbody>
                     <tr>
                         <td>
-                            <p>Siam Bank is with you every step of the way, whether you are buying your first home or moving to a new home.&nbsp; We offer a variety of custom in-house Fixed Rate and Adjustable Rate Mortgage loans with various terms and down payment options.&nbsp; Our loan officers provide unmatched personal service and work with you to find the best loan.</p>
+                            <p><?php echo $name; ?> is with you every step of the way, whether you are buying your first home or moving to a new home.&nbsp; We offer a variety of custom in-house Fixed Rate and Adjustable Rate Mortgage loans with various terms and down payment options.&nbsp; Our loan officers provide unmatched personal service and work with you to find the best loan.</p>
                             <p>Pre-approval by one of our loan officers is the first step.&nbsp; Knowing your price range and loan amount is a good way to start shopping for a home with confidence.&nbsp;</p>
                             <p>First-Time Homebuyer and Low-Income Loans are also available.</p>
                         </td>

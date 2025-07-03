@@ -244,7 +244,7 @@
 
 
                         <div></br>
-                            <li id="google_translate_element"></li>
+                            <li><?php echo $translate ?></li>
                         </div>
                     </ul>
 

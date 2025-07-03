@@ -152,12 +152,7 @@ if (isset($_POST['emaillogin'])) {
                                 <!--   <p>Only Individuals who have <?= $pageTitle ?>   account and authorised access to Online
                                     Banking should
                                     proceed beyond this point.</p>-->
-                                <h5 style="text-align: center;"><div id="google_translate_element"></div>
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 
-'ar,en,es,jv,ko,pa,pt,ru,zh-CN,zh-TW,ja', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-} </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script></h5>
+                                <h5 style="text-align: center;"><?php echo $translate ?></h5>
                             </div>
                         </div>
                     </div><br>

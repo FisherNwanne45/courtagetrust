@@ -15,6 +15,7 @@ $email3 = '';
 $country = '';
 $curr = '';
 $login = '';
+$translate = '';
 $footertext = 'Equal Housing Lender | Equal Opportunity Employer | Member FDIC';
 $slidertext = 'Your Gateway to Financial Privacy and Security';
 $sliderBOLD = 'Secure Future, Beyond Borders';
@@ -54,6 +55,7 @@ try {
         $login = $url . '/login';
         $register = $url . '/opening';
         $livechat = $row['tawk'];
+        $translate = $row['translate'];
     } else {
         echo "No user found with ID: $userId";
     }

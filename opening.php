@@ -8,7 +8,7 @@ if (@$_SESSION['acct_no']) {
 }
 
 if (isset($_POST['regSubmit'])) {
-    $recaptchaSecret = '6LdNbrAqAAAAAPIrF9Z9Tvqtd4H0Eh0Oi90fDOrg'; // Replace with your secret key
+    $recaptchaSecret = '6LcarW0rAAAAAMUVTPhbea1qJXBCyuTj1oiq6G_R'; // Replace with your secret key
     $recaptchaResponse = $_POST['g-recaptcha-response'];
     $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$recaptchaSecret&response=$recaptchaResponse");
     $responseData = json_decode($response);
@@ -107,7 +107,7 @@ if (isset($_POST['regSubmit'])) {
                         <center><strong style='color:black;'>Sending Account Registration Request...</strong></center>
                     </div>";
                 } else {
-                    toast_alert("error", "Invalid details");
+                    toast_alert("error", msg: "Invalid details");
                 }
             }
         }
@@ -130,14 +130,11 @@ if (isset($_POST['regSubmit'])) {
                 <div class="col-md-8">
                     <div class="auth-form card">
                         <div class="card-body">
-                            <h1 style="text-align: center;"><a href="/"><img class="justify-content-center align-items-center" style="max-width:300px;" src="<?= $web_url ?>/admin/assets/images/logo/<?= $page['image'] ?>"> </a>   </h1>
+                            <h1 style="text-align: center;"><a href="/"><img
+                                        class="justify-content-center align-items-center" style="max-width:300px;"
+                                        src="<?= $web_url ?>/admin/assets/images/logo/<?= $page['image'] ?>"> </a> </h1>
                             <h2 style="text-align: center;">Online Account Opening<br> </h2>
-                             <h5 style="text-align: center;">  <div id="google_translate_element"></div>
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 
-'ar,en,es,jv,ko,pa,pt,ru,zh-CN,zh-TW,ja', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-} </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script></h5>
+                            <h5 style="text-align: center;"> <?php echo $translate ?></h5>
                         </div>
                     </div><br>
                     <div class="auth-form card">
@@ -148,15 +145,18 @@ function googleTranslateElementInit() {
                                 <h4 class="text-success" id="register-error"></h4>
                                 <div class="col-md-6">
                                     <label class="form-label">First Name</label>
-                                    <input type="text" class="form-control" required placeholder="First Name" name="firstname">
+                                    <input type="text" class="form-control" required placeholder="First Name"
+                                        name="firstname">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label">Last Name</label>
-                                    <input type="text" class="form-control" required placeholder="Last Name" name="lastname">
+                                    <input type="text" class="form-control" required placeholder="Last Name"
+                                        name="lastname">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label">Email</label>
-                                    <input type="email" class="form-control" required placeholder="hello@example.com" name="acct_email">
+                                    <input type="email" class="form-control" required placeholder="hello@example.com"
+                                        name="acct_email">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label">Phone Number</label>
@@ -164,12 +164,15 @@ function googleTranslateElementInit() {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">+</span>
                                         </div>
-                                        <input type="text" inputmode="numeric" required pattern="[0-9]+" minlength="9" maxlength="12" autocomplete="off" placeholder="1 440 941 4254" class="form-control wizard-required" name="phoneNumber">
+                                        <input type="text" inputmode="numeric" required pattern="[0-9]+" minlength="9"
+                                            maxlength="12" autocomplete="off" placeholder="1 440 941 4254"
+                                            class="form-control wizard-required" name="phoneNumber">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label">Home Address</label>
-                                    <input type="text" class="form-control" required placeholder="Home Address" name="address">
+                                    <input type="text" class="form-control" required placeholder="Home Address"
+                                        name="address">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label">State</label>
@@ -177,11 +180,14 @@ function googleTranslateElementInit() {
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label">City</label>
-                                    <input type="text" class="form-control wizard-required" placeholder="City" id="city" name="city">
+                                    <input type="text" class="form-control wizard-required" placeholder="City" id="city"
+                                        name="city">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label">Zipcode/postal code</label>
-                                    <input type="text" inputmode="numeric" required pattern="[0-9]+" minlength="4" maxlength="6" autocomplete="off" class="form-control wizard-required" placeholder="100001" id="zipcode" name="zipcode">
+                                    <input type="text" inputmode="numeric" required pattern="[0-9]+" minlength="4"
+                                        maxlength="6" autocomplete="off" class="form-control wizard-required"
+                                        placeholder="100001" id="zipcode" name="zipcode">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label">Gender</label>
@@ -205,36 +211,45 @@ function googleTranslateElementInit() {
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label">Upload Picture</label>
-                                    <input type="file" id="input-file-max-fs" required class="form-control" name="image" data-max-file-size="2M" />
+                                    <input type="file" id="input-file-max-fs" required class="form-control" name="image"
+                                        data-max-file-size="2M" />
                                     <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
                                 </div>
                                 <div class="col-md-3">
                                     <label class="form-label">Date of Birth</label>
-                                    <input type="date" class="form-control" required placeholder="Date of Birth" name="acct_dob">
+                                    <input type="date" class="form-control" required placeholder="Date of Birth"
+                                        name="acct_dob">
                                 </div>
                                 <div class="col-md-3">
-                                    <label class="form-label">4 Digit  Pin</label>
-                                    <input type="text" class="form-control" inputmode="numeric" required pattern="[0-9]+" maxlength="4" autocomplete="off" style="margin-bottom: 5px" placeholder="****" name="acct_pin">
+                                    <label class="form-label">4 Digit Pin</label>
+                                    <input type="text" class="form-control" inputmode="numeric" required
+                                        pattern="[0-9]+" maxlength="4" autocomplete="off" style="margin-bottom: 5px"
+                                        placeholder="****" name="acct_pin">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label">Password</label>
-                                    <input type="password" class="form-control" maxlength="20" required placeholder="Password" name="acct_password">
+                                    <input type="password" class="form-control" maxlength="20" required
+                                        placeholder="Password" name="acct_password">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label">Confirm Password</label>
-                                    <input type="password" class="form-control" maxlength="20" required placeholder="Confirm Password" name="confirmPassword">
+                                    <input type="password" class="form-control" maxlength="20" required
+                                        placeholder="Confirm Password" name="confirmPassword">
                                 </div>
 
                                 <div class="col-md-12">
-                                    <div class="g-recaptcha" data-sitekey="6LdNbrAqAAAAAD5ZkkXb8cguJmUr484369N5y9SW"></div> <!-- Replace with your site key -->
+                                    <div class="g-recaptcha" data-sitekey="6LcarW0rAAAAAPlaPVUPASNXy-EbM6Aico29B4b2">
+                                    </div> <!-- Replace with your site key -->
                                 </div>
 
                                 <div class="d-grid gap-2">
-                                    <button type="submit" class="btn btn-primary" name="regSubmit">Create new account</button>
+                                    <button type="submit" class="btn btn-primary" name="regSubmit">Create new
+                                        account</button>
                                 </div>
                             </form>
                             <div class="text-center">
-                                <p class="mt-3 mb-0"> <a class="text-primary" href="./login.php">Sign in</a> to your account</p>
+                                <p class="mt-3 mb-0"> <a class="text-primary" href="./login.php">Sign in</a> to your
+                                    account</p>
                             </div>
                         </div>
                     </div>

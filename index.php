@@ -120,8 +120,9 @@
                      <div>
                          <a href="index.php" class="mobile-logo">
 
-                             <img src="<?php echo $url; ?>/admin/assets/images/logo/<?php echo $image; ?>" alt=" <?php echo $name; ?> Logo"><span
-                                 class="visuallyhidden"> <?php echo $name; ?> Logo</span></a>
+                             <img src="<?php echo $url; ?>/admin/assets/images/logo/<?php echo $image; ?>"
+                                 alt=" <?php echo $name; ?> Logo"><span class="visuallyhidden"> <?php echo $name; ?>
+                                 Logo</span></a>
                          <div>
                              <a href="javascript:void(0)" id="loginopen"
                                  class="Button1 fa-lock login-button"><span>Login</span></a>
@@ -177,7 +178,8 @@
                      <!--/toolbar-wrapper-->
                      <ul>
 
-                         <li id="logo"><a href="index.php"><img src="<?php echo $url; ?>/admin/assets/images/logo/<?php echo $image; ?>"
+                         <li id="logo"><a href="index.php"><img
+                                     src="<?php echo $url; ?>/admin/assets/images/logo/<?php echo $image; ?>"
                                      alt=" <?php echo $name; ?> Logo"></a></li>
                          <li>
                              <a href="javascript:void(0)"><span>Deposit</span> Accounts</a>

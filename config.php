@@ -2,6 +2,7 @@
 
 // Include the configuration file to establish a database connection
 require_once $_SERVER['DOCUMENT_ROOT'] . '/include/config.php';
+//require_once $_SERVER['DOCUMENT_ROOT'] . '/courtagetrust/include/config.php';
 
 
 // Initialize variables
@@ -28,7 +29,7 @@ try {
 
     // Fetch data from the users table (assuming there's a specific ID for the user you want)
     $userId = 1; // Replace with the actual ID or condition
-    $query = "SELECT url_name, url_address, url_tel, image, url_email, country, currency, login, register, tawk FROM settings WHERE id = :id";
+    $query = "SELECT url_name, url_address, url_tel, image, url_email, translate, country, currency, login, register, tawk FROM settings WHERE id = :id";
 
     // Prepare the query
     $stmt = $conn->prepare($query);

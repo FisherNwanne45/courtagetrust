@@ -10,11 +10,11 @@ include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
 
 // Other scripts Available
 $user_id = userDetails('id');
- 
+
 if ($row['acct_status'] === 'suspend') {
     header('Location: dashboard.php?dormant#dormant');
-	exit();
-  }
+    exit();
+}
 ?>
 
 <!-- App Header -->
@@ -24,26 +24,26 @@ if ($row['acct_status'] === 'suspend') {
         <!--    <ion-icon name="menu-outline"></ion-icon>-->
         <!--</a>-->
         <a href="<?= $web_url ?>/user/settings.php" class="headerButton">
-           <?php
-    // Fetch the image name from the database
-    $user_image = $row['acct_image']; // Assuming $row contains the user data from the database
+            <?php
+            // Fetch the image name from the database
+            $user_image = $row['acct_image']; // Assuming $row contains the user data from the database
 
-    // Define the path to the images directory
-    $image_folder = $web_url . "/assets/user/profile/";
+            // Define the path to the images directory
+            $image_folder = $web_url . "/assets/user/profile/";
 
-    // Set the default image
-    $default_image = "default.png";
+            // Set the default image
+            $default_image = "default.png";
 
-    // Check if the image exists and is not empty
-    if (!empty($user_image) && file_exists($_SERVER['DOCUMENT_ROOT'] . "/assets/user/profile/" . $user_image)) {
-        $image_to_display = $image_folder . $user_image;
-    } else {
-        $image_to_display = $image_folder . $default_image;
-    }
-?>
+            // Check if the image exists and is not empty
+            if (!empty($user_image) && file_exists($_SERVER['DOCUMENT_ROOT'] . "/assets/user/profile/" . $user_image)) {
+                $image_to_display = $image_folder . $user_image;
+            } else {
+                $image_to_display = $image_folder . $default_image;
+            }
+            ?>
 
-<!-- Display the image in HTML -->
-<img src="<?= $image_to_display ?>" alt="image" class="imaged w32">
+            <!-- Display the image in HTML -->
+            <img src="<?= $image_to_display ?>" alt="image" class="imaged w32">
         </a>
     </div>
     <div class="pageTitle">
@@ -66,7 +66,7 @@ if ($row['acct_status'] === 'suspend') {
 
 <div class="listview-title mt-2">Send Money</div>
 <ul class="listview image-listview inset">
-    <li>
+    <!--<li>
         <a href="<?= $web_url ?>/user/interbank-transfer.php" class="item">
             <div class="icon-box bg-primary">
                 <ion-icon name="send"></ion-icon>
@@ -78,7 +78,7 @@ if ($row['acct_status'] === 'suspend') {
 
             </div>
         </a>
-    </li>
+    </li>-->
     <li>
         <a href="<?= $web_url ?>/user/domestic-transfer.php" class="item">
             <div class="icon-box bg-primary">
@@ -118,7 +118,7 @@ if ($row['acct_status'] === 'suspend') {
             </div>
         </a>
     </li>
-  <!--  <li>
+    <!--  <li>
         <a href="#" class="item">
             <div class="icon-box bg-primary">
                 <ion-icon name="book"></ion-icon>

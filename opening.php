@@ -107,7 +107,7 @@ if (isset($_POST['regSubmit'])) {
                         <center><strong style='color:black;'>Sending Account Registration Request...</strong></center>
                     </div>";
                 } else {
-                    toast_alert("error", msg: "Invalid details");
+                    // toast_alert("error", msg: "Invalid details");
                 }
             }
         }

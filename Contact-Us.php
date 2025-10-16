@@ -15,7 +15,8 @@
             }, 'google_translate_element');
         }
     </script>
-    <script type="text/javascript" src="translate.google.com/translate_a/fa0d8a0d8.txt?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript"
+        src="translate.google.com/translate_a/fa0d8a0d8.txt?cb=googleTranslateElementInit"></script>
 
 
     <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
@@ -111,10 +112,14 @@
                     <div>
                         <a href="index.php" class="mobile-logo">
 
-                            <img src="<?php echo $url; ?>/admin/assets/images/logo/<?php echo $image; ?>" alt=" <?php echo $name; ?> Logo"><span class="visuallyhidden"> <?php echo $name; ?> Logo</span></a>
+                            <img src="<?php echo $url; ?>/admin/assets/images/logo/<?php echo $image; ?>"
+                                alt=" <?php echo $name; ?> Logo"><span class="visuallyhidden"> <?php echo $name; ?>
+                                Logo</span></a>
                         <div>
-                            <a href="javascript:void(0)" id="loginopen" class="Button1 fa-lock login-button"><span>Login</span></a>
-                            <a href="javascript:void(0)" id="menuopen" class="fa-bars"><span class="visuallyhidden">Menu</span></a>
+                            <a href="javascript:void(0)" id="loginopen"
+                                class="Button1 fa-lock login-button"><span>Login</span></a>
+                            <a href="javascript:void(0)" id="menuopen" class="fa-bars"><span
+                                    class="visuallyhidden">Menu</span></a>
                         </div>
                     </div>
 
@@ -156,10 +161,13 @@
                                 </div>
                             </li>
                         </ul>
-                    </div> <!--/toolbar-wrapper-->
+                    </div>
+                    <!--/toolbar-wrapper-->
                     <ul>
 
-                        <li id="logo"><a href="index.php"><img src="<?php echo $url; ?>/admin/assets/images/logo/<?php echo $image; ?>" alt=" <?php echo $name; ?> Logo"></a></li>
+                        <li id="logo"><a href="index.php"><img
+                                    src="<?php echo $url; ?>/admin/assets/images/logo/<?php echo $image; ?>"
+                                    alt=" <?php echo $name; ?> Logo"></a></li>
                         <li>
                             <a href="javascript:void(0)"><span>Deposit</span> Accounts</a>
                             <div>
@@ -219,7 +227,8 @@
                                     <h3>Additional Services</h3>
                                     <ul>
                                         <li><a href="Additional-Services.php">Safe Deposit Box</a></li>
-                                        <li><a href="Additional-Services.php#Telephone-Banking">Telephone Banking</a></li>
+                                        <li><a href="Additional-Services.php#Telephone-Banking">Telephone
+                                                Banking</a></li>
                                         <li><a href="Additional-Services.php#Lost-Card">Lost or Stolen Card</a></li>
                                     </ul>
                                 </div>
@@ -276,25 +285,40 @@
                 <tbody>
                     <tr>
                         <td>
-                            <h3 style="text-align: center;">For employment opportunities, apply in person with resume at the Pascagoula - Main Branch.</h3>
+                            <h3 style="text-align: center;">For employment opportunities, apply in person with
+                                resume at the Pascagoula - Main Branch.</h3>
                             <table class="Table-Grid-Thirds" style="width: 100%;">
                                 <tbody>
                                     <tr>
                                         <td>
                                             <h3>Call Us</h3>
-                                            <p>Call us Toll Free at: <br><strong> <?php echo $phone; ?> </strong></p>
+                                            <p>Call us Toll Free at: <br><strong> <?php echo $phone; ?> </strong>
+                                            </p>
 
-                                            <p>If you need assistance with online/mobile banking log-in credentials, please write us during regular business hours.</p>
+                                            <p>If you need assistance with online/mobile banking log-in credentials,
+                                                please write us during regular business hours.</p>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <h3>Email Us</h3>
-                                            <p>For general questions and comments, email us at&nbsp;<a href="mailto: <?php echo $email; ?>"> <?php echo $email; ?></a></p>
-                                            <p>For general online/mobile banking questions and comments, email us at&nbsp;<a href="mailto: <?php echo $email; ?>"> <?php echo $email; ?></a><a href="mailto:ebanking@<?php echo $domain; ?>"></a></p>
-                                            <p>For information regarding your property insurance, visit <a href=""></a></p>
-                                            <p><strong><?php echo $name; ?> does not discuss customer or account information via email.&nbsp; You may email a question or comment, along with a contact phone number, to one of the above email addresses and a <?php echo $name; ?> employee will respond within 72 hours.&nbsp;</strong></p>
-                                            <p><strong>Please do not submit personal, confidential or account information via email.&nbsp; This includes your social security number and account number.</strong></p>
+                                            <p>For general questions and comments, email us at&nbsp;<a
+                                                    href="mailto: <?php echo $email; ?>"> <?php echo $email; ?></a>
+                                            </p>
+                                            <p>For general online/mobile banking questions and comments, email us
+                                                at&nbsp;<a href="mailto: <?php echo $email; ?>">
+                                                    <?php echo $email; ?></a><a
+                                                    href="mailto:ebanking@<?php echo $domain; ?>"></a></p>
+                                            <p>For information regarding your property insurance, visit <a
+                                                    href=""></a></p>
+                                            <p><strong><?php echo $name; ?> does not discuss customer or account
+                                                    information via email.&nbsp; You may email a question or
+                                                    comment, along with a contact phone number, to one of the above
+                                                    email addresses and a <?php echo $name; ?> employee will respond
+                                                    within 72 hours.&nbsp;</strong></p>
+                                            <p><strong>Please do not submit personal, confidential or account
+                                                    information via email.&nbsp; This includes your social security
+                                                    number and account number.</strong></p>
                                         </td>
                                     </tr>
                                     <tr>
@@ -302,8 +326,10 @@
                                             <h3>Visit Us</h3>
                                             <h4>Address: <?php echo $addr; ?></h4>
                                             <p>Our Banking Hours Are:</p>
-                                            <p><strong>Monday, Tuesday &amp; Thursday:</strong> 9:00 am - 4:00 pm<br><strong>Wednesday:</strong> 9:00 am - 12:00 pm<br><strong>Friday:</strong> 9:00 am - 5:00 pm</p>
-                                            <p><a class="Button1" href="#">Find a Branch</a></p>
+                                            <p><strong>Monday, Tuesday &amp; Thursday:</strong> 9:00 am - 4:00
+                                                pm<br><strong>Wednesday:</strong> 9:00 am - 12:00
+                                                pm<br><strong>Friday:</strong> 9:00 am - 5:00 pm</p>
+                                            <p><a class="Button1" href="Branch-Locations.php">Find a Branch</a></p>
                                             <p>&nbsp;</p>
                                         </td>
                                     </tr>
@@ -348,12 +374,17 @@
                     <h3>Get Started</h3>
                     <ul>
                         <li><a href="Mortgage-Team.php#Apply-Now">Mortgage Application</a></li>
-                        <li><a href="Personal%20New%20Acct%20Application3f4b.pdf?documentId=57415" target="_blank">New Account Application</a></li>
-                        <li><a href="fillable%20switchkit434d.pdf?documentId=57331" target="_blank">Switch Kit</a></li>
+                        <li><a href="Personal%20New%20Acct%20Application3f4b.pdf?documentId=57415"
+                                target="_blank">New Account Application</a></li>
+                        <li><a href="fillable%20switchkit434d.pdf?documentId=57331" target="_blank">Switch Kit</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="awards">
-                    <img src="images/logo-best-places-to-work-mississippi.png" alt="Best Places to Work in Mississippi Award"> <img src="images/logo-american-banker-2018.png" alt="American Banker Best Bank to Work For Award 2018">
+                    <img src="images/logo-best-places-to-work-mississippi.png"
+                        alt="Best Places to Work in Mississippi Award"> <img
+                        src="images/logo-american-banker-2018.png"
+                        alt="American Banker Best Bank to Work For Award 2018">
                 </div>
                 <?php echo $livechat; ?>
                 <div class="copyright">
@@ -374,7 +405,8 @@
             </div>
         </footer>
     </div>
-    <a href="#top" id="gototop" class="fa fa-chevron-up downscale"><span class="visuallyhidden">Back to Top</span></a>
+    <a href="#top" id="gototop" class="fa fa-chevron-up downscale"><span class="visuallyhidden">Back to
+            Top</span></a>
     <script type="text/javascript" src="js/vendor/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="js/fiserv-plugins.js"></script>
     <script src="js/slideshow.js"></script>

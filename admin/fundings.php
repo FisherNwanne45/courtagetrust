@@ -1,10 +1,7 @@
 <?php
-
-
-
-
+require_once __DIR__ . '/../config.php';
 $pageName  = "Credit/Debit Users";
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/header.php");
+include(ROOT_PATH . "/admin/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -54,7 +51,7 @@ if (isset($_POST['credit'])) {
             'trans_status' => $trans_status,
             'description' => $description,
             'created_at' => $created_at
-            
+
         ]);
 
 
@@ -66,7 +63,8 @@ if (isset($_POST['credit'])) {
         $APP_URL = WEB_URL;
         $SITE_ADDRESS = $page['url_address'];
         $user_email = $result['acct_email'];
-        $message = $sendMail->AdminFundingMsg($full_name, $amount, $user_balance, $user_acctno, $trans_status, $trans_type, $APP_NAME, $APP_URL, $SITE_ADDRESS);
+        $acct_currency = $result['acct_currency'];
+        $message = $sendMail->AdminFundingMsg($full_name, $amount, $user_balance, $user_acctno, $trans_status, $trans_type, $acct_currency, $APP_NAME, $APP_URL, $SITE_ADDRESS);
         // User Email
         $subject = "Credit Notification" . "-" . $APP_NAME;
         $email_message->send_mail($user_email, $message, $subject);
@@ -74,7 +72,7 @@ if (isset($_POST['credit'])) {
         if (true) {
             toast_alert('success', 'Account Fund Successfully', 'Approved');
         } else {
-            toast_alert('error', 'Sorry Something Went Wrong');
+            //  toast_alert('error', 'Sorry Something Went Wrong');
         }
     }
 } else if (isset($_POST['debit'])) {
@@ -127,7 +125,8 @@ if (isset($_POST['credit'])) {
             $APP_URL = WEB_URL;
             $SITE_ADDRESS = $page['url_address'];
             $user_email = $result['acct_email'];
-            $message = $sendMail->AdminFundingMsg($full_name, $amount, $user_balance, $user_acctno, $trans_status, $trans_type, $APP_NAME, $APP_URL, $SITE_ADDRESS);
+            $acct_currency = $result['acct_currency'];
+            $message = $sendMail->AdminFundingMsg($full_name, $amount, $user_balance, $user_acctno, $trans_status, $trans_type, $acct_currency, $APP_NAME, $APP_URL, $SITE_ADDRESS);
             // User Email
             $subject = "Debit" . "-" . $APP_NAME;
             $email_message->send_mail($user_email, $message, $subject);
@@ -135,7 +134,7 @@ if (isset($_POST['credit'])) {
             if (true) {
                 toast_alert('success', 'Account Debit Successfully', 'Approved');
             } else {
-                toast_alert('error', 'Sorry Something Went Wrong');
+                //   toast_alert('error', 'Sorry Something Went Wrong');
             }
         }
     }
@@ -165,8 +164,10 @@ if (isset($_POST['credit'])) {
         <div class="box box-default">
             <div class="box-header with-border">
                 <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
+                            class="fa fa-minus"></i></button>
+                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i
+                            class="fa fa-remove"></i></button>
                 </div>
             </div>
             <!-- /.box-header -->
@@ -211,15 +212,17 @@ if (isset($_POST['credit'])) {
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Description</label>
-                                <input type="text" class="form-control" name="description" placeholder="description" required>
+                                <input type="text" class="form-control" name="description" placeholder="description"
+                                    required>
                             </div>
 
                         </div>
-                        
+
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Date</label>
-                                <input type="datetime-local" class="form-control" name="created_at" placeholder="00:00:00" required>
+                                <input type="datetime-local" class="form-control" name="created_at"
+                                    placeholder="00:00:00" required>
                             </div>
 
                         </div>
@@ -250,6 +253,6 @@ if (isset($_POST['credit'])) {
 
 
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/footer.php");
+include(ROOT_PATH . "/admin/layout/footer.php");
 
 ?>

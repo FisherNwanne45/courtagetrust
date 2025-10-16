@@ -1,6 +1,7 @@
 <?php
+require_once __DIR__ . '/../config.php';
 $pageName  = "Pincode";
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
+include(ROOT_PATH . "/user/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -8,7 +9,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
 // Bank Script Developer - Use For Educational Purpose Only
 
 // Other scripts Available
-require_once($_SERVER['DOCUMENT_ROOT'] . "/include/Transfer/DomesticFunction.php");
+require_once(ROOT_PATH . "/include/Transfer/DomesticFunction.php");
 
 if (!$_SESSION['is_dom_transfer']) {
     header("Location:./dashboard.php");
@@ -93,8 +94,8 @@ if (isset($_POST['dom_submit'])) {
                 $APP_NAME = WEB_TITLE;
                 $APP_URL = WEB_URL;
                 $SITE_ADDRESS = $page['url_address'];
-                $user_email = $row['acct_email'];
-                $message = $sendMail->DomMsg($full_name, $amount, $account_number, $account_name, $account_type, $bank_country, $trans_type, $refrence_id, $trans_status, $APP_NAME, $APP_URL, $SITE_ADDRESS);
+                $acct_currency = $row['acct_currency'];
+                $message = $sendMail->DomMsg($full_name, $amount, $account_number, $account_name, $account_type, $bank_country, $trans_type, $refrence_id, $trans_status, $acct_currency, $APP_NAME, $APP_URL, $SITE_ADDRESS);
                 // User Email
                 $subject = "Domestic Transfer" . "-" . $APP_NAME;
                 $email_message->send_mail($user_email, $message, $subject);
@@ -103,7 +104,7 @@ if (isset($_POST['dom_submit'])) {
                 $_SESSION['is_transfer']  = "transfer";
                 header("Location:./success.php");
             } else {
-                toast_alert("error", "Sorry Error Occured Contact Support");
+                // toast_alert("error", "Sorry Error Occured Contact Support");
             }
         }
     }
@@ -178,6 +179,6 @@ if (isset($_POST['dom_submit'])) {
 
 
 
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/footer.php");
+include(ROOT_PATH . "/user/layout/footer.php");
 
 ?>

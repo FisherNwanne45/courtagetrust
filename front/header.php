@@ -1,9 +1,9 @@
 <?php
 ob_start();
 session_start();
-
-require_once($_SERVER['DOCUMENT_ROOT'] . "/include/Function/Function.php");
-// require_once($_SERVER['DOCUMENT_ROOT'] . "/include/Function.php");
+require_once __DIR__ . '/../config.php';
+require_once(ROOT_PATH . "/include/Function/Function.php");
+// require_once(ROOT_PATH . "/include/Function.php");
 //require __DIR__."/../include/loginFunction.php";
 // require_once __DIR__."/../session.php";
 // require_once("/include/UserFunction.php");
@@ -54,7 +54,9 @@ $sendMail = new emailMessage();
     <link href="<?= $web_url ?>/front/css/responsive.css" rel="stylesheet" />
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;500;600;700;900&amp;family=Libre+Baskerville:wght@400;700&amp;family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;500;600;700;900&amp;family=Libre+Baskerville:wght@400;700&amp;family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
 
     <!-- Add site Favicon -->
     <link rel="icon" href="<?= $web_url ?>/front/images/favicon.png" type="image/x-icon" />
@@ -125,9 +127,12 @@ $sendMail = new emailMessage();
                             <!-- Info List -->
                             <ul class="info-list">
                                 <li>
-                                    <a href="<?= $web_url ?>/login"><span class="icon icofont-bank"></span>Internet Banking</a>
+                                    <a href="<?= $web_url ?>/login"><span class="icon icofont-bank"></span>Internet
+                                        Banking</a>
                                 </li>
-                                <li class="share"><a href="<?= $web_url ?>/p/about"><span class="icon icofont-handshake-deal"></span> Why Trust <?= $pageName  ?></a></li>
+                                <li class="share"><a href="<?= $web_url ?>/p/about"><span
+                                            class="icon icofont-handshake-deal"></span> Why Trust
+                                        <?= $pageName  ?></a></li>
 
 
                             </ul>
@@ -149,7 +154,9 @@ $sendMail = new emailMessage();
                     <div class="inner-container clearfix">
                         <div class="pull-left logo-box">
                             <div class="logo">
-                                <a href="/"><img src="<?= $web_url ?>/admin/assets/images/logo/<?= $page['image'] ?>" alt="" title="" width="200px" height="90px" /></a>
+                                <a href="/"><img
+                                        src="<?= $web_url ?>/admin/assets/images/logo/<?= $page['image'] ?>" alt=""
+                                        title="" width="200px" height="90px" /></a>
                             </div>
                         </div>
 
@@ -157,7 +164,9 @@ $sendMail = new emailMessage();
                             <!-- Main Menu -->
                             <nav class="main-menu navbar-expand-md">
                                 <div class="navbar-header">
-                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                        aria-expanded="false" aria-label="Toggle navigation">
                                         <span class="icon-bar"></span>
                                         <span class="icon-bar"></span>
                                         <span class="icon-bar"></span>
@@ -170,44 +179,59 @@ $sendMail = new emailMessage();
                                         <li class="dropdown">
                                             <a href="#">Personal <i class="fa fa-caret-down"></i></a>
                                             <ul>
-                                                <li><a href="<?= $web_url ?>/p/ultimate-checking.php">Ultimate Checking</a></li>
+                                                <li><a href="<?= $web_url ?>/p/ultimate-checking.php">Ultimate
+                                                        Checking</a></li>
                                                 <li>
-                                                    <a href="<?= $web_url ?>/p/health-savings-account.php">Health Savings Account (NSA)</a>
+                                                    <a href="<?= $web_url ?>/p/health-savings-account.php">Health
+                                                        Savings Account (NSA)</a>
                                                 </li>
                                                 <li>
-                                                    <a href="<?= $web_url ?>/p/individual-retirement-account.php">Individual Retirement Account(IRAs)</a>
+                                                    <a href="<?= $web_url ?>/p/individual-retirement-account.php">Individual
+                                                        Retirement Account(IRAs)</a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li class="dropdown">
                                             <a href="#">Business <i class="fa fa-caret-down"></i></a>
                                             <ul>
-                                                <li><a href="<?= $web_url ?>/p/overdraft-protection-sweeps.php">Overdraft Protection & Sweeps</a></li>
+                                                <li><a href="<?= $web_url ?>/p/overdraft-protection-sweeps.php">Overdraft
+                                                        Protection & Sweeps</a></li>
                                                 <li>
-                                                    <a href="<?= $web_url ?>/p/business-essential-checking.php">Business Essential Checking</a>
+                                                    <a href="<?= $web_url ?>/p/business-essential-checking.php">Business
+                                                        Essential Checking</a>
                                                 </li>
                                                 <li>
-                                                    <a href="<?= $web_url ?>/p/business-savings-account.php">Business Savings Account</a>
+                                                    <a href="<?= $web_url ?>/p/business-savings-account.php">Business
+                                                        Savings Account</a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li class="dropdown">
                                             <a href="#">Loans <i class="fa fa-caret-down"></i></a>
                                             <ul class="from-right">
-                                                <li><a href="<?= $web_url ?>/p/home-mortgage-loans.php">Home Mortgage Loans</a></li>
-                                                <li><a href="<?= $web_url ?>/p/personal-loans.php">Personal Loans</a></li>
-                                                <li><a href="<?= $web_url ?>/p/working-capital-loans.php">Working Capital Loans</a></li>
-                                                <li><a href="<?= $web_url ?>/p/investment-property-loans.php">Investment Property Loans</a></li>
-                                                <li><a href="<?= $web_url ?>/p/commercial-real-estate-loans.php">Commercial Real Estate Loans</a></li>
-                                                <li><a href="<?= $web_url ?>/p/business-term-loans.php">Business Term Loans</a></li>
+                                                <li><a href="<?= $web_url ?>/p/home-mortgage-loans.php">Home
+                                                        Mortgage Loans</a></li>
+                                                <li><a href="<?= $web_url ?>/p/personal-loans.php">Personal
+                                                        Loans</a></li>
+                                                <li><a href="<?= $web_url ?>/p/working-capital-loans.php">Working
+                                                        Capital Loans</a></li>
+                                                <li><a href="<?= $web_url ?>/p/investment-property-loans.php">Investment
+                                                        Property Loans</a></li>
+                                                <li><a href="<?= $web_url ?>/p/commercial-real-estate-loans.php">Commercial
+                                                        Real Estate Loans</a></li>
+                                                <li><a href="<?= $web_url ?>/p/business-term-loans.php">Business
+                                                        Term Loans</a></li>
                                             </ul>
                                         </li>
                                         <li class="dropdown">
                                             <a href="#">Services <i class="fa fa-caret-down"></i></a>
                                             <ul class="from-right">
-                                                <li><a href="<?= $web_url ?>/p/online-banking.php">Online Banking</a></li>
-                                                <li><a href="<?= $web_url ?>/p/wire-transfers.php">Wire Transfers</a></li>
-                                                <li><a href="<?= $web_url ?>/p/lost-cards.php">Lost or Stolen Cards</a></li>
+                                                <li><a href="<?= $web_url ?>/p/online-banking.php">Online
+                                                        Banking</a></li>
+                                                <li><a href="<?= $web_url ?>/p/wire-transfers.php">Wire
+                                                        Transfers</a></li>
+                                                <li><a href="<?= $web_url ?>/p/lost-cards.php">Lost or Stolen
+                                                        Cards</a></li>
                                             </ul>
                                         </li>
                                         <li class="current">
@@ -221,7 +245,8 @@ $sendMail = new emailMessage();
                         <div class="outer-box">
                             <!-- Search Btn -->
                             <div class="search-box-btn search-box-outer">
-                                <a href="<?= $web_url ?>/login.php" class="theme-btn btn-style-one" style="margin-top:0px;padding:10px 20px;"><span class="txt">Banking</span></a>
+                                <a href="<?= $web_url ?>/login.php" class="theme-btn btn-style-one"
+                                    style="margin-top:0px;padding:10px 20px;"><span class="txt">Banking</span></a>
                             </div>
                             <!-- Mobile Navigation Toggler -->
                             <div class="mobile-nav-toggler">
@@ -239,7 +264,8 @@ $sendMail = new emailMessage();
                 <div class="close-btn"><span class="icon lnr lnr-cross"></span></div>
                 <nav class="menu-box">
                     <div class="nav-logo">
-                        <a href="/"><img src="<?= $web_url ?>/assets/images/logo/<?= $page['image'] ?>" alt="" title="" width="180" /></a>
+                        <a href="/"><img src="<?= $web_url ?>/assets/images/logo/<?= $page['image'] ?>" alt=""
+                                title="" width="180" /></a>
                     </div>
                     <div class="menu-outer">
                         <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->

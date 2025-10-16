@@ -1,6 +1,7 @@
 <?php
+require_once __DIR__ . '/../config.php';
 $pageName  = "Password Settings";
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
+include(ROOT_PATH . "/user/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -76,7 +77,8 @@ include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
 
 
                 <div class="form-group mt-4">
-                    <button type="submit" class="btn btn-primary btn-block mt-10 btn-md" name="">Generate Statement</button>
+                    <button type="submit" class="btn btn-primary btn-block mt-10 btn-md" name="">Generate
+                        Statement</button>
                 </div>
             </form>
 
@@ -87,7 +89,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
 
 <?php
 
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/bottom.php");
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/footer.php");
+include(ROOT_PATH . "/user/layout/bottom.php");
+include(ROOT_PATH . "/user/layout/footer.php");
 
 ?>

@@ -1,10 +1,7 @@
 <?php
-
-
-
-
+require_once __DIR__ . '/../config.php';
 $pageName  = "Dashboard";
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/header.php");
+include(ROOT_PATH . "/admin/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -39,7 +36,7 @@ if (isset($_POST['newsletter'])) {
         if (true) {
             toast_alert('success', 'Email Successfully Sent', 'Approved');
         } else {
-            toast_alert('error', 'Sorry Something Went Wrong');
+            // toast_alert('error', 'Sorry Something Went Wrong');
         }
     }
 }
@@ -87,7 +84,8 @@ if (isset($_POST['newsletter'])) {
                     <div class="icon">
                         <i class="ion ion-bag"></i>
                     </div>
-                    <a href="./fundings.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="./fundings.php" class="small-box-footer">More info <i
+                            class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -107,7 +105,8 @@ if (isset($_POST['newsletter'])) {
                     <div class="icon">
                         <i class="ion ion-person-add"></i>
                     </div>
-                    <a href="./users.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="./users.php" class="small-box-footer">More info <i
+                            class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -130,7 +129,8 @@ if (isset($_POST['newsletter'])) {
                     <div class="icon">
                         <i class="ion ion-stats-bars"></i>
                     </div>
-                    <a href="./wire-trans.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="./wire-trans.php" class="small-box-footer">More info <i
+                            class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -153,7 +153,8 @@ if (isset($_POST['newsletter'])) {
                     <div class="icon">
                         <i class="ion ion-pie-graph"></i>
                     </div>
-                    <a href="./domestic-trans.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="./domestic-trans.php" class="small-box-footer">More info <i
+                            class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -180,7 +181,8 @@ if (isset($_POST['newsletter'])) {
                     <div class="icon">
                         <i class="ion ion-bag"></i>
                     </div>
-                    <a href="./pending-deposit.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="./pending-deposit.php" class="small-box-footer">More info <i
+                            class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -203,7 +205,8 @@ if (isset($_POST['newsletter'])) {
                     <div class="icon">
                         <i class="ion ion-person-add"></i>
                     </div>
-                    <a href="./deposit.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="./deposit.php" class="small-box-footer">More info <i
+                            class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -226,7 +229,8 @@ if (isset($_POST['newsletter'])) {
                     <div class="icon">
                         <i class="ion ion-stats-bars"></i>
                     </div>
-                    <a href="./stocks-trans.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="./stocks-trans.php" class="small-box-footer">More info <i
+                            class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -249,7 +253,8 @@ if (isset($_POST['newsletter'])) {
                     <div class="icon">
                         <i class="ion ion-pie-graph"></i>
                     </div>
-                    <a href="./loan-trans.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="./loan-trans.php" class="small-box-footer">More info <i
+                            class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -309,7 +314,8 @@ if (isset($_POST['newsletter'])) {
                                 <input type="text" class="form-control" name="subjectid" placeholder="Subject">
                             </div>
                             <div>
-                                <textarea class="textarea" placeholder="Message" name="messageid" style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                                <textarea class="textarea" placeholder="Message" name="messageid"
+                                    style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
                             </div>
 
                         </div>
@@ -330,9 +336,11 @@ if (isset($_POST['newsletter'])) {
                     <div class="box-header">
                         <!-- tools box -->
                         <div class="pull-right box-tools">
-                            <button type="button" class="btn btn-primary btn-sm daterange pull-right" data-toggle="tooltip" title="Date range">
+                            <button type="button" class="btn btn-primary btn-sm daterange pull-right"
+                                data-toggle="tooltip" title="Date range">
                                 <i class="fa fa-calendar"></i></button>
-                            <button type="button" class="btn btn-primary btn-sm pull-right" data-widget="collapse" data-toggle="tooltip" title="Collapse" style="margin-right: 5px;">
+                            <button type="button" class="btn btn-primary btn-sm pull-right" data-widget="collapse"
+                                data-toggle="tooltip" title="Collapse" style="margin-right: 5px;">
                                 <i class="fa fa-minus"></i></button>
                         </div>
                         <!-- /. tools -->
@@ -382,6 +390,6 @@ if (isset($_POST['newsletter'])) {
 
 
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/footer.php");
+include(ROOT_PATH . "/admin/layout/footer.php");
 
 ?>

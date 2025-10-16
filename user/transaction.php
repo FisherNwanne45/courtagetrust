@@ -1,6 +1,7 @@
 <?php
+require_once __DIR__ . '/../config.php';
 $pageName  = "History";
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
+include(ROOT_PATH . "/user/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -30,30 +31,30 @@ include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
 <!-- * App Header -->
 
 <style>
-/* Hide the logo on screen */
-.print-only {
-    display: none;
-}
-
-/* Show the logo only in print */
-@media print {
+    /* Hide the logo on screen */
     .print-only {
-        display: block;
-    }
-
-    .pageTitle {
         display: none;
     }
-}
+
+    /* Show the logo only in print */
+    @media print {
+        .print-only {
+            display: block;
+        }
+
+        .pageTitle {
+            display: none;
+        }
+    }
 </style>
 
 <div class="col-12" id="appCapsul">
     <ul class="listview flush transparent simple-listview no-space mt-3 print-only">
         <li>
             <img style="max-width:300px;" src="<?= $web_url ?>/admin/assets/images/logo/<?= $page['image'] ?>">
-            <span>Account No: <?= $row['acct_no']?><br>Account Name: <?= $fullName ?></span>
+            <span>Account No: <?= $row['acct_no'] ?><br>Account Name: <?= $fullName ?></span>
         </li><br>
-        <small><i>This Statement was generated on <?php echo date('l, F j, Y \a\t g:i A');?></i></small></hr>
+        <small><i>This Statement was generated on <?php echo date('l, F j, Y \a\t g:i A'); ?></i></small></hr>
     </ul>
     <div class="row mt-2">
         <div class="col-6">
@@ -117,47 +118,47 @@ include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
 
             ?>
 
-            <a href="./transaction-info.php?id=<?php echo $result['trans_id']; ?>" class="item">
-                <div class="detail">
-                    <div>
-                        <h2><?= $result['trans_type'] ?></h2>
+                <a href="./transaction-info.php?id=<?php echo $result['trans_id']; ?>" class="item">
+                    <div class="detail">
+                        <div>
+                            <h2><?= $result['trans_type'] ?></h2>
 
 
-                        <p><?= $result['created_at'] ?></p>
+                            <p><?= $result['created_at'] ?></p>
+                        </div>
                     </div>
-                </div>
-                <div class="mid">
-                    <h5><?= $result['description'] ?></h5>
-                    <h5><?= $result['account_name'] ?></h5>
-                    <p> Ref #: <?= $result['refrence_id'] ?></p>
+                    <div class="mid">
+                        <h5><?= $result['description'] ?></h5>
+                        <h5><?= $result['account_name'] ?></h5>
+                        <p> Ref #: <?= $result['refrence_id'] ?></p>
 
 
-                </div>
+                    </div>
 
-                <div class="right">
-                    <?php
+                    <div class="right">
+                        <?php
                         if ($result['transaction_type'] === 'credit') {
                         ?>
 
-                    <h2 class="text-success">
-                        +<?php echo number_format($amount, 2, '.', ','); ?>
-                    </h2>
+                            <h2 class="text-success">
+                                +<?php echo number_format($amount, 2, '.', ','); ?>
+                            </h2>
 
-                    <?php
+                        <?php
                         } else {
                         ?>
 
-                    <h2 class="text-danger">
-                        -<?php echo number_format($amount, 2, '.', ','); ?>
-                    </h2>
+                            <h2 class="text-danger">
+                                -<?php echo number_format($amount, 2, '.', ','); ?>
+                            </h2>
 
-                    <?php
+                        <?php
                         }
                         ?>
 
 
-                </div>
-            </a>
+                    </div>
+                </a>
 
             <?php
 
@@ -178,13 +179,13 @@ include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
 
             if ($stmt->rowCount() == 0) {
             ?>
-            <div class="transactions">
-                <a href="#" class="item">
+                <div class="transactions">
+                    <a href="#" class="item">
 
-                    <h2>No transaction Yet</h2>
+                        <h2>No transaction Yet</h2>
 
-                </a>
-            </div>
+                    </a>
+                </div>
 
             <?php
             } else {
@@ -202,30 +203,30 @@ include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
     </div>
 </div>
 <script>
-document.getElementById('button').addEventListener('click', function() {
-    // Select the div you want to print
-    var divToPrint = document.getElementById('appCapsul').innerHTML;
+    document.getElementById('button').addEventListener('click', function() {
+        // Select the div you want to print
+        var divToPrint = document.getElementById('appCapsul').innerHTML;
 
-    // Open a new window
-    var newWindow = window.open('', '', 'width=800, height=600');
+        // Open a new window
+        var newWindow = window.open('', '', 'width=800, height=600');
 
-    newWindow.document.write(
-    '<link rel="stylesheet" href="../assets/panel/css/style.css">'); // Optional: Link CSS if needed
+        newWindow.document.write(
+            '<link rel="stylesheet" href="../assets/panel/css/style.css">'); // Optional: Link CSS if needed
 
-    newWindow.document.write(divToPrint);
+        newWindow.document.write(divToPrint);
 
 
-    // Close the document for writing to enable printing
-    newWindow.document.close();
+        // Close the document for writing to enable printing
+        newWindow.document.close();
 
-    // Print the content
-    newWindow.print();
+        // Print the content
+        newWindow.print();
 
-    // Close the print window
-    newWindow.close();
-});
+        // Close the print window
+        newWindow.close();
+    });
 </script>
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/footer.php");
+include(ROOT_PATH . "/user/layout/footer.php");
 
 ?>

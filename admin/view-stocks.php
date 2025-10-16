@@ -1,6 +1,7 @@
 <?php
+require_once __DIR__ . '/../config.php';
 $pageName  = "Edit Stocks Transactions";
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/header.php");
+include(ROOT_PATH . "/admin/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -99,7 +100,7 @@ if (isset($_POST['accept'])) {
           </div>
         ";
     } else {
-        toast_alert('error', 'Sorry Something Went Wrong');
+        //   toast_alert('error', 'Sorry Something Went Wrong');
     }
 }
 
@@ -144,7 +145,7 @@ if (isset($_POST['decline'])) {
           </div>
         ";
     } else {
-        toast_alert('error', 'Sorry Something Went Wrong');
+        //     toast_alert('error', 'Sorry Something Went Wrong');
     }
 }
 
@@ -179,7 +180,7 @@ if (isset($_POST['hold'])) {
           </div>
         ";
     } else {
-        toast_alert('error', 'Sorry Something Went Wrong');
+        //    toast_alert('error', 'Sorry Something Went Wrong');
     }
 }
 
@@ -212,7 +213,8 @@ if (isset($_POST['hold'])) {
 
             <div class="box-header with-border">
                 <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
+                            class="fa fa-minus"></i></button>
                 </div>
             </div>
             <!-- /.box-header -->
@@ -223,21 +225,26 @@ if (isset($_POST['hold'])) {
                     <div class="col-md-4">
                         <div class="form-group">
                             <label>Amount</label>
-                            <input type="number" class="form-control" name="amount" placeholder="<?= $result['amount'] ?>" value="<?= $result['amount'] ?>" required>
+                            <input type="number" class="form-control" name="amount"
+                                placeholder="<?= $result['amount'] ?>" value="<?= $result['amount'] ?>" required>
                         </div>
 
 
 
                         <div class="form-group">
                             <label>Stock Name</label>
-                            <input type="text" class="form-control" name="account_name" placeholder="<?= $result['account_name'] ?>" value="<?= $result['account_name'] ?>" required>
+                            <input type="text" class="form-control" name="account_name"
+                                placeholder="<?= $result['account_name'] ?>" value="<?= $result['account_name'] ?>"
+                                required>
                         </div>
 
 
 
                         <div class="form-group">
                             <label>Date</label>
-                            <input type="text" class="form-control" name="created_at" placeholder="<?= $result['created_at'] ?>" value="<?= $result['created_at'] ?>" required>
+                            <input type="text" class="form-control" name="created_at"
+                                placeholder="<?= $result['created_at'] ?>" value="<?= $result['created_at'] ?>"
+                                required>
                         </div>
 
                         <br>
@@ -277,6 +284,6 @@ if (isset($_POST['hold'])) {
 
 
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/footer.php");
+include(ROOT_PATH . "/admin/layout/footer.php");
 
 ?>

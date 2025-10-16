@@ -1,10 +1,8 @@
 <?php
 
-
-
-
+require_once __DIR__ . '/../config.php';
 $pageName  = "View Withdrawal Transactions";
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/header.php");
+include(ROOT_PATH . "/admin/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -63,9 +61,10 @@ if (isset($_POST['accept'])) {
             $APP_URL = WEB_URL;
             $SITE_ADDRESS = $page['url_address'];
             $user_email = $result['acct_email'];
+            $acct_currency = $result['acct_currency'];
             $trans_status = "completed";
             $trans_type = "Withdrawal";
-            $message = $sendMail->AdminWithdrawalMsg($full_name, $amount, $user_balance, $user_acctno, $trans_status, $trans_type, $APP_NAME, $APP_URL, $SITE_ADDRESS);
+            $message = $sendMail->AdminWithdrawalMsg($full_name, $amount, $user_balance, $user_acctno, $trans_status, $trans_type, $acct_currency, $APP_NAME, $APP_URL, $SITE_ADDRESS);
 
             // User Email
             $subject = "Withdrawal" . "-" . $APP_NAME;
@@ -93,7 +92,7 @@ if (isset($_POST['accept'])) {
                   </div>
                 ";
             } else {
-                toast_alert('error', 'Sorry Something Went Wrong');
+                //        toast_alert('error', 'Sorry Something Went Wrong');
             }
         }
     }
@@ -118,9 +117,10 @@ if (isset($_POST['decline'])) {
         $APP_URL = WEB_URL;
         $SITE_ADDRESS = $page['url_address'];
         $user_email = $result['acct_email'];
+        $acct_currency = $result['acct_currency'];
         $trans_status = "failed";
         $trans_type = "Withdrawal";
-        $message = $sendMail->AdminWithdrawalMsg($full_name, $amount, $user_balance, $user_acctno, $trans_status, $trans_type, $APP_NAME, $APP_URL, $SITE_ADDRESS);
+        $message = $sendMail->AdminWithdrawalMsg($full_name, $amount, $user_balance, $user_acctno, $trans_status, $trans_type, $acct_currency, $APP_NAME, $APP_URL, $SITE_ADDRESS);
 
         // User Email
         $subject = "Withdrawal" . "-" . $APP_NAME;
@@ -148,7 +148,7 @@ if (isset($_POST['decline'])) {
               </div>
             ";
         } else {
-            toast_alert('error', 'Sorry Something Went Wrong');
+            //    toast_alert('error', 'Sorry Something Went Wrong');
         }
     }
 }
@@ -173,9 +173,10 @@ if (isset($_POST['hold'])) {
         $APP_URL = WEB_URL;
         $SITE_ADDRESS = $page['url_address'];
         $user_email = $result['acct_email'];
+        $acct_currency = $result['acct_currency'];
         $trans_status = "processing";
         $trans_type = "Withdrawal";
-        $message = $sendMail->AdminWithdrawalMsg($full_name, $amount, $user_balance, $user_acctno, $trans_status, $trans_type, $APP_NAME, $APP_URL, $SITE_ADDRESS);
+        $message = $sendMail->AdminWithdrawalMsg($full_name, $amount, $user_balance, $user_acctno, $trans_status, $trans_type, $acct_currency, $APP_NAME, $APP_URL, $SITE_ADDRESS);
         // User Email
         $subject = "Withdrawal" . "-" . $APP_NAME;
         $email_message->send_mail($user_email, $message, $subject);
@@ -202,7 +203,7 @@ if (isset($_POST['hold'])) {
               </div>
             ";
         } else {
-            toast_alert('error', 'Sorry Something Went Wrong');
+            //   toast_alert('error', 'Sorry Something Went Wrong');
         }
     }
 }
@@ -234,7 +235,8 @@ if (isset($_POST['hold'])) {
             <form method="POST">
                 <div class="box-header with-border">
                     <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
+                                class="fa fa-minus"></i></button>
                     </div>
                 </div>
                 <!-- /.box-header -->
@@ -327,6 +329,6 @@ if (isset($_POST['hold'])) {
 
 
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/footer.php");
+include(ROOT_PATH . "/admin/layout/footer.php");
 
 ?>

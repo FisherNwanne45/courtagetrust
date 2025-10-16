@@ -1,10 +1,11 @@
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/include/vendor/autoload.php");
+require_once __DIR__ . '/../../config.php';
+include(ROOT_PATH . "/include/vendor/autoload.php");
 
 use PHPMailer\PHPMailer\PHPMailer;
 
-require_once($_SERVER['DOCUMENT_ROOT'] . "/include/config.php");
-require_once($_SERVER['DOCUMENT_ROOT'] . "/include/Email/smtp.php");
+require_once(ROOT_PATH . "/include/config.php");
+require_once(ROOT_PATH . "/include/Email/smtp.php");
 
 class USER
 {
@@ -403,7 +404,7 @@ class emailMessage
                         </tr>
                         <tr>
                             <td class='content-block powered-by'>
-                                2023 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
+                                2025 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
                             </td>
                         </tr>
                             </table>
@@ -415,7 +416,7 @@ class emailMessage
                 </html>";
     }
 
-    public function DepositMsg($full_name, $amount, $trans_type, $trans_status, $refrence_id, $APP_NAME, $APP_URL, $SITE_ADDRESS)
+    public function DepositMsg($full_name, $amount, $trans_type, $trans_status, $refrence_id, $acct_currency, $APP_NAME, $APP_URL, $SITE_ADDRESS)
     {
         return "<!doctype html>
     <html>
@@ -767,7 +768,7 @@ class emailMessage
                                 <tr>
                                 <td>
                                     <h2>Dear $full_name </h2>
-                                    <p>Your $trans_type of  $$amount is $trans_status with the refrence id #$refrence_id</p>
+                                    <p>Your $trans_type of  $acct_currency$amount is $trans_status with the refrence id #$refrence_id</p>
                                 </td>
                                 </tr>
                             </table>
@@ -786,7 +787,7 @@ class emailMessage
                         </tr>
                         <tr>
                             <td class='content-block powered-by'>
-                                2023 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
+                                2025 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
                             </td>
                         </tr>
                             </table>
@@ -799,7 +800,7 @@ class emailMessage
     </html>";
     }
 
-    public function WithdrawMsg($full_name, $amount, $trans_type, $trans_status, $refrence_id, $APP_NAME, $APP_URL, $SITE_ADDRESS)
+    public function WithdrawMsg($full_name, $amount, $trans_type, $trans_status, $refrence_id, $acct_currency, $APP_NAME, $APP_URL, $SITE_ADDRESS)
     {
         return "<!doctype html>
     <html>
@@ -1151,7 +1152,7 @@ class emailMessage
                                 <tr>
                                 <td>
                                     <h2>Hi $full_name</h2>
-                                    <p>Your $trans_type of $$amount is $trans_status with the refrence id #$refrence_id</p>
+                                    <p>Your $trans_type of $acct_currency$amount is $trans_status with the refrence id #$refrence_id</p>
                                 </td>
                                 </tr>
                             </table>
@@ -1170,7 +1171,7 @@ class emailMessage
                         </tr>
                         <tr>
                             <td class='content-block powered-by'>
-                                2023 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
+                                2025 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
                             </td>
                         </tr>
                             </table>
@@ -1183,7 +1184,7 @@ class emailMessage
     </html>";
     }
 
-    public function WireMsg($full_name, $amount, $account_type, $trans_type, $refrence_id, $swift_code, $routine_number, $bank_country, $bank_name, $trans_status, $account_number, $account_name, $APP_NAME, $APP_URL, $SITE_ADDRESS)
+    public function WireMsg($full_name, $amount, $account_type, $trans_type, $refrence_id, $swift_code, $routine_number, $bank_country, $bank_name, $trans_status, $account_number, $account_name, $acct_currency, $APP_NAME, $APP_URL, $SITE_ADDRESS)
     {
         return "<!doctype html>
     <html>
@@ -1535,7 +1536,7 @@ class emailMessage
                                 <tr>
                                 <td>
                                     <h2>Hi $full_name,</h2>
-                                    <p>Your $trans_type of <strong>$amount</strong> to $bank_name, $bank_country, $account_number, $account_name, $account_type, $swift_code, $routine_number with the refrence id #$refrence_id is $trans_status.</p>
+                                    <p>Your $trans_type of <strong>$acct_currency$amount</strong> to $bank_name, $bank_country, $account_number, $account_name, $account_type, $swift_code, $routine_number with the refrence id #$refrence_id is $trans_status.</p>
                                 </td>
                                 </tr>
                             </table>
@@ -1554,7 +1555,7 @@ class emailMessage
                         </tr>
                         <tr>
                             <td class='content-block powered-by'>
-                                2023 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
+                                2025 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
                             </td>
                         </tr>
                             </table>
@@ -1943,7 +1944,7 @@ class emailMessage
                             </tr>
                             <tr>
                                 <td class='content-block powered-by'>
-                                    2023 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
+                                    2025 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
                                 </td>
                             </tr>
                                 </table>
@@ -2331,7 +2332,7 @@ class emailMessage
                         </tr>
                         <tr>
                             <td class='content-block powered-by'>
-                                2023 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
+                                2025 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
                             </td>
                         </tr>
                             </table>
@@ -2344,7 +2345,7 @@ class emailMessage
     </html>";
     }
 
-    public function DomMsg($full_name, $amount, $account_number, $account_name, $account_type, $bank_country, $trans_type, $refrence_id, $trans_status, $APP_NAME, $APP_URL, $SITE_ADDRESS)
+    public function DomMsg($full_name, $amount, $account_number, $account_name, $account_type, $bank_country, $trans_type, $refrence_id, $trans_status, $acct_currency, $APP_NAME, $APP_URL, $SITE_ADDRESS)
     {
         return "<!doctype html>
     <html>
@@ -2696,7 +2697,7 @@ class emailMessage
                                 <tr>
                                 <td>
                                     <h2>Hi $full_name,</h2>
-                                    <p>Your $trans_type of <strong>$amount</strong> to  $account_number, $account_name, $account_type, $bank_country with the refrence id #$refrence_id is $trans_status.</p>
+                                    <p>Your $trans_type of <strong>$acct_currency$amount</strong> to  $account_number, $account_name, $account_type, $bank_country with the refrence id #$refrence_id is $trans_status.</p>
                                 </td>
                                 </tr>
                             </table>
@@ -2715,7 +2716,7 @@ class emailMessage
                         </tr>
                         <tr>
                             <td class='content-block powered-by'>
-                                2023 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
+                                2025 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
                             </td>
                         </tr>
                             </table>
@@ -3099,7 +3100,7 @@ class emailMessage
                         </tr>
                         <tr>
                             <td class='content-block powered-by'>
-                                2023 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
+                                2025 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
                             </td>
                         </tr>
                             </table>
@@ -3112,7 +3113,7 @@ class emailMessage
     </html>";
     }
 
-    public function InterMsg($full_name, $amount, $account_number, $account_name, $refrence_id, $trans_type, $trans_status, $APP_NAME, $APP_URL, $SITE_ADDRESS)
+    public function InterMsg($full_name, $amount, $account_number, $account_name, $refrence_id, $trans_type, $trans_status, $acct_currency, $APP_NAME, $APP_URL, $SITE_ADDRESS)
     {
         return "<!doctype html>
     <html>
@@ -3464,7 +3465,7 @@ class emailMessage
                                 <tr>
                                 <td>
                                 <h2>Hi $full_name,</h2>
-                                <p>Your $trans_type of <strong>$amount</strong> to  $account_number, $account_name with the refrence id #$refrence_id is $trans_status.</p>
+                                <p>Your $trans_type of <strong>$acct_currency$amount</strong> to  $account_number, $account_name with the refrence id #$refrence_id is $trans_status.</p>
                                 </td>
                                 </tr>
                             </table>
@@ -3483,7 +3484,7 @@ class emailMessage
                         </tr>
                         <tr>
                             <td class='content-block powered-by'>
-                                2023 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
+                                2025 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
                             </td>
                         </tr>
                             </table>
@@ -3867,7 +3868,7 @@ class emailMessage
                         </tr>
                         <tr>
                             <td class='content-block powered-by'>
-                                2023 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
+                                2025 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
                             </td>
                         </tr>
                             </table>
@@ -4251,7 +4252,7 @@ class emailMessage
                         </tr>
                         <tr>
                             <td class='content-block powered-by'>
-                                2023 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
+                                2025 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
                             </td>
                         </tr>
                             </table>
@@ -4637,7 +4638,7 @@ class emailMessage
                         </tr>
                         <tr>
                             <td class='content-block powered-by'>
-                                2023 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
+                                2025 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
                             </td>
                         </tr>
                             </table>
@@ -5023,7 +5024,7 @@ class emailMessage
                         </tr>
                         <tr>
                             <td class='content-block powered-by'>
-                                2023 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
+                                2025 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
                             </td>
                         </tr>
                             </table>
@@ -5407,7 +5408,7 @@ class emailMessage
                         </tr>
                         <tr>
                             <td class='content-block powered-by'>
-                                2023 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
+                                2025 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
                             </td>
                         </tr>
                             </table>
@@ -5793,7 +5794,7 @@ class emailMessage
                         </tr>
                         <tr>
                             <td class='content-block powered-by'>
-                                2023 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
+                                2025 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
                             </td>
                         </tr>
                             </table>

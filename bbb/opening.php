@@ -1,6 +1,6 @@
 <?php
 $pageName  = "Open an Account";
-include $_SERVER['DOCUMENT_ROOT'] . "/auth/reg.php";
+include ROOT_PATH . "/auth/reg.php";
 
 if (@$_SESSION['acct_no']) {
     header("Location:./user/dashboard.php");
@@ -137,13 +137,13 @@ if (isset($_POST['regSubmit'])) {
                             <h5 style="text-align: center;">
                                 <div id="google_translate_element"></div>
                                 <script type="text/javascript">
-                                function googleTranslateElementInit() {
-                                    new google.translate.TranslateElement({
-                                        pageLanguage: 'en',
-                                        includedLanguages: 'ar,en,es,jv,ko,pa,pt,ru,zh-CN,zh-TW,ja',
-                                        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-                                    }, 'google_translate_element');
-                                }
+                                    function googleTranslateElementInit() {
+                                        new google.translate.TranslateElement({
+                                            pageLanguage: 'en',
+                                            includedLanguages: 'ar,en,es,jv,ko,pa,pt,ru,zh-CN,zh-TW,ja',
+                                            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                                        }, 'google_translate_element');
+                                    }
                                 </script>
                                 <script type="text/javascript"
                                     src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
@@ -275,7 +275,7 @@ if (isset($_POST['regSubmit'])) {
 </div>
 
 <?php
-include $_SERVER['DOCUMENT_ROOT'] . "/auth/footer.php";
+include ROOT_PATH . "/auth/footer.php";
 ?>
 
 <!-- Add this script at the end of the body tag -->

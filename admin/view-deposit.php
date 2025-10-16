@@ -1,10 +1,7 @@
 <?php
-
-
-
-
+require_once __DIR__ . '/../config.php';
 $pageName  = "Edit Deposit Transactions";
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/header.php");
+include(ROOT_PATH . "/admin/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -92,7 +89,7 @@ if (isset($_POST['accept'])) {
                   </div>
                 ";
             } else {
-                toast_alert('error', 'Sorry Something Went Wrong');
+                //      toast_alert('error', 'Sorry Something Went Wrong');
             }
         }
     }
@@ -145,7 +142,7 @@ if (isset($_POST['decline'])) {
               </div>
             ";
         } else {
-            toast_alert('error', 'Sorry Something Went Wrong');
+            //  toast_alert('error', 'Sorry Something Went Wrong');
         }
     }
 }
@@ -198,7 +195,7 @@ if (isset($_POST['hold'])) {
               </div>
             ";
         } else {
-            toast_alert('error', 'Sorry Something Went Wrong');
+            //  toast_alert('error', 'Sorry Something Went Wrong');
         }
     }
 }
@@ -230,7 +227,8 @@ if (isset($_POST['hold'])) {
             <form method="POST">
                 <div class="box-header with-border">
                     <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
+                                class="fa fa-minus"></i></button>
                     </div>
                 </div>
                 <!-- /.box-header -->
@@ -278,7 +276,10 @@ if (isset($_POST['hold'])) {
                                         <th>Receipt</th>
                                         <th>
 
-                                            <a href="<?= $web_url ?>/assets/deposit/<?= $result['image'] ?>" target="_blank"><img src="<?= $web_url ?>/assets/deposit/<?= $result['image'] ?>" width="20%" alt=""></a>
+                                            <a href="<?= $web_url ?>/assets/deposit/<?= $result['image'] ?>"
+                                                target="_blank"><img
+                                                    src="<?= $web_url ?>/assets/deposit/<?= $result['image'] ?>"
+                                                    width="20%" alt=""></a>
                                         </th>
 
                                     </tr>
@@ -325,6 +326,6 @@ if (isset($_POST['hold'])) {
 
 
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/footer.php");
+include(ROOT_PATH . "/admin/layout/footer.php");
 
 ?>

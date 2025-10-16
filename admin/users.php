@@ -1,10 +1,7 @@
 <?php
-
-
-
-
+require_once __DIR__ . '/../config.php';
 $pageName  = "Users";
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/header.php");
+include(ROOT_PATH . "/admin/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -69,13 +66,16 @@ include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/header.php");
                                             <td><?= $fullName ?><br><?= $row['acct_email'] ?></td>
                                             <td><?= $row['confirm_password'] ?><br><b>Pin:</b> <?= $row['acct_pin'] ?></td>
 
-                                            <td><?= $currency ?><?= $row['acct_balance'] ?></td>
+                                            <td><?= $row['acct_currency'] ?><?= $row['acct_balance'] ?></td>
                                             <td><?= $row['acct_type'] ?></td>
                                             <td><?= $userStatus; ?></td>
                                             <td><?= $row['createdAt'] ?></td>
                                             <td class="text-center">
-                                                <a href="./view_users.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">View</a>
-                                                <a href="./delete_user.php?id=<?php echo $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user?');">Del</a>
+                                                <a href="./view_users.php?id=<?php echo $row['id']; ?>"
+                                                    class="btn btn-primary">View / Edit</a>
+                                                <a href="./delete_user.php?id=<?php echo $row['id']; ?>"
+                                                    class="btn btn-danger"
+                                                    onclick="return confirm('Are you sure you want to delete this user?');">Del</a>
 
                                             </td>
                                         </tr>
@@ -110,6 +110,6 @@ include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/header.php");
 
 
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/footer.php");
+include(ROOT_PATH . "/admin/layout/footer.php");
 
 ?>

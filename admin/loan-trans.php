@@ -1,10 +1,7 @@
 <?php
-
-
-
-
+require_once __DIR__ . '/../config.php';
 $pageName  = "Loan Transactions";
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/header.php");
+include(ROOT_PATH . "/admin/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -72,8 +69,11 @@ include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/header.php");
                                             <td><?= $currency ?><?php echo number_format($amount, 2, '.', ','); ?></td>
                                             <td><?= $transStatus ?></td>
                                             <td><?= $result['created_at'] ?></td>
-                                            <td class="text-center"><a href="./viewloan-trans.php?id=<?php echo $result['refrence_id']; ?>" class="btn btn-primary">View</a>
-                                                <a href="./delete_loan.php?id=<?php echo $result['refrence_id']; ?>" class="btn btn-danger">Del</a>
+                                            <td class="text-center"><a
+                                                    href="./viewloan-trans.php?id=<?php echo $result['refrence_id']; ?>"
+                                                    class="btn btn-primary">View</a>
+                                                <a href="./delete_loan.php?id=<?php echo $result['refrence_id']; ?>"
+                                                    class="btn btn-danger">Del</a>
                                             </td>
                                         </tr>
 
@@ -107,6 +107,6 @@ include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/header.php");
 
 
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/footer.php");
+include(ROOT_PATH . "/admin/layout/footer.php");
 
 ?>

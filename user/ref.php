@@ -1,7 +1,7 @@
 <?php
-
+require_once __DIR__ . '/../config.php';
 $pageName  = "Referral";
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
+include(ROOT_PATH . "/user/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -41,7 +41,8 @@ $user_id = userDetails('id');
             <div class="card-body">
 
                 <br>
-                <center><img src="<?= $web_url ?>/assets/images/ref.png" width="280px" height="260px" alt="Referral Image">
+                <center><img src="<?= $web_url ?>/assets/images/ref.png" width="280px" height="260px"
+                        alt="Referral Image">
                     <br><br>
                     <h1>Earn extra $ buck<br>with every referral</h1>
                     <p class="text-color">Share your referral code with your friends.</p>
@@ -49,9 +50,15 @@ $user_id = userDetails('id');
 
                 <div class="form-group">
                     <div class="input-group">
-                        <input id="myInput" type="text" class="form-control" style="border-bottom-right-radius: 0; border-top-right-radius: 0;" readonly="readonly" placeholder="<?= $web_url ?>/online-account-opening.php?id=<?= $row['acct_no'] ?>" value="<?= $web_url ?>/online-account-opening.php?id=<?= $row['acct_no'] ?>">
+                        <input id="myInput" type="text" class="form-control"
+                            style="border-bottom-right-radius: 0; border-top-right-radius: 0;" readonly="readonly"
+                            placeholder="<?= $web_url ?>/online-account-opening.php?id=<?= $row['acct_no'] ?>"
+                            value="<?= $web_url ?>/online-account-opening.php?id=<?= $row['acct_no'] ?>">
                         <span class="input-group-btn">
-                            <button style="color: #fff; border-bottom-left-radius: 0; height: 43px; border-top-left-radius: 0;" onclick="this.innerHTML='Copied'; this.classList.remove('btn-primary');this.classList.add('btn-primary');  var copyText = document.getElementById('myInput');  copyText.select();document.execCommand('copy');" class="btn btn-primary" type="button" id="copy-button">Copy </button>
+                            <button
+                                style="color: #fff; border-bottom-left-radius: 0; height: 43px; border-top-left-radius: 0;"
+                                onclick="this.innerHTML='Copied'; this.classList.remove('btn-primary');this.classList.add('btn-primary');  var copyText = document.getElementById('myInput');  copyText.select();document.execCommand('copy');"
+                                class="btn btn-primary" type="button" id="copy-button">Copy </button>
                         </span>
                     </div>
                 </div>
@@ -68,7 +75,7 @@ $user_id = userDetails('id');
     <!-- * App Capsule -->
 
     <?php
-    include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/bottom.php");
-    include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/footer.php");
+    include(ROOT_PATH . "/user/layout/bottom.php");
+    include(ROOT_PATH . "/user/layout/footer.php");
 
     ?>

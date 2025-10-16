@@ -1,7 +1,8 @@
 <?php
+require_once __DIR__ . '/../config.php';
 $pageName  = "Pincode";
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
-require_once($_SERVER['DOCUMENT_ROOT'] . "/include/Transfer/InterFunction.php");
+include(ROOT_PATH . "/user/layout/header.php");
+require_once(ROOT_PATH . "/include/Transfer/InterFunction.php");
 
 if (!$_SESSION['is_inter_transfer']) {
     header("Location:./dashboard.php");
@@ -78,7 +79,8 @@ if (isset($_POST['inter_submit'])) {
                 $APP_URL = WEB_URL;
                 $SITE_ADDRESS = $page['url_address'];
                 $user_email = $row['acct_email'];
-                $message = $sendMail->InterMsg($full_name, $amount, $account_number, $account_name, $refrence_id, $trans_type, $trans_status, $APP_NAME, $APP_URL, $SITE_ADDRESS);
+                $acct_currency = $row['acct_currency'];
+                $message = $sendMail->InterMsg($full_name, $amount, $account_number, $account_name, $refrence_id, $trans_type, $trans_status, $acct_currency, $APP_NAME, $APP_URL, $SITE_ADDRESS);
                 // User Email
                 $subject = "Interbank Transfer" . "-" . $APP_NAME;
                 $email_message->send_mail($user_email, $message, $subject);
@@ -87,7 +89,7 @@ if (isset($_POST['inter_submit'])) {
                 $_SESSION['is_transfer']  = "transfer";
                 header("Location:./success.php");
             } else {
-                toast_alert("error", "Sorry Error Occured Contact Support");
+                // toast_alert("error", "Sorry Error Occured Contact Support");
             }
         }
     }
@@ -123,7 +125,8 @@ if (isset($_POST['inter_submit'])) {
     <div class="section mb-5 p-2">
         <form method="POST">
             <div class="form-group basic">
-                <input type="text" name="pin" class="form-control verification-input" minlength="3" autocomplete="off" id="smscode" placeholder="••••" maxlength="4">
+                <input type="text" name="pin" class="form-control verification-input" minlength="3" autocomplete="off"
+                    id="smscode" placeholder="••••" maxlength="4">
 
 
 
@@ -131,8 +134,10 @@ if (isset($_POST['inter_submit'])) {
 
                 <input type="number" value="<?= $temp_trans['amount'] ?>" name="amount" hidden id="amount">
 
-                <input type="text" value="<?= $temp_trans['account_name'] ?>" name="account_name" hidden id="account_name">
-                <input type="number" value="<?= $temp_trans['account_number'] ?>" name="account_number" hidden id="account_number">
+                <input type="text" value="<?= $temp_trans['account_name'] ?>" name="account_name" hidden
+                    id="account_name">
+                <input type="number" value="<?= $temp_trans['account_number'] ?>" name="account_number" hidden
+                    id="account_number">
 
                 <input type="text" value="<?= $temp_trans['trans_type'] ?>" name="trans_type" hidden id="trans_type">
 
@@ -141,7 +146,8 @@ if (isset($_POST['inter_submit'])) {
             </div>
 
             <div class="form-button-group transparent">
-                <button type="submit" class="btn btn-primary btn-block btn-lg" name="inter_submit">Comfirm Transaction</button>
+                <button type="submit" class="btn btn-primary btn-block btn-lg" name="inter_submit">Comfirm
+                    Transaction</button>
             </div>
 
         </form>
@@ -154,6 +160,6 @@ if (isset($_POST['inter_submit'])) {
 
 
 
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/footer.php");
+include(ROOT_PATH . "/user/layout/footer.php");
 
 ?>

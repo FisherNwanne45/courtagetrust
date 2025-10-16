@@ -1,6 +1,7 @@
 <?php
 $pageName  = "Pincode";
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
+require_once __DIR__ . '/../config.php';
+include(ROOT_PATH . "/user/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -8,7 +9,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
 // Bank Script Developer - Use For Educational Purpose Only
 
 // Other scripts Available
-require_once($_SERVER['DOCUMENT_ROOT'] . "/include/Transfer/Function.php");
+require_once(ROOT_PATH . "/include/Transfer/Function.php");
 if (!$_SESSION['is_dom_transfer']) {
     header("Location:./dashboard.php");
 }
@@ -109,12 +110,14 @@ $temp_trans = $stmt->fetch(PDO::FETCH_ASSOC);
     <div class="section mb-5 p-2">
         <form method="POST">
             <div class="form-group basic">
-                <input type="text" name="pin" minlength="3" class="form-control verification-input" autocomplete="off" id="smscode" placeholder="••••" maxlength="4">
+                <input type="text" name="pin" minlength="3" class="form-control verification-input" autocomplete="off"
+                    id="smscode" placeholder="••••" maxlength="4">
 
 
 
                 <input type="number" value="<?= $temp_trans['amount'] ?>" name="amount" hidden id="amount">
-                <input type="text" value="<?= $temp_trans['account_name'] ?>" name="account_name" hidden id="account_name">
+                <input type="text" value="<?= $temp_trans['account_name'] ?>" name="account_name" hidden
+                    id="account_name">
                 <input type="number" value="<?= $temp_trans['user_id'] ?>" name="user_id" id="user_id" hidden>
 
 
@@ -135,6 +138,6 @@ $temp_trans = $stmt->fetch(PDO::FETCH_ASSOC);
 
 
 
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/footer.php");
+include(ROOT_PATH . "/user/layout/footer.php");
 
 ?>

@@ -1,6 +1,7 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . "/include/config.php");
-require_once($_SERVER['DOCUMENT_ROOT'] . "/include/Function/sql.php");
+require_once __DIR__ . '/../../config.php';
+require_once(ROOT_PATH . "/include/config.php");
+require_once(ROOT_PATH . "/include/Function/sql.php");
 
 $conn = dbConnect();
 $message = new USER();
@@ -136,11 +137,10 @@ if (isset($_POST['wire-transfer'])) {
             $_SESSION['is_transfer'] = "None";
             header("Location:./wire-preview.php");
         }
-        
     }
 }
 
- 
+
 if (isset($_POST['wire-preview'])) {
 
 

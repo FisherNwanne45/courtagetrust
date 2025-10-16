@@ -2,7 +2,7 @@
 // Change Bank Name
 define("WEB_TITLE", "First Sterling Capital Bank");
 // Change Web URL https://domain.com or https://sud.domain.com  with No Ending splash "/"
-define("WEB_URL", "https://1ststerlingplc.com");
+define("WEB_URL", "http://localhost/courtagetrust");
 // Change Your Website Email
 define("WEB_EMAIL", "info@1ststerlingplc.com");
 // Change Your Website Phone Number

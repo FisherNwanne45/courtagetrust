@@ -1,6 +1,7 @@
 <?php
+require_once __DIR__ . '/../config.php';
 $pageName  = "Transaction Preview";
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
+include(ROOT_PATH . "/user/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -82,6 +83,6 @@ include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
 
 
     <?php
-    include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/footer.php");
+    include(ROOT_PATH . "/user/layout/footer.php");
 
     ?>

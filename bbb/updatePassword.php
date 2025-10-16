@@ -2,7 +2,7 @@
 
 
 $pageName  = "New Password";
-include_once($_SERVER['DOCUMENT_ROOT'] . "/auth/header.php");
+include_once(ROOT_PATH . "/auth/header.php");
 if (@$_SESSION['acct_no']) {
     header("Location:./user/dashboard.php");
 }
@@ -153,6 +153,6 @@ if (isset($_POST['update'])) {
 
 <?php
 
-include_once($_SERVER['DOCUMENT_ROOT'] . "/auth/footer.php");
+include_once(ROOT_PATH . "/auth/footer.php");
 
 ?>

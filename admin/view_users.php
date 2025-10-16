@@ -1,6 +1,7 @@
 <?php
 $pageName  = "Edit User";
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/header.php");
+require_once __DIR__ . '/../config.php';
+include(ROOT_PATH . "/admin/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -66,7 +67,7 @@ if (isset($_POST['upload_picture'])) {
           </div>
         ";
         } else {
-            echo "invalid";
+            //   echo "invalid";
         }
     }
 }
@@ -118,7 +119,7 @@ if (isset($_POST['upload_picture2'])) {
           </div>
         ";
         } else {
-            echo "invalid";
+            //    echo "invalid";
         }
     }
 }
@@ -161,7 +162,7 @@ if (isset($_POST['profile_save'])) {
         'acct_gender' => $acct_gender,
         'billing_code' => $billing_code,
         'transfer' => $transfer,
-        'acct_currency'=> $acct_currency,
+        'acct_currency' => $acct_currency,
         'acct_cot' => $acct_cot,
         'acct_tax' => $acct_tax,
         'acct_imf' => $acct_imf,
@@ -198,7 +199,7 @@ if (isset($_POST['profile_save'])) {
           </div>
         ";
     } else {
-        toast_alert('error', 'Sorry something went wrong');
+        //   toast_alert('error', 'Sorry something went wrong');
     }
 }
 
@@ -247,7 +248,7 @@ if (isset($_POST['change_pin'])) {
           </div>
         ";
         } else {
-            toast_alert('error', 'Sorry Something Went Wrong');
+            //  toast_alert('error', 'Sorry Something Went Wrong');
         }
     }
 }
@@ -323,7 +324,7 @@ if (isset($_POST['status_submit'])) {
     $message = $sendMail->AdminRegisterMsg($full_name, $acct_no, $acct_status, $APP_NAME, $APP_URL, $SITE_ADDRESS);
     // User Email
     $subject = "Account Status" . "-" . $APP_NAME;
-  //  $email_message->send_mail($user_email, $message, $subject);
+    //  $email_message->send_mail($user_email, $message, $subject);
 
     if (true) {
         $msg1 = "
@@ -347,7 +348,7 @@ if (isset($_POST['status_submit'])) {
           </div>
         ";
     } else {
-        toast_alert('error', 'Sorry Something Went Wrong');
+        //  toast_alert('error', 'Sorry Something Went Wrong');
     }
 }
 
@@ -374,7 +375,8 @@ if (isset($_POST['status_submit'])) {
             <div class="box box-default">
                 <div class="box-header with-border">
                     <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
+                                class="fa fa-minus"></i></button>
                     </div>
                 </div>
                 <!-- /.box-header -->
@@ -387,53 +389,80 @@ if (isset($_POST['status_submit'])) {
 
                             <div class="form-group">
                                 <label for="exampleInputEmail1">First Name</label>
-                                <input type="text" class="form-control" placeholder="<?= $row['firstname'] ?>" name="firstname" value="<?= $row['firstname'] ?>">
+                                <input type="text" class="form-control" placeholder="<?= $row['firstname'] ?>"
+                                    name="firstname" value="<?= $row['firstname'] ?>">
 
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Last Name</label>
-                                <input type="text" class="form-control" value="<?= $row['lastname'] ?>" placeholder="<?= $row['lastname'] ?>" name="lastname">
+                                <input type="text" class="form-control" value="<?= $row['lastname'] ?>"
+                                    placeholder="<?= $row['lastname'] ?>" name="lastname">
                             </div>
-                            
+
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Account Number</label>
-                                <input type="text" class="form-control" value="<?= $row['acct_no'] ?>" placeholder="<?= $row['acct_no'] ?>" name="acct_no">
+                                <input type="text" class="form-control" value="<?= $row['acct_no'] ?>"
+                                    placeholder="<?= $row['acct_no'] ?>" name="acct_no">
                             </div>
                             <!-- /.form-group -->
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Account Type</label>
                                 <select class="form-control select2" name="acct_type" style="width: 100%;">
-    <option value="">Select Account Type</option>
-    <option value="Savings" <?php echo ($row['acct_type'] === 'Savings') ? 'selected' : ''; ?>>Savings Account</option>
-    <option value="Current" <?php echo ($row['acct_type'] === 'Current') ? 'selected' : ''; ?>>Current Account</option>
-    <option value="Checking" <?php echo ($row['acct_type'] === 'Checking') ? 'selected' : ''; ?>>Checking Account</option>
-    <option value="Fixed Deposit" <?php echo ($row['acct_type'] === 'Fixed Deposit') ? 'selected' : ''; ?>>Fixed Deposit</option>
-    <option value="Platinum" <?php echo ($row['acct_type'] === 'Platinum') ? 'selected' : ''; ?>>Platinum</option>
-    <option value="Non Resident" <?php echo ($row['acct_type'] === 'Non Resident') ? 'selected' : ''; ?>>Non Resident Account</option>
-    <option value="Online Banking" <?php echo ($row['acct_type'] === 'Online Banking') ? 'selected' : ''; ?>>Online Banking</option>
-    <option value="Domiciliary Account" <?php echo ($row['acct_type'] === 'Domiciliary Account') ? 'selected' : ''; ?>>Domiciliary Account</option>
-    <option value="Joint Account" <?php echo ($row['acct_type'] === 'Joint Account') ? 'selected' : ''; ?>>Joint Account</option>
-</select>
+                                    <option value="">Select Account Type</option>
+                                    <option value="Savings"
+                                        <?php echo ($row['acct_type'] === 'Savings') ? 'selected' : ''; ?>>Savings
+                                        Account</option>
+                                    <option value="Current"
+                                        <?php echo ($row['acct_type'] === 'Current') ? 'selected' : ''; ?>>Current
+                                        Account</option>
+                                    <option value="Checking"
+                                        <?php echo ($row['acct_type'] === 'Checking') ? 'selected' : ''; ?>>Checking
+                                        Account</option>
+                                    <option value="Fixed Deposit"
+                                        <?php echo ($row['acct_type'] === 'Fixed Deposit') ? 'selected' : ''; ?>>Fixed
+                                        Deposit</option>
+                                    <option value="Platinum"
+                                        <?php echo ($row['acct_type'] === 'Platinum') ? 'selected' : ''; ?>>Platinum
+                                    </option>
+                                    <option value="Non Resident"
+                                        <?php echo ($row['acct_type'] === 'Non Resident') ? 'selected' : ''; ?>>Non
+                                        Resident Account</option>
+                                    <option value="Online Banking"
+                                        <?php echo ($row['acct_type'] === 'Online Banking') ? 'selected' : ''; ?>>Online
+                                        Banking</option>
+                                    <option value="Domiciliary Account"
+                                        <?php echo ($row['acct_type'] === 'Domiciliary Account') ? 'selected' : ''; ?>>
+                                        Domiciliary Account</option>
+                                    <option value="Joint Account"
+                                        <?php echo ($row['acct_type'] === 'Joint Account') ? 'selected' : ''; ?>>Joint
+                                        Account</option>
+                                </select>
 
                             </div>
 
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" value="<?= $row['acct_email'] ?>" placeholder="<?= $row['acct_email'] ?>" name="acct_email">
+                                <input type="email" class="form-control" value="<?= $row['acct_email'] ?>"
+                                    placeholder="<?= $row['acct_email'] ?>" name="acct_email">
                             </div>
 
-                           <div class="form-group">
-    <label class="form-label">Gender</label>
-    <select class="form-control select2" name="acct_gender">
-        <option value="">Select Gender</option>
-        <option value="Male" <?php echo ($row['acct_gender'] === 'Male') ? 'selected' : ''; ?>>Male</option>
-        <option value="Female" <?php echo ($row['acct_gender'] === 'Female') ? 'selected' : ''; ?>>Female</option>
-        <option value="Other" <?php echo ($row['acct_gender'] === 'Other') ? 'selected' : ''; ?>>Other</option>
-    </select>
-</div>
+                            <div class="form-group">
+                                <label class="form-label">Gender</label>
+                                <select class="form-control select2" name="acct_gender">
+                                    <option value="">Select Gender</option>
+                                    <option value="Male"
+                                        <?php echo ($row['acct_gender'] === 'Male') ? 'selected' : ''; ?>>Male</option>
+                                    <option value="Female"
+                                        <?php echo ($row['acct_gender'] === 'Female') ? 'selected' : ''; ?>>Female
+                                    </option>
+                                    <option value="Other"
+                                        <?php echo ($row['acct_gender'] === 'Other') ? 'selected' : ''; ?>>Other
+                                    </option>
+                                </select>
+                            </div>
 
 
-         <!--                   <div class="form-group">
+                            <!--                   <div class="form-group">
     <label>Billing Code Option</label>
     <select class="form-control select2" name="billing_code" style="width: 100%;">
         <option value="">Select Option</option>
@@ -442,19 +471,23 @@ if (isset($_POST['status_submit'])) {
     </select>
 </div>-->
 
-<div class="form-group">
-    <label>Billing Code Option</label>
-    <select class="form-control select2" name="billing_code" style="width: 100%;">
-        <option value="">Select Option</option>
-        <option value="1" <?php echo ($row['billing_code'] === '1') ? 'selected' : ''; ?>>3 Codes and OTP</option>
-        <option value="2" <?php echo ($row['billing_code'] === '2') ? 'selected' : ''; ?>>3 Codes and Account Pin</option>
-        <option value="3" <?php echo ($row['billing_code'] === '3') ? 'selected' : ''; ?>>Account Pin Only</option>
-        <option value="0" <?php echo ($row['billing_code'] === '0') ? 'selected' : ''; ?>>OTP Code only</option>
-    </select>
-</div>
+                            <div class="form-group">
+                                <label>Billing Code Option</label>
+                                <select class="form-control select2" name="billing_code" style="width: 100%;">
+                                    <option value="">Select Option</option>
+                                    <option value="1" <?php echo ($row['billing_code'] === '1') ? 'selected' : ''; ?>>3
+                                        Codes and OTP</option>
+                                    <option value="2" <?php echo ($row['billing_code'] === '2') ? 'selected' : ''; ?>>3
+                                        Codes and Account Pin</option>
+                                    <option value="3" <?php echo ($row['billing_code'] === '3') ? 'selected' : ''; ?>>
+                                        Account Pin Only</option>
+                                    <option value="0" <?php echo ($row['billing_code'] === '0') ? 'selected' : ''; ?>>
+                                        OTP Code only</option>
+                                </select>
+                            </div>
 
 
-<!--
+                            <!--
 <div class="form-group">
     <label>Transfer Code Option</label>
     <select class="form-control select2" name="transfer" style="width: 100%;">
@@ -464,19 +497,25 @@ if (isset($_POST['status_submit'])) {
     </select>
 </div>
 -->
-<input type="hidden" name="transfer"  value="1" >
+                            <input type="hidden" name="transfer" value="1">
 
                             <div class="form-group">
                                 <label for="exampleInputEmail1"><?= $page['code1'] ?> Code</label>
-                                <input type="text" inputmode="numeric" required pattern="[0-9]+" maxlength="4" autocomplete="off" value="<?= $row['acct_cot'] ?>" class="form-control" name="acct_cot" placeholder="<?= $row['acct_cot'] ?>">
+                                <input type="text" inputmode="numeric" required pattern="[0-9]+" maxlength="4"
+                                    autocomplete="off" value="<?= $row['acct_cot'] ?>" class="form-control"
+                                    name="acct_cot" placeholder="<?= $row['acct_cot'] ?>">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1"><?= $page['code2'] ?> Code</label>
-                                <input type="text" inputmode="numeric" required pattern="[0-9]+" maxlength="4" autocomplete="off" value="<?= $row['acct_tax'] ?>" class="form-control" name="acct_tax" placeholder="<?= $row['acct_tax'] ?>">
+                                <input type="text" inputmode="numeric" required pattern="[0-9]+" maxlength="4"
+                                    autocomplete="off" value="<?= $row['acct_tax'] ?>" class="form-control"
+                                    name="acct_tax" placeholder="<?= $row['acct_tax'] ?>">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1"><?= $page['code3'] ?> Code</label>
-                                <input type="text" inputmode="numeric" required pattern="[0-9]+" maxlength="4" autocomplete="off" value="<?= $row['acct_imf'] ?>" class="form-control" name="acct_imf" placeholder="<?= $row['acct_imf'] ?>">
+                                <input type="text" inputmode="numeric" required pattern="[0-9]+" maxlength="4"
+                                    autocomplete="off" value="<?= $row['acct_imf'] ?>" class="form-control"
+                                    name="acct_imf" placeholder="<?= $row['acct_imf'] ?>">
                             </div>
 
 
@@ -486,48 +525,116 @@ if (isset($_POST['status_submit'])) {
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Account Phone</label>
-                                <input type="text" inputmode="numeric" required pattern="[0-9]+" maxlength="12" autocomplete="off" value="<?= $row['acct_phone'] ?>" class="form-control" name="acct_phone" placeholder="<?= $row['acct_phone'] ?>">
+                                <input type="text" inputmode="numeric" required pattern="[0-9]+" maxlength="12"
+                                    autocomplete="off" value="<?= $row['acct_phone'] ?>" class="form-control"
+                                    name="acct_phone" placeholder="<?= $row['acct_phone'] ?>">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Account Address</label>
-                                <input type="text" value="<?= $row['acct_address'] ?>" class="form-control" name="acct_address" placeholder="<?= $row['acct_address'] ?>">
+                                <input type="text" value="<?= $row['acct_address'] ?>" class="form-control"
+                                    name="acct_address" placeholder="<?= $row['acct_address'] ?>">
                             </div>
 
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Date of Birth</label>
-                                <input type="date" class="form-control" value="<?= $row['acct_dob'] ?>" name="acct_dob" placeholder="<?= $row['acct_dob'] ?>">
+                                <input type="date" class="form-control" value="<?= $row['acct_dob'] ?>" name="acct_dob"
+                                    placeholder="<?= $row['acct_dob'] ?>">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Balance</label>
-                                <input type="number" class="form-control" value="<?= $row['acct_balance'] ?>" name="acct_balance" placeholder="<?= $row['acct_balance'] ?>">
+                                <input type="number" class="form-control" value="<?= $row['acct_balance'] ?>"
+                                    name="acct_balance" placeholder="<?= $row['acct_balance'] ?>">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Currency</label>
-                                <input type="text" class="form-control" value="<?= $row['acct_currency'] ?>" name="acct_currency" placeholder="$">
+                                <select class="form-control select2" required name="acct_currency">
+                                    <option value="">Select Account Currency</option>
+
+                                    <option value="$" <?php echo ($row['acct_currency'] === '$') ? 'selected' : ''; ?>>
+                                        United States Dollar (USD) $</option>
+                                    <option value="C$"
+                                        <?php echo ($row['acct_currency'] === 'C$') ? 'selected' : ''; ?>>Canadian
+                                        Dollar (CAD) C$</option>
+                                    <option value="R$"
+                                        <?php echo ($row['acct_currency'] === 'R$') ? 'selected' : ''; ?>>Brazilian Real
+                                        (BRL) R$</option>
+                                    <option value="Mex$"
+                                        <?php echo ($row['acct_currency'] === 'Mex$') ? 'selected' : ''; ?>>Mexican Peso
+                                        (MXN) Mex$</option>
+
+                                    <option value="€" <?php echo ($row['acct_currency'] === '€') ? 'selected' : ''; ?>>
+                                        Euro (EUR) €</option>
+                                    <option value="£" <?php echo ($row['acct_currency'] === '£') ? 'selected' : ''; ?>>
+                                        British Pound Sterling (GBP) £</option>
+                                    <option value="Fr"
+                                        <?php echo ($row['acct_currency'] === 'Fr') ? 'selected' : ''; ?>>Swiss Franc
+                                        (CHF) Fr</option>
+                                    <option value="kr"
+                                        <?php echo ($row['acct_currency'] === 'kr') ? 'selected' : ''; ?>>Swedish Krona
+                                        (SEK) kr</option>
+                                    <option value="kr"
+                                        <?php echo ($row['acct_currency'] === 'kr') ? 'selected' : ''; ?>>Norwegian
+                                        Krone (NOK) kr</option>
+                                    <option value="₽" <?php echo ($row['acct_currency'] === '₽') ? 'selected' : ''; ?>>
+                                        Russian Ruble (RUB) ₽</option>
+
+                                    <option value="¥" <?php echo ($row['acct_currency'] === '¥') ? 'selected' : ''; ?>>
+                                        Japanese Yen (JPY) ¥</option>
+                                    <option value="¥" <?php echo ($row['acct_currency'] === '¥') ? 'selected' : ''; ?>>
+                                        Chinese Yuan (CNY) ¥</option>
+                                    <option value="₹" <?php echo ($row['acct_currency'] === '₹') ? 'selected' : ''; ?>>
+                                        Indian Rupee (INR) ₹</option>
+                                    <option value="HK$"
+                                        <?php echo ($row['acct_currency'] === 'HK$') ? 'selected' : ''; ?>>Hong Kong
+                                        Dollar (HKD) HK$</option>
+                                    <option value="S$"
+                                        <?php echo ($row['acct_currency'] === 'S$') ? 'selected' : ''; ?>>Singapore
+                                        Dollar (SGD) S$</option>
+                                    <option value="₩" <?php echo ($row['acct_currency'] === '₩') ? 'selected' : ''; ?>>
+                                        South Korean Won (KRW) ₩</option>
+
+                                    <option value="A$"
+                                        <?php echo ($row['acct_currency'] === 'A$') ? 'selected' : ''; ?>>Australian
+                                        Dollar (AUD) A$</option>
+                                    <option value="NZ$"
+                                        <?php echo ($row['acct_currency'] === 'NZ$') ? 'selected' : ''; ?>>New Zealand
+                                        Dollar (NZD) NZ$</option>
+                                    <option value="R" <?php echo ($row['acct_currency'] === 'R') ? 'selected' : ''; ?>>
+                                        South African Rand (ZAR) R</option>
+                                    <option value="₺" <?php echo ($row['acct_currency'] === '₺') ? 'selected' : ''; ?>>
+                                        Turkish Lira (TRY) ₺</option>
+                                </select>
+
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Loan</label>
-                                <input type="number" value="<?= $row['loan_balance'] ?>" class="form-control" name="loan_balance" placeholder="<?= $row['loan_balance'] ?>">
+                                <input type="number" value="<?= $row['loan_balance'] ?>" class="form-control"
+                                    name="loan_balance" placeholder="<?= $row['loan_balance'] ?>">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Limit Remain</label>
-                                <input type="number" value="<?= $row['limit_remain'] ?>" class="form-control" name="limit_remain" placeholder="<?= $row['limit_remain'] ?>">
+                                <input type="number" value="<?= $row['limit_remain'] ?>" class="form-control"
+                                    name="limit_remain" placeholder="<?= $row['limit_remain'] ?>">
                             </div>
 
                             <div class="form-group">
                                 <label>State</label>
-                                <input type="text" value="<?= $row['state'] ?>" class="form-control" name="state" placeholder="<?= $row['state'] ?>">
+                                <input type="text" value="<?= $row['state'] ?>" class="form-control" name="state"
+                                    placeholder="<?= $row['state'] ?>">
                             </div>
 
                             <div class="form-group">
                                 <label class="form-label">Zipcode</label>
-                                <input type="text" inputmode="numeric" required pattern="[0-9]+" maxlength="5" autocomplete="off" class="form-control" value="<?= $row['zipcode'] ?>" placeholder="<?= $row['zipcode'] ?>" name="zipcode">
+                                <input type="text" inputmode="numeric" required pattern="[0-9]+" maxlength="5"
+                                    autocomplete="off" class="form-control" value="<?= $row['zipcode'] ?>"
+                                    placeholder="<?= $row['zipcode'] ?>" name="zipcode">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Date of Account Creation</label>
-                                <input type="text" class="form-control" value="<?= $row['createdAt'] ?>" name="createdAt" placeholder="<?= $row['createdAt'] ?>">
+                                <input type="text" class="form-control" value="<?= $row['createdAt'] ?>"
+                                    name="createdAt" placeholder="<?= $row['createdAt'] ?>">
                             </div>
-                            
+
 
                         </div>
 
@@ -557,15 +664,18 @@ if (isset($_POST['status_submit'])) {
                         <div class="box-body">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Current Password</label>
-                                <input type="password" class="form-control" name="old_password" placeholder="<?= $row['confirm_password'] ?>">
+                                <input type="password" class="form-control" name="old_password"
+                                    placeholder="<?= $row['confirm_password'] ?>">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">New Password</label>
-                                <input type="password" class="form-control" name="new_password" placeholder="Old Password">
+                                <input type="password" class="form-control" name="new_password"
+                                    placeholder="Old Password">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Confirm New Password</label>
-                                <input type="password" class="form-control" name="confirm_password" placeholder="Old Password">
+                                <input type="password" class="form-control" name="confirm_password"
+                                    placeholder="Old Password">
                             </div>
                         </div>
                         <!-- /.box-body -->
@@ -577,112 +687,116 @@ if (isset($_POST['status_submit'])) {
                     </form>
                 </div>
                 <div>
-    Profile Image
-</div>
-<form method="POST" id="general-info" enctype="multipart/form-data" style="display: flex; align-items: center;">
-    <!-- Display the current image using an <img> tag -->
-    
-    <?php
-    // Fetch the image name from the database
-    $user_image = $row['acct_image']; // Assuming $row contains the user data from the database
+                    Profile Image
+                </div>
+                <form method="POST" id="general-info" enctype="multipart/form-data"
+                    style="display: flex; align-items: center;">
+                    <!-- Display the current image using an <img> tag -->
 
-    // Define the path to the images directory
-    $image_folder = "../assets/user/profile/";
+                    <?php
+                    // Fetch the image name from the database
+                    $user_image = $row['acct_image']; // Assuming $row contains the user data from the database
 
-    // Set the default image
-    $default_image = "default.png";
+                    // Define the path to the images directory
+                    $image_folder = "../assets/user/profile/";
 
-    // Check if the image exists and is not empty
-    if (!empty($user_image) && file_exists($image_folder . $user_image)) {
-        $image_to_display = $image_folder . $user_image;
-    } else {
-        $image_to_display = $image_folder . $default_image;
-    }
-?>
+                    // Set the default image
+                    $default_image = "default.png";
 
-<!-- Display the image in HTML -->
-<img src="<?= $image_to_display ?>" alt="Profile Image" id="image-preview" style="height: 120px;">
+                    // Check if the image exists and is not empty
+                    if (!empty($user_image) && file_exists($image_folder . $user_image)) {
+                        $image_to_display = $image_folder . $user_image;
+                    } else {
+                        $image_to_display = $image_folder . $default_image;
+                    }
+                    ?>
 
-    
-     
+                    <!-- Display the image in HTML -->
+                    <img src="<?= $image_to_display ?>" alt="Profile Image" id="image-preview" style="height: 120px;">
 
-    <div class="form-group" style="flex: 1;">
-        <input type="file" id="input-file-max-fs" class="form-control" name="image" data-max-file-size="2M" />
-        <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
-    </div>
-    <div class="box-footer">
-        <button type="submit" name="upload_picture" class="btn btn-primary">Change Profile Pic</button>
-    </div>
-</form>
 
-<br><br>
 
-<div id="fresh">
-    ID Card
-</div>
-<form method="POST" id="general-info" enctype="multipart/form-data" style="display: flex; align-items: center;">
-    <!-- Display the current ID card image using an <img> tag -->
-     <?php
-    // Fetch the image name from the database
-    $user_image2 = $row['acct_image2']; // Assuming $row contains the user data from the database
 
-    // Define the path to the images directory
-    $image_folder = "../assets/user/profile/";
+                    <div class="form-group" style="flex: 1;">
+                        <input type="file" id="input-file-max-fs" class="form-control" name="image"
+                            data-max-file-size="2M" />
+                        <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
+                    </div>
+                    <div class="box-footer">
+                        <button type="submit" name="upload_picture" class="btn btn-primary">Change Profile Pic</button>
+                    </div>
+                </form>
 
-    // Set the default image
-    $default_image2 = "id.jpg";
+                <br><br>
 
-    // Check if the image exists and is not empty
-    if (!empty($user_image2) && file_exists($image_folder . $user_image2)) {
-        $image_to_display2 = $image_folder . $user_image2;
-    } else {
-        $image_to_display2 = $image_folder . $default_image2;
-    }
-?>
+                <div id="fresh">
+                    ID Card
+                </div>
+                <form method="POST" id="general-info" enctype="multipart/form-data"
+                    style="display: flex; align-items: center;">
+                    <!-- Display the current ID card image using an <img> tag -->
+                    <?php
+                    // Fetch the image name from the database
+                    $user_image2 = $row['acct_image2']; // Assuming $row contains the user data from the database
 
-<!-- Display the image in HTML -->
-<img src="<?= $image_to_display2 ?>" alt="ID Card" id="id-card-preview" style="height: 120px;">
-    
-    
+                    // Define the path to the images directory
+                    $image_folder = "../assets/user/profile/";
 
-    <div class="form-group" style="flex: 1;">
-        <input type="file" id="input-file-max-fs2" class="form-control" name="image2" data-max-file-size="2M" />
-        <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
-    </div>
-    <div class="box-footer">
-        <button type="submit" name="upload_picture2" class="btn btn-primary">Change ID Card</button>
-    </div>
-</form>
+                    // Set the default image
+                    $default_image2 = "id.jpg";
 
-<script>
-    // Function to display the selected image in the image preview
-    function displayImage(event) {
-        var input = event.target;
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function(e) {
-                document.getElementById('image-preview').src = e.target.result;
-            };
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
+                    // Check if the image exists and is not empty
+                    if (!empty($user_image2) && file_exists($image_folder . $user_image2)) {
+                        $image_to_display2 = $image_folder . $user_image2;
+                    } else {
+                        $image_to_display2 = $image_folder . $default_image2;
+                    }
+                    ?>
 
-    // Function to display the selected ID card image in the preview
-    function displayIDCard(event) {
-        var input = event.target;
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function(e) {
-                document.getElementById('id-card-preview').src = e.target.result;
-            };
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
+                    <!-- Display the image in HTML -->
+                    <img src="<?= $image_to_display2 ?>" alt="ID Card" id="id-card-preview" style="height: 120px;">
 
-    // Add event listeners to the file inputs
-    document.getElementById('input-file-max-fs').addEventListener('change', displayImage);
-    document.getElementById('input-file-max-fs2').addEventListener('change', displayIDCard);
-</script>
+
+
+                    <div class="form-group" style="flex: 1;">
+                        <input type="file" id="input-file-max-fs2" class="form-control" name="image2"
+                            data-max-file-size="2M" />
+                        <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
+                    </div>
+                    <div class="box-footer">
+                        <button type="submit" name="upload_picture2" class="btn btn-primary">Change ID Card</button>
+                    </div>
+                </form>
+
+                <script>
+                    // Function to display the selected image in the image preview
+                    function displayImage(event) {
+                        var input = event.target;
+                        if (input.files && input.files[0]) {
+                            var reader = new FileReader();
+                            reader.onload = function(e) {
+                                document.getElementById('image-preview').src = e.target.result;
+                            };
+                            reader.readAsDataURL(input.files[0]);
+                        }
+                    }
+
+                    // Function to display the selected ID card image in the preview
+                    function displayIDCard(event) {
+                        var input = event.target;
+                        if (input.files && input.files[0]) {
+                            var reader = new FileReader();
+                            reader.onload = function(e) {
+                                document.getElementById('id-card-preview').src = e.target.result;
+                            };
+                            reader.readAsDataURL(input.files[0]);
+                        }
+                    }
+
+                    // Add event listeners to the file inputs
+                    document.getElementById('input-file-max-fs').addEventListener('change', displayImage);
+                    document.getElementById('input-file-max-fs2').addEventListener('change', displayIDCard);
+                </script>
                 <!-- /.box -->
             </div>
             <!--/.col (left) -->
@@ -699,15 +813,20 @@ if (isset($_POST['status_submit'])) {
                         <div class="box-body">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Old Pin</label>
-                                <input type="text" inputmode="numeric" required pattern="[0-9]+" maxlength="4" autocomplete="off" class="form-control" name="current_pin" placeholder="<?= $row['acct_pin'] ?>">
+                                <input type="text" inputmode="numeric" required pattern="[0-9]+" maxlength="4"
+                                    autocomplete="off" class="form-control" name="current_pin"
+                                    placeholder="<?= $row['acct_pin'] ?>">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">New Pin</label>
-                                <input type="text" inputmode="numeric" required pattern="[0-9]+" maxlength="4" autocomplete="off" class="form-control" name="new_pin" placeholder="New Pin">
+                                <input type="text" inputmode="numeric" required pattern="[0-9]+" maxlength="4"
+                                    autocomplete="off" class="form-control" name="new_pin" placeholder="New Pin">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Confirm New Pin</label>
-                                <input type="text" inputmode="numeric" required pattern="[0-9]+" maxlength="4" autocomplete="off" class="form-control" name="confirm_pin" placeholder="Confirm Pin">
+                                <input type="text" inputmode="numeric" required pattern="[0-9]+" maxlength="4"
+                                    autocomplete="off" class="form-control" name="confirm_pin"
+                                    placeholder="Confirm Pin">
                             </div>
                         </div>
                         <!-- /.box-body -->
@@ -728,7 +847,7 @@ if (isset($_POST['status_submit'])) {
                             <option value="active">ACTIVE</option>
                             <option value="suspend">PAUSE TRANSFER</option>
                             <option value="hold">DISABLE LOGIN</option>
-                            
+
                         </select>
                     </div>
                     <div class="box-footer">
@@ -750,6 +869,6 @@ if (isset($_POST['status_submit'])) {
 
 
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/footer.php");
+include(ROOT_PATH . "/admin/layout/footer.php");
 
 ?>

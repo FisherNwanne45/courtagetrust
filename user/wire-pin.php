@@ -1,6 +1,7 @@
 <?php
+require_once __DIR__ . '/../config.php';
 $pageName  = "Pincode";
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
+include(ROOT_PATH . "/user/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -8,7 +9,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
 // Bank Script Developer - Use For Educational Purpose Only
 
 // Other scripts Available
-require_once($_SERVER['DOCUMENT_ROOT'] . "/include/Transfer/WireFunction.php");
+require_once(ROOT_PATH . "/include/Transfer/WireFunction.php");
 
 if (!$_SESSION['is_wire_transfer']) {
     header("Location:./dashboard.php");
@@ -99,7 +100,8 @@ if (isset($_POST['wire_submit'])) {
                 $APP_URL = WEB_URL;
                 $SITE_ADDRESS = $page['url_address'];
                 $user_email = $row['acct_email'];
-                $message = $sendMail->WireMsg($full_name, $amount, $account_type, $trans_type, $refrence_id, $swift_code, $routine_number, $bank_country, $bank_name, $trans_status, $account_number, $account_name, $APP_NAME, $APP_URL, $SITE_ADDRESS);
+                $acct_currency = $row['acct_currency'];
+                $message = $sendMail->WireMsg($full_name, $amount, $account_type, $trans_type, $refrence_id, $swift_code, $routine_number, $bank_country, $bank_name, $trans_status, $account_number, $account_name, $acct_currency, $APP_NAME, $APP_URL, $SITE_ADDRESS);
                 // User Email
                 $subject = "Wire Transfer" . "-" . $APP_NAME;
                 $email_message->send_mail($user_email, $message, $subject);
@@ -108,7 +110,7 @@ if (isset($_POST['wire_submit'])) {
                 $_SESSION['is_transfer']  = "transfer";
                 header("Location:./success.php");
             } else {
-                toast_alert("error", "Sorry Error Occured Contact Support");
+                // toast_alert("error", "Sorry Error Occured Contact Support");
             }
         }
     }
@@ -143,7 +145,8 @@ if (isset($_POST['wire_submit'])) {
     <div class="section mb-5 p-2">
         <form method="POST">
             <div class="form-group basic">
-                <input type="text" name="pin" class="form-control verification-input" autocomplete="off" id="smscode" placeholder="••••" minlength="3" maxlength="4">
+                <input type="text" name="pin" class="form-control verification-input" autocomplete="off" id="smscode"
+                    placeholder="••••" minlength="3" maxlength="4">
 
 
 
@@ -151,13 +154,18 @@ if (isset($_POST['wire_submit'])) {
 
                 <input type="number" value="<?= $temp_trans['amount'] ?>" name="amount" hidden id="amount">
                 <input type="text" value="<?= $temp_trans['bank_name'] ?>" name="bank_name" hidden id="bank_name">
-                <input type="text" value="<?= $temp_trans['account_name'] ?>" name="account_name" hidden id="account_name">
-                <input type="number" value="<?= $temp_trans['account_number'] ?>" name="account_number" hidden id="account_number">
-                <input type="text" value="<?= $temp_trans['account_type'] ?>" name="account_type" hidden id="account_type">
+                <input type="text" value="<?= $temp_trans['account_name'] ?>" name="account_name" hidden
+                    id="account_name">
+                <input type="number" value="<?= $temp_trans['account_number'] ?>" name="account_number" hidden
+                    id="account_number">
+                <input type="text" value="<?= $temp_trans['account_type'] ?>" name="account_type" hidden
+                    id="account_type">
                 <input type="text" value="<?= $temp_trans['trans_type'] ?>" name="trans_type" hidden id="trans_type">
-                <input type="text" value="<?= $temp_trans['bank_country'] ?>" name="bank_country" hidden id="bank_country">
+                <input type="text" value="<?= $temp_trans['bank_country'] ?>" name="bank_country" hidden
+                    id="bank_country">
                 <input type="number" value="<?= $temp_trans['user_id'] ?>" name="user_id" id="user_id" hidden>
-                <input type="text" value="<?= $temp_trans['routine_number'] ?>" name="routine_number" id="routine_number" hidden>
+                <input type="text" value="<?= $temp_trans['routine_number'] ?>" name="routine_number"
+                    id="routine_number" hidden>
                 <input type="text" value="<?= $temp_trans['swift_code'] ?>" name="swift_code" id="swift_code" hidden>
 
 
@@ -165,7 +173,8 @@ if (isset($_POST['wire_submit'])) {
             </div>
 
             <div class="form-button-group transparent">
-                <button type="submit" class="btn btn-primary btn-block btn-lg" name="wire_submit">Comfirm Transaction</button>
+                <button type="submit" class="btn btn-primary btn-block btn-lg" name="wire_submit">Comfirm
+                    Transaction</button>
             </div>
 
         </form>
@@ -178,6 +187,6 @@ if (isset($_POST['wire_submit'])) {
 
 
 
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/footer.php");
+include(ROOT_PATH . "/user/layout/footer.php");
 
 ?>

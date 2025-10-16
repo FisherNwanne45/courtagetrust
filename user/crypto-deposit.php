@@ -1,6 +1,7 @@
 <?php
 $pageName  = "Digital Deposit";
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
+require_once __DIR__ . '/../config.php';
+include(ROOT_PATH . "/user/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -84,14 +85,15 @@ if (isset($_POST['deposit'])) {
                     $APP_URL = WEB_URL;
                     $SITE_ADDRESS = $page['url_address'];
                     $user_email = $row['acct_email'];
-                    $message = $sendMail->DepositMsg($full_name, $amount, $trans_type, $trans_status, $refrence_id, $APP_NAME, $APP_URL, $SITE_ADDRESS);
+                    $acct_currency = $row['acct_currency'];
+                    $message = $sendMail->DepositMsg($full_name, $amount, $trans_type, $trans_status, $refrence_id, $acct_currency, $APP_NAME, $APP_URL, $SITE_ADDRESS);
                     // User Email
                     $subject = "Deposit" . "-" . $APP_NAME;
                     $email_message->send_mail($user_email, $message, $subject);
 
                     toast_alert("success", "Your Deposit request is pending", "Thanks!");
                 } else {
-                    toast_alert("error", "Sorry Something Went Wrong !");
+                    //    toast_alert("error", "Sorry Something Went Wrong !");
                 }
             }
         }
@@ -140,7 +142,8 @@ if (isset($_POST['deposit'])) {
                 <div class="form-group basic">
                     <div class="input-wrapper">
                         <label class="label">Crypto Type</label>
-                        <select name="crypto_name" onchange="crypto_type(this.value)" required class="form-control" data-width='100%'>
+                        <select name="crypto_name" onchange="crypto_type(this.value)" required class="form-control"
+                            data-width='100%'>
                             <option value="">Select Crypto Type</option>
                             <?php
                             $sql = $conn->query("SELECT * FROM crypto_currency ORDER BY crypto_name");
@@ -166,7 +169,8 @@ if (isset($_POST['deposit'])) {
                 <div class="form-group basic">
                     <div class="input-wrapper">
                         <label class="label">Crypto Wallet Address</label>
-                        <input type="text" class="form-control" name="wallet_address" id="wallet_address" placeholder="Wallet Address" readonly>
+                        <input type="text" class="form-control" name="wallet_address" id="wallet_address"
+                            placeholder="Wallet Address" readonly>
                         <i class="clear-input">
                             <ion-icon name="close-circle"></ion-icon>
                         </i>
@@ -186,7 +190,9 @@ if (isset($_POST['deposit'])) {
                 <div class="form-group basic">
                     <div class="input-wrapper">
                         <label class="label">Trasaction Pin</label>
-                        <input type="text" class="form-control" inputmode="numeric" required pattern="[0-9]+" maxlength="4" autocomplete="off" style="margin-bottom: 5px" placeholder="Your 4 Digit Transaction Pin" name="pin">
+                        <input type="text" class="form-control" inputmode="numeric" required pattern="[0-9]+"
+                            maxlength="4" autocomplete="off" style="margin-bottom: 5px"
+                            placeholder="Your 4 Digit Transaction Pin" name="pin">
                         <i class="clear-input">
                             <ion-icon name="close-circle"></ion-icon>
                         </i>
@@ -203,7 +209,8 @@ if (isset($_POST['deposit'])) {
                                 Back</a>
                         </div>
                         <div class="col-6">
-                            <button type="submit" class="btn btn-lg btn-primary btn-block" name="deposit">Proceed</button>
+                            <button type="submit" class="btn btn-lg btn-primary btn-block"
+                                name="deposit">Proceed</button>
                         </div>
                     </div>
                 </div>
@@ -221,7 +228,7 @@ if (isset($_POST['deposit'])) {
 <!-- Ofofonobs Developer WhatsAPP +2348114313795 -->
 
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/bottom.php");
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/footer.php");
+include(ROOT_PATH . "/user/layout/bottom.php");
+include(ROOT_PATH . "/user/layout/footer.php");
 
 ?>

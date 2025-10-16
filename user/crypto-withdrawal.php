@@ -1,6 +1,7 @@
 <?php
+require_once __DIR__ . '/../config.php';
 $pageName  = "Crypto Withdrawal";
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
+include(ROOT_PATH . "/user/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -71,7 +72,8 @@ if (isset($_POST['withdraw'])) {
             $APP_URL = WEB_URL;
             $SITE_ADDRESS = $page['url_address'];
             $user_email = $row['acct_email'];
-            $message = $sendMail->WithdrawMsg($full_name, $amount, $trans_type, $trans_status, $refrence_id, $APP_NAME, $APP_URL, $SITE_ADDRESS);
+            $acct_currency = $row['acct_currency'];
+            $message = $sendMail->WithdrawMsg($full_name, $amount, $trans_type, $trans_status, $refrence_id, $acct_currency, $APP_NAME, $APP_URL, $SITE_ADDRESS);
             // User Email
             $subject = "Crypto Withdrawal" . "-" . $APP_NAME;
             $email_message->send_mail($user_email, $message, $subject);
@@ -161,7 +163,9 @@ if (isset($_POST['withdraw'])) {
                 <div class="form-group basic">
                     <div class="input-wrapper">
                         <label class="label">Trasaction Pin</label>
-                        <input type="text" class="form-control" inputmode="numeric" required pattern="[0-9]+" maxlength="4" autocomplete="off" style="margin-bottom: 5px" placeholder="Your 4 Digit Transaction Pin" name="pin">
+                        <input type="text" class="form-control" inputmode="numeric" required pattern="[0-9]+"
+                            maxlength="4" autocomplete="off" style="margin-bottom: 5px"
+                            placeholder="Your 4 Digit Transaction Pin" name="pin">
                         <i class="clear-input">
                             <ion-icon name="close-circle"></ion-icon>
                         </i>
@@ -178,7 +182,8 @@ if (isset($_POST['withdraw'])) {
                                 Back</a>
                         </div>
                         <div class="col-6">
-                            <button type="submit" class="btn btn-lg btn-primary btn-block" name="withdraw">Proceed</button>
+                            <button type="submit" class="btn btn-lg btn-primary btn-block"
+                                name="withdraw">Proceed</button>
                         </div>
                     </div>
                 </div>
@@ -196,7 +201,7 @@ if (isset($_POST['withdraw'])) {
 <!-- Ofofonobs Developer WhatsAPP +2348114313795 -->
 
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/bottom.php");
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/footer.php");
+include(ROOT_PATH . "/user/layout/bottom.php");
+include(ROOT_PATH . "/user/layout/footer.php");
 
 ?>

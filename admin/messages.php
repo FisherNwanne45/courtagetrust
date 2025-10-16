@@ -1,10 +1,7 @@
 <?php
-
-
-
-
+require_once __DIR__ . '/../config.php';
 $pageName  = "Support Tickets";
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/header.php");
+include(ROOT_PATH . "/admin/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -63,7 +60,8 @@ include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/header.php");
                                         <td><?= $row['ticket_message'] ?></td>
                                         <td><?= $row['createdAt'] ?></td>
                                         <td class="text-center">
-                                            <a href="./view_users.php?id=<?php echo $row['user_id']; ?>" class="btn btn-primary">View User</a>
+                                            <a href="./view_users.php?id=<?php echo $row['user_id']; ?>"
+                                                class="btn btn-primary">View User</a>
                                         </td>
                                     </tr>
 
@@ -96,6 +94,6 @@ include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/header.php");
 
 
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/footer.php");
+include(ROOT_PATH . "/admin/layout/footer.php");
 
 ?>

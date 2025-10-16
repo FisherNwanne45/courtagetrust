@@ -1,8 +1,8 @@
 <?php
 ob_start();
 session_start();
-require_once($_SERVER['DOCUMENT_ROOT'] . "/admin/include/adminloginFunction.php");
-require_once($_SERVER['DOCUMENT_ROOT'] . "/admin/include/session.php");
+require_once(ROOT_PATH . "/admin/include/adminloginFunction.php");
+require_once(ROOT_PATH . "/admin/include/session.php");
 
 if (@$_SESSION['admin']) {
     header('Location:./dashboard.php');

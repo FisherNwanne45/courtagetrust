@@ -1,7 +1,8 @@
 <?php
+require_once __DIR__ . '/../config.php';
 session_start();
 $pageName = "Upload Picture";
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
+include(ROOT_PATH . "/user/layout/header.php");
 
 // Ensure the user is authenticated
 if (!isset($_SESSION['user_id'])) {
@@ -40,7 +41,7 @@ if (isset($_POST['upload_picture']) && isset($_FILES['image'])) {
 
     // Move file securely
     if (move_uploaded_file($file['tmp_name'], $destination)) {
-        require_once $_SERVER['DOCUMENT_ROOT'] . "/config/database.php"; // Secure database connection
+        require_once ROOT_PATH . "/config/database.php"; // Secure database connection
 
         $sql = "UPDATE users SET acct_image=:image WHERE id=:user_id";
         $stmt = $conn->prepare($sql);
@@ -114,6 +115,6 @@ if (isset($_POST['upload_picture']) && isset($_FILES['image'])) {
 </div>
 
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/bottom.php");
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/footer.php");
+include(ROOT_PATH . "/user/layout/bottom.php");
+include(ROOT_PATH . "/user/layout/footer.php");
 ?>

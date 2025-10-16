@@ -1,6 +1,7 @@
 <?php
+require_once __DIR__ . '/../config.php';
 $pageName  = "Password Settings";
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
+include(ROOT_PATH . "/user/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -94,7 +95,8 @@ if (isset($_POST['change_password'])) {
                 <div class="form-group basic">
                     <div class="input-wrapper">
                         <label class="label">Old Password</label>
-                        <input type="text" class="form-control" autocomplete="off" name="old_password" placeholder="Old Password" required>
+                        <input type="text" class="form-control" autocomplete="off" name="old_password"
+                            placeholder="Old Password" required>
                         <i class="clear-input">
                             <ion-icon name="close-circle"></ion-icon>
                         </i>
@@ -105,7 +107,8 @@ if (isset($_POST['change_password'])) {
                 <div class="form-group basic">
                     <div class="input-wrapper">
                         <label class="label">New Password</label>
-                        <input type="text" class="form-control" autocomplete="off" placeholder="New Password" name="new_password" required>
+                        <input type="text" class="form-control" autocomplete="off" placeholder="New Password"
+                            name="new_password" required>
                         <i class="clear-input">
                             <ion-icon name="close-circle"></ion-icon>
                         </i>
@@ -116,7 +119,8 @@ if (isset($_POST['change_password'])) {
                 <div class="form-group basic">
                     <div class="input-wrapper">
                         <label class="label">Confirm New Password</label>
-                        <input type="text" class="form-control" id="phone_number" autocomplete="off" name="confirm_password" placeholder="Confirm New Password" required>
+                        <input type="text" class="form-control" id="phone_number" autocomplete="off"
+                            name="confirm_password" placeholder="Confirm New Password" required>
                         <i class="clear-input">
                             <ion-icon name="close-circle"></ion-icon>
                         </i>
@@ -139,8 +143,8 @@ if (isset($_POST['change_password'])) {
 
 <?php
 
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/bottom.php");
+include(ROOT_PATH . "/user/layout/bottom.php");
 
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/footer.php");
+include(ROOT_PATH . "/user/layout/footer.php");
 
 ?>

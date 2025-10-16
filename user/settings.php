@@ -1,10 +1,7 @@
 <?php
-
-
-
-
+require_once __DIR__ . '/../config.php';
 $pageName  = "Account Settings";
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
+include(ROOT_PATH . "/user/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -22,35 +19,35 @@ include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
         <!--    <ion-icon name="menu-outline"></ion-icon>-->
         <!--</a>-->
         <a href="<?= $web_url ?>/user/settings.php" class="headerButton">
-           <?php
-    // Fetch the image name from the database
-    $user_image = $row['acct_image']; // Assuming $row contains the user data from the database
-    $user_image2 = $row['acct_image2'];
+            <?php
+            // Fetch the image name from the database
+            $user_image = $row['acct_image']; // Assuming $row contains the user data from the database
+            $user_image2 = $row['acct_image2'];
 
-    // Define the path to the images directory
-    $image_folder = $web_url . "/assets/user/profile/";
+            // Define the path to the images directory
+            $image_folder = $web_url . "/assets/user/profile/";
 
-    // Set the default image
-    $default_image = "default.png";
-    $default_image2 = "id.jpg";
+            // Set the default image
+            $default_image = "default.png";
+            $default_image2 = "id.jpg";
 
-    // Check if the image exists and is not empty
-    if (!empty($user_image) && file_exists($_SERVER['DOCUMENT_ROOT'] . "/assets/user/profile/" . $user_image)) {
-        $image_to_display = $image_folder . $user_image;
-    } else {
-        $image_to_display = $image_folder . $default_image;
-    }
-    
-    
-    if (!empty($user_image2) && file_exists($_SERVER['DOCUMENT_ROOT'] . "/assets/user/profile/" . $user_image2)) {
-        $image_to_display2 = $image_folder . $user_image2;
-    } else {
-        $image_to_display2 = $image_folder . $default_image2;
-    }
-?>
+            // Check if the image exists and is not empty
+            if (!empty($user_image) && file_exists(ROOT_PATH . "/assets/user/profile/" . $user_image)) {
+                $image_to_display = $image_folder . $user_image;
+            } else {
+                $image_to_display = $image_folder . $default_image;
+            }
 
-<!-- Display the image in HTML -->
-<img src="<?= $image_to_display ?>" alt="image" class="imaged w32">
+
+            if (!empty($user_image2) && file_exists(ROOT_PATH . "/assets/user/profile/" . $user_image2)) {
+                $image_to_display2 = $image_folder . $user_image2;
+            } else {
+                $image_to_display2 = $image_folder . $default_image2;
+            }
+            ?>
+
+            <!-- Display the image in HTML -->
+            <img src="<?= $image_to_display ?>" alt="image" class="imaged w32">
         </a>
     </div>
     <div class="pageTitle">
@@ -78,14 +75,14 @@ include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
         <div class="avatar-section">
             <a href="#">
                 <img src="<?= $image_to_display ?>" alt="avatar" class="imaged w100 rounded">
-                 
+
                 <a href="<?= $web_url ?>/user/upload-pics.php" class="button">
                     <ion-icon name="camera-outline"></ion-icon>
                 </a>
         </div>
     </div>
 
-   
+
     <div class="listview-title mt-1">Profile Settings</div>
     <ul class="listview image-listview text inset">
         <li>
@@ -140,20 +137,21 @@ include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
         <li>
             <a href="#" class="item">
                 <div class="icon-box bg-primary">
-                     
+
                     <ion-icon name="id-card-outline"></ion-icon>
                 </div>
                 <div class="in">
                     <div>Identity Document
                         <div class="text-muted">
-                            <img src="<?= $image_to_display2 ?>" alt="ID Card" id="id-card-preview" style="height: 150px;">
-                          
+                            <img src="<?= $image_to_display2 ?>" alt="ID Card" id="id-card-preview"
+                                style="height: 150px;">
+
                         </div>
                     </div>
                 </div>
             </a>
         </li>
-        
+
         <li>
             <a href="<?= $web_url ?>/user/statements.php" class="item">
                 <div class="icon-box bg-primary">
@@ -232,8 +230,8 @@ include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
             </a>
         </li>
     </ul>
-    
-     <div class="listview-title mt-1">Theme</div>
+
+    <div class="listview-title mt-1">Theme</div>
     <ul class="listview image-listview text inset no-line">
         <li>
             <div class="item">
@@ -263,8 +261,8 @@ include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
 
 <?php
 
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/bottom.php");
+include(ROOT_PATH . "/user/layout/bottom.php");
 
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/footer.php");
+include(ROOT_PATH . "/user/layout/footer.php");
 
 ?>

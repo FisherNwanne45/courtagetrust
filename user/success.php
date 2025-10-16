@@ -1,6 +1,7 @@
 <?php
+require_once __DIR__ . '/../config.php';
 $pageName  = "Transaction Status";
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
+include(ROOT_PATH . "/user/layout/header.php");
 
 
 if (!isset($_SESSION['is_transfer'])) {
@@ -265,8 +266,8 @@ $DomesticFee = $page['domesticfee'];
 
 
     <?php
-    include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/bottom.php");
+    include(ROOT_PATH . "/user/layout/bottom.php");
 
-    include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/footer.php");
+    include(ROOT_PATH . "/user/layout/footer.php");
 
     ?>

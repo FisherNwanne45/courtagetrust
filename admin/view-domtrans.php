@@ -1,10 +1,7 @@
 <?php
-
-
-
-
+require_once __DIR__ . '/../config.php';
 $pageName  = "Edit Domestic Transactions";
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/header.php");
+include(ROOT_PATH . "/admin/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -48,9 +45,10 @@ if (isset($_POST['accept'])) {
     $APP_URL = WEB_URL;
     $SITE_ADDRESS = $page['url_address'];
     $user_email = $result['acct_email'];
+    $acct_currency = $result['acct_currency'];
     $trans_status = "completed";
     $trans_type = "Domestic Transfer";
-    $message = $sendMail->AdminDomMsg($full_name, $amount, $user_balance, $trans_status, $trans_type, $APP_NAME, $APP_URL, $SITE_ADDRESS);
+    $message = $sendMail->AdminDomMsg($full_name, $amount, $user_balance, $trans_status, $trans_type, $acct_currency, $APP_NAME, $APP_URL, $SITE_ADDRESS);
     // User Email
     $subject = "Domesitic" . "-" . $APP_NAME;
     $email_message->send_mail($user_email, $message, $subject);
@@ -77,7 +75,7 @@ if (isset($_POST['accept'])) {
           </div>
         ";
     } else {
-        toast_alert('error', 'Sorry Something Went Wrong');
+        //   toast_alert('error', 'Sorry Something Went Wrong');
     }
 }
 
@@ -106,9 +104,10 @@ if (isset($_POST['decline'])) {
     $APP_URL = WEB_URL;
     $SITE_ADDRESS = $page['url_address'];
     $user_email = $result['acct_email'];
+    $acct_currency = $result['acct_currency'];
     $trans_status = "failed";
     $trans_type = "Domestic Transfer";
-    $message = $sendMail->AdminDomMsg($full_name, $amount, $user_balance, $trans_status, $trans_type, $APP_NAME, $APP_URL, $SITE_ADDRESS);
+    $message = $sendMail->AdminDomMsg($full_name, $amount, $user_balance, $trans_status, $trans_type, $acct_currency, $APP_NAME, $APP_URL, $SITE_ADDRESS);
     // User Email
     $subject = "Domesitic" . "-" . $APP_NAME;
     $email_message->send_mail($user_email, $message, $subject);
@@ -136,7 +135,7 @@ if (isset($_POST['decline'])) {
           </div>
         ";
     } else {
-        toast_alert('error', 'Sorry Something Went Wrong');
+        //    toast_alert('error', 'Sorry Something Went Wrong');
     }
 }
 
@@ -155,9 +154,10 @@ if (isset($_POST['hold'])) {
     $APP_URL = WEB_URL;
     $SITE_ADDRESS = $page['url_address'];
     $user_email = $result['acct_email'];
+    $acct_currency = $result['acct_currency'];
     $trans_status = "processing";
     $trans_type = "Domestic Transfer";
-    $message = $sendMail->AdminDomMsg($full_name, $amount, $user_balance, $trans_status, $trans_type, $APP_NAME, $APP_URL, $SITE_ADDRESS);
+    $message = $sendMail->AdminDomMsg($full_name, $amount, $user_balance, $trans_status, $trans_type, $acct_currency, $APP_NAME, $APP_URL, $SITE_ADDRESS);
 
     if (true) {
         $msg1 = "
@@ -181,7 +181,7 @@ if (isset($_POST['hold'])) {
           </div>
         ";
     } else {
-        toast_alert('error', 'Sorry Something Went Wrong');
+        //   toast_alert('error', 'Sorry Something Went Wrong');
     }
 }
 
@@ -266,7 +266,8 @@ if (isset($_POST['update_trans'])) {
             <form method="POST">
                 <div class="box-header with-border">
                     <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
+                                class="fa fa-minus"></i></button>
                     </div>
                 </div>
                 <!-- /.box-header -->
@@ -277,16 +278,22 @@ if (isset($_POST['update_trans'])) {
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Amount</label>
-                                <input type="number" class="form-control" name="amount" placeholder="<?= $result['amount'] ?>" value="<?= $result['amount'] ?>" required>
+                                <input type="number" class="form-control" name="amount"
+                                    placeholder="<?= $result['amount'] ?>" value="<?= $result['amount'] ?>" required>
                             </div>
                             <!-- /.form-group -->
                             <div class="form-group">
                                 <label>Bank Name</label>
-                                <input type="text" class="form-control" name="bank_name" placeholder="<?= $result['bank_name'] ?>" value="<?= $result['bank_name'] ?>" required>
+                                <input type="text" class="form-control" name="bank_name"
+                                    placeholder="<?= $result['bank_name'] ?>" value="<?= $result['bank_name'] ?>"
+                                    required>
                             </div>
                             <div class="form-group">
                                 <label>Account Number</label>
-                                <input type="text" inputmode="numeric" required pattern="[0-9]+" maxlength="12" autocomplete="off" class="form-control" name="account_number" placeholder="<?= $result['account_number'] ?>" value="<?= $result['account_number'] ?>" required>
+                                <input type="text" inputmode="numeric" required pattern="[0-9]+" maxlength="12"
+                                    autocomplete="off" class="form-control" name="account_number"
+                                    placeholder="<?= $result['account_number'] ?>"
+                                    value="<?= $result['account_number'] ?>" required>
                             </div>
                             <!-- /.form-group -->
                         </div>
@@ -294,7 +301,9 @@ if (isset($_POST['update_trans'])) {
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Account Name</label>
-                                <input type="text" class="form-control" name="account_name" placeholder="<?= $result['account_name'] ?>" value="<?= $result['account_name'] ?>" required>
+                                <input type="text" class="form-control" name="account_name"
+                                    placeholder="<?= $result['account_name'] ?>" value="<?= $result['account_name'] ?>"
+                                    required>
                             </div>
 
                             <div class="form-group">
@@ -572,7 +581,9 @@ if (isset($_POST['update_trans'])) {
 
                             <div class="form-group">
                                 <label>Date</label>
-                                <input type="text" class="form-control" name="created_at" placeholder="<?= $result['created_at'] ?>" value="<?= $result['created_at'] ?>" required>
+                                <input type="text" class="form-control" name="created_at"
+                                    placeholder="<?= $result['created_at'] ?>" value="<?= $result['created_at'] ?>"
+                                    required>
                             </div>
 
 
@@ -609,6 +620,6 @@ if (isset($_POST['update_trans'])) {
 
 
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/footer.php");
+include(ROOT_PATH . "/admin/layout/footer.php");
 
 ?>

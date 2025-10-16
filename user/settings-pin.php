@@ -1,6 +1,7 @@
 <?php
+require_once __DIR__ . '/../config.php';
 $pageName  = "Pin Settings";
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
+include(ROOT_PATH . "/user/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -81,7 +82,9 @@ if (isset($_POST['change_pin'])) {
                 <div class="form-group basic">
                     <div class="input-wrapper">
                         <label class="label">Old Pin</label>
-                        <input type="text" inputmode="numeric" pattern="[0-9]+" minlength="3" maxlength="4" autocomplete="off" class="form-control" name="current_pin" autocomplete="off" placeholder="Old Pin" required>
+                        <input type="text" inputmode="numeric" pattern="[0-9]+" minlength="3" maxlength="4"
+                            autocomplete="off" class="form-control" name="current_pin" autocomplete="off"
+                            placeholder="Old Pin" required>
                         <i class="clear-input">
                             <ion-icon name="close-circle"></ion-icon>
                         </i>
@@ -92,7 +95,9 @@ if (isset($_POST['change_pin'])) {
                 <div class="form-group basic">
                     <div class="input-wrapper">
                         <label class="label">New Pin</label>
-                        <input type="text" inputmode="numeric" pattern="[0-9]+" minlength="3" maxlength="4" autocomplete="off" class="form-control" name="new_pin" autocomplete="off" placeholder="New Pin" required>
+                        <input type="text" inputmode="numeric" pattern="[0-9]+" minlength="3" maxlength="4"
+                            autocomplete="off" class="form-control" name="new_pin" autocomplete="off"
+                            placeholder="New Pin" required>
                         <i class="clear-input">
                             <ion-icon name="close-circle"></ion-icon>
                         </i>
@@ -103,7 +108,9 @@ if (isset($_POST['change_pin'])) {
                 <div class="form-group basic">
                     <div class="input-wrapper">
                         <label class="label">Confirm New Pin</label>
-                        <input type="text" inputmode="numeric" pattern="[0-9]+" minlength="3" maxlength="4" autocomplete="off" class="form-control" name="confirm_pin" autocomplete="off" placeholder="Confirm New Pin" required>
+                        <input type="text" inputmode="numeric" pattern="[0-9]+" minlength="3" maxlength="4"
+                            autocomplete="off" class="form-control" name="confirm_pin" autocomplete="off"
+                            placeholder="Confirm New Pin" required>
                         <i class="clear-input">
                             <ion-icon name="close-circle"></ion-icon>
                         </i>
@@ -127,7 +134,7 @@ if (isset($_POST['change_pin'])) {
 <!-- Ofofonobs Developer WhatsAPP +2348114313795 -->
 
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/bottom.php");
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/footer.php");
+include(ROOT_PATH . "/user/layout/bottom.php");
+include(ROOT_PATH . "/user/layout/footer.php");
 
 ?>

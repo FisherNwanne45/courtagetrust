@@ -1,10 +1,7 @@
 <?php
-
-
-
-
+require_once __DIR__ . '/../config.php';
 $pageName  = "Edit Virtual Cards";
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/header.php");
+include(ROOT_PATH . "/admin/layout/header.php");
 
 
 $id = $_GET['id'];
@@ -55,7 +52,7 @@ if (isset($_POST['process_card'])) {
         //  toast_alert('success','Credit Card On Hold Successfully','success');
     } else {
         //        notify_alert('Sorry Something Went Wrong','danger','2000','Close');
-        toast_alert('error', 'Sorry Something Went Wrong');
+        //   toast_alert('error', 'Sorry Something Went Wrong');
     }
 }
 
@@ -92,7 +89,7 @@ if (isset($_POST['hold_card'])) {
         //  toast_alert('success','Credit Card On Hold Successfully','success');
     } else {
         //        notify_alert('Sorry Something Went Wrong','danger','2000','Close');
-        toast_alert('error', 'Sorry Something Went Wrong');
+        //  toast_alert('error', 'Sorry Something Went Wrong');
     }
 }
 
@@ -129,7 +126,7 @@ if (isset($_POST['active_card'])) {
 
         // toast_alert('success','Credit Card Active Successfully','success');
     } else {
-        toast_alert('error', 'Sorry Something Went Wrong');
+        //  toast_alert('error', 'Sorry Something Went Wrong');
     }
 }
 
@@ -160,7 +157,8 @@ if (isset($_POST['active_card'])) {
             <form method="POST">
                 <div class="box-header with-border">
                     <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
+                                class="fa fa-minus"></i></button>
                     </div>
                 </div>
                 <!-- /.box-header -->
@@ -271,6 +269,6 @@ if (isset($_POST['active_card'])) {
 
 
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/footer.php");
+include(ROOT_PATH . "/admin/layout/footer.php");
 
 ?>

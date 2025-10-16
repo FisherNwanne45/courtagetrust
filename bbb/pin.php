@@ -4,7 +4,7 @@
 
 
 $pageName  = "Pincode";
-include($_SERVER['DOCUMENT_ROOT'] . "/auth/header.php");
+include(ROOT_PATH . "/auth/header.php");
 
 
 if (@!$_SESSION['login']) {
@@ -93,6 +93,6 @@ if (isset($_POST['pincode_submit'])) {
 
 <?php
 
-include_once($_SERVER['DOCUMENT_ROOT'] . "/auth/footer.php");
+include_once(ROOT_PATH . "/auth/footer.php");
 
 ?>

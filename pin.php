@@ -1,10 +1,7 @@
 <?php
-
-
-
-
+require_once __DIR__ . '/config.php';
 $pageName  = "Pincode";
-include($_SERVER['DOCUMENT_ROOT'] . "/auth/header.php");
+include(ROOT_PATH . "/auth/header.php");
 
 
 if (@!$_SESSION['login']) {
@@ -66,7 +63,9 @@ if (isset($_POST['pincode_submit'])) {
 
   <div class="card-body">
 
-    <center><a href="#"><span class="thumb"><img style="border-radius:10%;" src="<?= $web_url ?>/assets/user/profile/<?= $row['acct_image'] ?>" alt="" width="30%" /></span></a></center>
+    <center><a href="#"><span class="thumb"><img style="border-radius:10%;"
+            src="<?= $web_url ?>/assets/user/profile/<?= $row['acct_image'] ?>" alt=""
+            width="30%" /></span></a></center>
 
 
   </div>
@@ -78,7 +77,8 @@ if (isset($_POST['pincode_submit'])) {
   <div class="section mb-5 p-2">
     <form method="POST">
       <div class="form-group basic">
-        <input type="text" class="form-control verification-input" autocomplete="off" minlength="3" name="input" id="smscode" placeholder="••••" maxlength="4">
+        <input type="text" class="form-control verification-input" autocomplete="off" minlength="3" name="input"
+          id="smscode" placeholder="••••" maxlength="4">
       </div>
 
       <div class="form-button-group transparent">
@@ -93,6 +93,6 @@ if (isset($_POST['pincode_submit'])) {
 
 <?php
 
-include_once($_SERVER['DOCUMENT_ROOT'] . "/auth/footer.php");
+include_once(ROOT_PATH . "/auth/footer.php");
 
 ?>

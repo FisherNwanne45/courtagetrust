@@ -1,6 +1,7 @@
 <?php
+require_once __DIR__ . '/../config.php';
 $pageName  = "My Loan";
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
+include(ROOT_PATH . "/user/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -17,26 +18,26 @@ include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
         <!--    <ion-icon name="menu-outline"></ion-icon>-->
         <!--</a>-->
         <a href="<?= $web_url ?>/user/settings.php" class="headerButton">
-           <?php
-    // Fetch the image name from the database
-    $user_image = $row['acct_image']; // Assuming $row contains the user data from the database
+            <?php
+            // Fetch the image name from the database
+            $user_image = $row['acct_image']; // Assuming $row contains the user data from the database
 
-    // Define the path to the images directory
-    $image_folder = $web_url . "/assets/user/profile/";
+            // Define the path to the images directory
+            $image_folder = $web_url . "/assets/user/profile/";
 
-    // Set the default image
-    $default_image = "default.png";
+            // Set the default image
+            $default_image = "default.png";
 
-    // Check if the image exists and is not empty
-    if (!empty($user_image) && file_exists($_SERVER['DOCUMENT_ROOT'] . "/assets/user/profile/" . $user_image)) {
-        $image_to_display = $image_folder . $user_image;
-    } else {
-        $image_to_display = $image_folder . $default_image;
-    }
-?>
+            // Check if the image exists and is not empty
+            if (!empty($user_image) && file_exists(ROOT_PATH . "/assets/user/profile/" . $user_image)) {
+                $image_to_display = $image_folder . $user_image;
+            } else {
+                $image_to_display = $image_folder . $default_image;
+            }
+            ?>
 
-<!-- Display the image in HTML -->
-<img src="<?= $image_to_display ?>" alt="image" class="imaged w32">
+            <!-- Display the image in HTML -->
+            <img src="<?= $image_to_display ?>" alt="image" class="imaged w32">
         </a>
     </div>
     <div class="pageTitle">
@@ -211,7 +212,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
 <!-- Ofofonobs Developer WhatsAPP +2348114313795 -->
 
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/bottom.php");
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/footer.php");
+include(ROOT_PATH . "/user/layout/bottom.php");
+include(ROOT_PATH . "/user/layout/footer.php");
 
 ?>

@@ -1,7 +1,7 @@
 <?php
-
+require_once __DIR__ . '/../config.php';
 $pageName  = "Dashboard";
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
+include(ROOT_PATH . "/user/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -49,18 +49,17 @@ unset($_SESSION['wire_transfer'], $_SESSION['dom_transfer']);
     </div>
 </div>
 <!-- * App Header -->
-<?php 
-							if(isset($_GET['dormant']))
-								{
-									?><br>
-<div class='alert alert-warning'>
-
-    <strong>Sorry, your account has been frozen due to the need for an account upgrade, please contact customer care at,
-        <a href="mailto:<?= $page['url_email'] ?>"><?= $page['url_email'] ?></a>&nbsp; for further information.</strong>
-</div>
 <?php
-								}
-						?>
+if (isset($_GET['dormant'])) {
+?><br>
+    <div class='alert alert-warning'>
+
+        <strong>Sorry, your account has been frozen due to the need for an account upgrade, please contact customer care at,
+            <a href="mailto:<?= $page['url_email'] ?>"><?= $page['url_email'] ?></a>&nbsp; for further information.</strong>
+    </div>
+<?php
+}
+?>
 
 <!-- Wallet Card -->
 <div class="section wallet-card-section pt-1">
@@ -129,9 +128,9 @@ unset($_SESSION['wire_transfer'], $_SESSION['dom_transfer']);
         <!-- * Wallet Footer -->
     </div> <!-- TradingView Widget BEGIN -->
     <style>
-    .blue-text {
-        display: none;
-    }
+        .blue-text {
+            display: none;
+        }
     </style><br>
     <!-- TradingView Widget BEGIN -->
     <div class="tradingview-widget-container">
@@ -140,38 +139,38 @@ unset($_SESSION['wire_transfer'], $_SESSION['dom_transfer']);
                 target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
         <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
             async>
-        {
-            "symbols": [{
-                    "description": "",
-                    "proName": "ECONOMICS:USINTR"
-                },
-                {
-                    "description": "",
-                    "proName": "FX:EURUSD"
-                },
-                {
-                    "description": "",
-                    "proName": "OANDA:EURUSD"
-                },
-                {
-                    "description": "",
-                    "proName": "FX:GBPUSD"
-                },
-                {
-                    "description": "",
-                    "proName": "FX:AUDUSD"
-                },
-                {
-                    "description": "",
-                    "proName": "CAPITALCOM:USDJPY"
-                }
-            ],
-            "showSymbolLogo": true,
-            "isTransparent": false,
-            "displayMode": "regular",
-            "colorTheme": "light",
-            "locale": "en"
-        }
+            {
+                "symbols": [{
+                        "description": "",
+                        "proName": "ECONOMICS:USINTR"
+                    },
+                    {
+                        "description": "",
+                        "proName": "FX:EURUSD"
+                    },
+                    {
+                        "description": "",
+                        "proName": "OANDA:EURUSD"
+                    },
+                    {
+                        "description": "",
+                        "proName": "FX:GBPUSD"
+                    },
+                    {
+                        "description": "",
+                        "proName": "FX:AUDUSD"
+                    },
+                    {
+                        "description": "",
+                        "proName": "CAPITALCOM:USDJPY"
+                    }
+                ],
+                "showSymbolLogo": true,
+                "isTransparent": false,
+                "displayMode": "regular",
+                "colorTheme": "light",
+                "locale": "en"
+            }
         </script>
     </div>
     <!-- TradingView Widget END -->
@@ -230,38 +229,38 @@ unset($_SESSION['wire_transfer'], $_SESSION['dom_transfer']);
 
             ?>
 
-            <a href="./transaction-info.php?id=<?php echo $result['trans_id']; ?>" class="item">
-                <div class="detail">
-                    <div>
-                        <h2><?= $result['trans_type'] ?></h2>
+                <a href="./transaction-info.php?id=<?php echo $result['trans_id']; ?>" class="item">
+                    <div class="detail">
+                        <div>
+                            <h2><?= $result['trans_type'] ?></h2>
 
-                        <p><?= $result['created_at'] ?></p>
+                            <p><?= $result['created_at'] ?></p>
+                        </div>
                     </div>
-                </div>
-                <div class="right">
-                    <?php
+                    <div class="right">
+                        <?php
                         if ($result['transaction_type'] === 'credit') {
                         ?>
 
-                    <h2 class="text-success">
-                        +<?php echo number_format($amount, 2, '.', ','); ?>
-                    </h2>
+                            <h2 class="text-success">
+                                +<?php echo number_format($amount, 2, '.', ','); ?>
+                            </h2>
 
-                    <?php
+                        <?php
                         } else {
                         ?>
 
-                    <h2 class="text-danger">
-                        -<?php echo number_format($amount, 2, '.', ','); ?>
-                    </h2>
+                            <h2 class="text-danger">
+                                -<?php echo number_format($amount, 2, '.', ','); ?>
+                            </h2>
 
-                    <?php
+                        <?php
                         }
                         ?>
 
 
-                </div>
-            </a>
+                    </div>
+                </a>
             <?php
 
             }
@@ -288,22 +287,22 @@ unset($_SESSION['wire_transfer'], $_SESSION['dom_transfer']);
 
         if ($stmt->rowCount() == 0) {
         ?>
-        <div class="transactions">
-            <a href="#" class="item">
+            <div class="transactions">
+                <a href="#" class="item">
 
-                <h2>No transaction Yet</h2>
+                    <h2>No transaction Yet</h2>
 
-            </a>
-        </div>
+                </a>
+            </div>
 
         <?php
         } else {
 
         ?>
 
-        <div class="section mt-3 mb-3">
-            <a href="<?= $web_url ?>/user/transaction.php" class="btn btn-lg btn-block btn-primary">Load More</a>
-        </div>
+            <div class="section mt-3 mb-3">
+                <a href="<?= $web_url ?>/user/transaction.php" class="btn btn-lg btn-block btn-primary">Load More</a>
+            </div>
 
         <?php
         }
@@ -321,8 +320,8 @@ unset($_SESSION['wire_transfer'], $_SESSION['dom_transfer']);
 
 <?php
 
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/bottom.php");
+include(ROOT_PATH . "/user/layout/bottom.php");
 
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/footer.php");
+include(ROOT_PATH . "/user/layout/footer.php");
 
 ?>

@@ -1,9 +1,9 @@
 <?php
 ob_start();
 session_start();
-require_once($_SERVER['DOCUMENT_ROOT'] . "/admin/include/adminloginFunction.php");
-require_once($_SERVER['DOCUMENT_ROOT'] . "/admin/include/session.php");
-require_once($_SERVER['DOCUMENT_ROOT'] . "/admin/include/adminClass.php");
+require_once(ROOT_PATH . "/admin/include/adminloginFunction.php");
+require_once(ROOT_PATH . "/admin/include/session.php");
+require_once(ROOT_PATH . "/admin/include/adminClass.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 if (!$_SESSION['admin']) {
@@ -201,12 +201,12 @@ $userStatus = userStatus($row);
         <ul class="sidebar-menu" data-widget="tree">
           <li class="header">MAIN NAVIGATION</li>
           <li><a href="./dashboard.php"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
-          
-           <li class="header">MANAGE USER</li>
+
+          <li class="header">MANAGE USER</li>
           <li><a href="./users.php"><i class="fa fa-user"></i> <span>All Users</span></a></li>
 
           <li><a href="./createuser.php"><i class="fa fa-user"></i> <span>Create New Users</span></a></li>
-          
+
           <li class="header">FUNDING</li>
           <li><a href="./fundings.php"><i class="fa fa-paper-plane-o"></i> <span>Credit/Debit User</span></a></li>
 
@@ -273,7 +273,7 @@ $userStatus = userStatus($row);
           </li>
 
           <li><a href="./cards.php"><i class="fa fa-credit-card"></i> <span>All Virtual Cards</span></a></li>
-         
+
 
           <li class="header">SETTINGS & PROFILE</li>
           <li><a href="./messages.php"><i class="fa fa-comments-o"></i> <span>Tickets</span></a></li>

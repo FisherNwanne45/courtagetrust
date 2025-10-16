@@ -1,8 +1,7 @@
 <?php
-
-
+require_once __DIR__ . '/config.php';
 $pageName  = "Forgot Password";
-include_once($_SERVER['DOCUMENT_ROOT'] . "/auth/header.php");
+include_once(ROOT_PATH . "/auth/header.php");
 if (@$_SESSION['acct_no']) {
     header("Location:./user/dashboard.php");
 }
@@ -53,7 +52,7 @@ if (isset($_POST['send-link'])) {
 
             toast_alert("success", "Password reset link sent to email", "Thanks!");
         } else {
-            toast_alert("error", "Sorry Something Went Wrong !");
+            // toast_alert("error", "Sorry Something Went Wrong !");
         }
     }
 }
@@ -88,7 +87,8 @@ if (isset($_POST['send-link'])) {
                     <div class="section mt-3">
                         <div class="card">
                             <div class="card-body">
-                                <p>Please type in the email address linked to your <?= $pageTitle ?> account to reset your password.</p>
+                                <p>Please type in the email address linked to your <?= $pageTitle ?> account to reset
+                                    your password.</p>
                             </div>
                         </div>
                     </div><br>
@@ -108,14 +108,16 @@ if (isset($_POST['send-link'])) {
                                             <form method="post" class="signin_validate row g-3">
                                                 <div class="col-12">
                                                     <label class="form-label">Email Address</label>
-                                                    <input type="email" maxlength="60" class="form-control" placeholder="example@gmail.com" name="email" />
+                                                    <input type="email" maxlength="60" class="form-control"
+                                                        placeholder="example@gmail.com" name="email" />
                                                 </div>
 
                                                 <div class="mt-3 mb-0">
                                                     <a href="./login.php">Remember Password?</a>
                                                 </div>
                                                 <div class="d-grid gap-2">
-                                                    <button type="submit" name="send-link" class="btn btn-primary" style="background-color:#1F1B44;">
+                                                    <button type="submit" name="send-link" class="btn btn-primary"
+                                                        style="background-color:#1F1B44;">
                                                         Reset
                                                     </button>
                                                 </div>
@@ -139,7 +141,8 @@ if (isset($_POST['send-link'])) {
                                         Theme Mode
                                     </div>
                                     <div class="form-check form-switch  ms-2">
-                                        <input class="form-check-input dark-mode-switch" type="checkbox" id="darkmodeSwitch">
+                                        <input class="form-check-input dark-mode-switch" type="checkbox"
+                                            id="darkmodeSwitch">
                                         <label class="form-check-label" for="darkmodeSwitch"></label>
                                     </div>
                                 </div>
@@ -159,6 +162,6 @@ if (isset($_POST['send-link'])) {
 
 <?php
 
-include_once($_SERVER['DOCUMENT_ROOT'] . "/auth/footer.php");
+include_once(ROOT_PATH . "/auth/footer.php");
 
 ?>

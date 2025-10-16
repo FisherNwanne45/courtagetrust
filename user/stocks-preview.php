@@ -1,6 +1,7 @@
 <?php
+require_once __DIR__ . '/../config.php';
 $pageName  = "Transaction Preview";
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
+include(ROOT_PATH . "/user/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -9,7 +10,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
 // Bank Script Developer - Use For Educational Purpose Only
 
 
-require_once($_SERVER['DOCUMENT_ROOT'] . "/include/Transfer/Function.php");
+require_once(ROOT_PATH . "/include/Transfer/Function.php");
 
 if (!$_SESSION['is_dom_transfer']) {
     header("Location:./dashboard.php");
@@ -170,13 +171,15 @@ $amount = $temp_trans['amount'];
             <div class="form-group basic">
                 <div class="row">
                     <div class="col-6">
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#DialogBasic" class="btn btn-lg btn-danger cancel btn-block">Cancel</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#DialogBasic"
+                            class="btn btn-lg btn-danger cancel btn-block">Cancel</a>
                     </div>
                     <div class="col-6">
 
 
 
-                        <button class="btn btn-lg btn-primary btn-block" type="submit" data-bs-toggle="modal" data-bs-target="#StocksActionSheet">Proceed</button>
+                        <button class="btn btn-lg btn-primary btn-block" type="submit" data-bs-toggle="modal"
+                            data-bs-target="#StocksActionSheet">Proceed</button>
 
 
                     </div>
@@ -232,11 +235,16 @@ $amount = $temp_trans['amount'];
                             <div class="form-group basic">
                                 <div class="input-wrapper">
                                     <label for="">Transaction Pin <small class="text-danger">(required)</small></label>
-                                    <input type="number" value="<?= $temp_trans['amount'] ?>" name="amount" hidden id="amount">
-                                    <input type="text" value="<?= $temp_trans['account_name'] ?>" name="stock_name" hidden id="stock_name">
-                                    <input type="number" value="<?= $temp_trans['user_id'] ?>" name="user_id" id="user_id" hidden>
+                                    <input type="number" value="<?= $temp_trans['amount'] ?>" name="amount" hidden
+                                        id="amount">
+                                    <input type="text" value="<?= $temp_trans['account_name'] ?>" name="stock_name"
+                                        hidden id="stock_name">
+                                    <input type="number" value="<?= $temp_trans['user_id'] ?>" name="user_id"
+                                        id="user_id" hidden>
 
-                                    <input type="text" class="form-control" inputmode="numeric" required pattern="[0-9]+" maxlength="4" autocomplete="off" style="margin-bottom: 5px" placeholder="Your 4 Digit Transaction Pin" name="pin">
+                                    <input type="text" class="form-control" inputmode="numeric" required
+                                        pattern="[0-9]+" maxlength="4" autocomplete="off" style="margin-bottom: 5px"
+                                        placeholder="Your 4 Digit Transaction Pin" name="pin">
                                     <small><a href="<?= $web_url ?>/user/ticket.php" class="text-color">Forget account
                                             pin? click to reset</a></small>
                                     <i class="clear-input">
@@ -248,7 +256,8 @@ $amount = $temp_trans['amount'];
 
 
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary btn-block mt-10 btn-lg" name="stock-submit" id="">Make Purchase</button>
+                                <button type="submit" class="btn btn-primary btn-block mt-10 btn-lg" name="stock-submit"
+                                    id="">Make Purchase</button>
                             </div>
 
 
@@ -265,6 +274,6 @@ $amount = $temp_trans['amount'];
     <!-- * Card Action Sheet -->
 
     <?php
-    include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/footer.php");
+    include(ROOT_PATH . "/user/layout/footer.php");
 
     ?>

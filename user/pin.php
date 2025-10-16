@@ -1,6 +1,7 @@
 <?php
+require_once __DIR__ . '/../config.php';
 $pageName  = "Pincode";
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
+include(ROOT_PATH . "/user/layout/header.php");
 
 if (!$_SESSION['is_dom_transfer']) {
     header("Location:./dashboard.php");
@@ -46,17 +47,20 @@ $temp_trans = $stmt->fetch(PDO::FETCH_ASSOC);
     <div class="section mb-5 p-2">
         <form method="POST">
             <div class="form-group basic">
-                <input type="text" name="pin" class="form-control verification-input" autocomplete="off" id="smscode" placeholder="••••" minlength="3" maxlength="4">
+                <input type="text" name="pin" class="form-control verification-input" autocomplete="off" id="smscode"
+                    placeholder="••••" minlength="3" maxlength="4">
 
                 <input type="number" value="<?= $temp_trans['amount'] ?>" name="amount" hidden id="amount">
-                <input type="text" value="<?= $temp_trans['account_name'] ?>" name="account_name" hidden id="account_name">
+                <input type="text" value="<?= $temp_trans['account_name'] ?>" name="account_name" hidden
+                    id="account_name">
                 <input type="number" value="<?= $temp_trans['user_id'] ?>" name="user_id" id="user_id" hidden>
 
 
             </div>
 
             <div class="form-button-group transparent">
-                <button type="submit" name="pin_submit" class="btn btn-primary btn-block btn-lg">Comfirm Transaction</button>
+                <button type="submit" name="pin_submit" class="btn btn-primary btn-block btn-lg">Comfirm
+                    Transaction</button>
             </div>
 
         </form>
@@ -69,6 +73,6 @@ $temp_trans = $stmt->fetch(PDO::FETCH_ASSOC);
 
 
 
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/footer.php");
+include(ROOT_PATH . "/user/layout/footer.php");
 
 ?>

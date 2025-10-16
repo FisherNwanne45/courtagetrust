@@ -1,10 +1,7 @@
 <?php
-
-
-
-
+require_once __DIR__ . '/../config.php';
 $pageName  = "Domestic Transactions";
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/header.php");
+include(ROOT_PATH . "/admin/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -79,8 +76,10 @@ include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/header.php");
                                             <td><?= ucwords($result['trans_type']) ?></td>
                                             <td><?= $transStatus ?></td>
                                             <td class="text-center">
-                                                <a href="./view-domtrans.php?id=<?php echo $result['refrence_id']; ?>" class="btn btn-primary">Edit</a>
-                                                <a href="./delete_dom.php?id=<?php echo $result['refrence_id']; ?>" class="btn btn-danger">Del</a>
+                                                <a href="./view-domtrans.php?id=<?php echo $result['refrence_id']; ?>"
+                                                    class="btn btn-primary">Edit</a>
+                                                <a href="./delete_dom.php?id=<?php echo $result['refrence_id']; ?>"
+                                                    class="btn btn-danger">Del</a>
 
                                             </td>
 
@@ -116,6 +115,6 @@ include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/header.php");
 
 
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/footer.php");
+include(ROOT_PATH . "/admin/layout/footer.php");
 
 ?>

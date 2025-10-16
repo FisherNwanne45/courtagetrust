@@ -1,7 +1,7 @@
 <?php
-
+require_once __DIR__ . '/../config.php';
 $pageName  = "All Stocks Products";
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/header.php");
+include(ROOT_PATH . "/admin/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -27,7 +27,7 @@ if (isset($_POST['stocks_save'])) {
     if (true) {
         toast_alert('success', 'Stock Added Successfully', 'Success');
     } else {
-        toast_alert('error', 'Something Went Wrong');
+        //  toast_alert('error', 'Something Went Wrong');
     }
 }
 
@@ -93,7 +93,8 @@ if (isset($_POST['stocks_save'])) {
                                             <td><?= $row['stock_percentage'] ?></td>
                                             <td><?= $row['created_at'] ?></td>
                                             <td class="text-center">
-                                                <a href="./delete_stocks.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Del</a>
+                                                <a href="./delete_stocks.php?id=<?php echo $row['id']; ?>"
+                                                    class="btn btn-danger">Del</a>
 
 
                                             </td>
@@ -144,10 +145,12 @@ if (isset($_POST['stocks_save'])) {
                     </p>
 
                     <p><label>Stock Price</label>
-                        <input type="text" class="form-control" name="stock_price" inputmode="numeric" required pattern="[0-9]+" maxlength="10" autocomplete="off" require placeholder="0.00">
+                        <input type="text" class="form-control" name="stock_price" inputmode="numeric" required
+                            pattern="[0-9]+" maxlength="10" autocomplete="off" require placeholder="0.00">
                     </p>
                     <p><label>Percentage ROI</label>
-                        <input type="text" inputmode="numeric" required pattern="[1-9]+" maxlength="2" autocomplete="off" class="form-control" name="stock_percentage" require placeholder="1-99">
+                        <input type="text" inputmode="numeric" required pattern="[1-9]+" maxlength="2"
+                            autocomplete="off" class="form-control" name="stock_percentage" require placeholder="1-99">
                     </p>
 
                 </div>
@@ -165,6 +168,6 @@ if (isset($_POST['stocks_save'])) {
 
 
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/footer.php");
+include(ROOT_PATH . "/admin/layout/footer.php");
 
 ?>

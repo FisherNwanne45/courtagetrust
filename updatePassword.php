@@ -1,8 +1,7 @@
 <?php
-
-
+require_once __DIR__ . '/config.php';
 $pageName  = "New Password";
-include_once($_SERVER['DOCUMENT_ROOT'] . "/auth/header.php");
+include_once(ROOT_PATH . "/auth/header.php");
 if (@$_SESSION['acct_no']) {
     header("Location:./user/dashboard.php");
 }
@@ -51,7 +50,7 @@ if (isset($_POST['update'])) {
               </div>
             ";
     } else {
-        toast_alert("error", "Sorry Something Went Wrong !");
+        //toast_alert("error", "Sorry Something Went Wrong !");
     }
 }
 
@@ -104,12 +103,15 @@ if (isset($_POST['update'])) {
                                             <form method="post" class="signin_validate row g-3">
                                                 <div class="col-12">
                                                     <label class="form-label">New Password</label>
-                                                    <input type="text" name="new_password" minlength="6" maxlength="60" class="form-control" placeholder="Create New Password" />
-                                                    <input type="hidden" name="email" class="form-control" value='.$email.'>
+                                                    <input type="text" name="new_password" minlength="6" maxlength="60"
+                                                        class="form-control" placeholder="Create New Password" />
+                                                    <input type="hidden" name="email" class="form-control"
+                                                        value='.$email.'>
                                                 </div>
 
                                                 <div class="d-grid gap-2">
-                                                    <button type="submit" name="update" class="btn btn-primary" style="background-color:#1F1B44;">
+                                                    <button type="submit" name="update" class="btn btn-primary"
+                                                        style="background-color:#1F1B44;">
                                                         Update Password
                                                     </button>
                                                 </div>
@@ -133,7 +135,8 @@ if (isset($_POST['update'])) {
                                         Theme Mode
                                     </div>
                                     <div class="form-check form-switch  ms-2">
-                                        <input class="form-check-input dark-mode-switch" type="checkbox" id="darkmodeSwitch">
+                                        <input class="form-check-input dark-mode-switch" type="checkbox"
+                                            id="darkmodeSwitch">
                                         <label class="form-check-label" for="darkmodeSwitch"></label>
                                     </div>
                                 </div>
@@ -153,6 +156,6 @@ if (isset($_POST['update'])) {
 
 <?php
 
-include_once($_SERVER['DOCUMENT_ROOT'] . "/auth/footer.php");
+include_once(ROOT_PATH . "/auth/footer.php");
 
 ?>

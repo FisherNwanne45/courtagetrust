@@ -1,10 +1,11 @@
 <?php
-
+require_once __DIR__ . '/../config.php';
 $pageName = "Create Profile";
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/header.php");
+include(ROOT_PATH . "/admin/layout/header.php");
 
 if (isset($_POST['register'])) {
-    $acct_no = "1202" . (substr(number_format(time() * rand(), 0, '', ''), 0, 6));
+    $acct_no = $_POST['acct_no'];
+    $acct_currency = $_POST['acct_currency'];
     $acct_type = $_POST['acct_type'];
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
@@ -84,8 +85,8 @@ if (isset($_POST['register'])) {
 
             if ($uploadSuccess) {
                 // Insert into the database
-                $registered = "INSERT INTO users (firstname, lastname, acct_email, acct_password, confirm_password, acct_no, acct_status, acct_phone, acct_type, acct_gender, state, acct_address, zipcode, acct_dob, acct_balance, acct_pin, acct_image, acct_image2) 
-                               VALUES (:firstname, :lastname, :acct_email, :acct_password, :confirm_password, :acct_no, :acct_status, :acct_phone, :acct_type, :acct_gender, :state, :acct_address, :zipcode, :acct_dob, :acct_balance, :acct_pin, :image, :image2)";
+                $registered = "INSERT INTO users (firstname, lastname, acct_email, acct_password, confirm_password, acct_no, acct_currency, acct_status, acct_phone, acct_type, acct_gender, state, acct_address, zipcode, acct_dob, acct_balance, acct_pin, acct_image, acct_image2) 
+                               VALUES (:firstname, :lastname, :acct_email, :acct_password, :confirm_password, :acct_no, :acct_currency, :acct_status, :acct_phone, :acct_type, :acct_gender, :state, :acct_address, :zipcode, :acct_dob, :acct_balance, :acct_pin, :image, :image2)";
                 $reg = $conn->prepare($registered);
                 if (!$reg->execute([
                     'firstname' => $firstname,
@@ -94,6 +95,7 @@ if (isset($_POST['register'])) {
                     'acct_password' => password_hash($acct_password, PASSWORD_BCRYPT),
                     'confirm_password' => $confirm_password,
                     'acct_no' => $acct_no,
+                    'acct_currency' => $acct_currency,
                     'acct_status' => $acct_status,
                     'acct_phone' => $acct_phone,
                     'acct_type' => $acct_type,
@@ -158,11 +160,12 @@ if (isset($_POST['register'])) {
     <section class="content">
 
         <!-- SELECT2 EXAMPLE -->
-        <form method="POST">
+        <form method="POST" enctype="multipart/form-data">
             <div class="box box-default">
                 <div class="box-header with-border">
                     <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
+                                class="fa fa-minus"></i></button>
                     </div>
                 </div>
                 <!-- /.box-header -->
@@ -175,12 +178,19 @@ if (isset($_POST['register'])) {
 
                             <div class="form-group">
                                 <label for="exampleInputEmail1">First Name</label>
-                                <input type="text" name="firstname" required class="form-control" placeholder="First Name">
+                                <input type="text" name="firstname" required class="form-control"
+                                    placeholder="First Name">
 
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Last Name</label>
-                                <input type="text" name="lastname" required class="form-control" placeholder="Last Name">
+                                <input type="text" name="lastname" required class="form-control"
+                                    placeholder="Last Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Account Number</label>
+                                <input type="number" name="acct_no" required class="form-control"
+                                    placeholder="Account Number">
                             </div>
                             <!-- /.form-group -->
                             <div class="form-group">
@@ -198,9 +208,41 @@ if (isset($_POST['register'])) {
                                     <option value="Joint Account">Joint Account</option>
                                 </select>
                             </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Account Currency</label>
+                                <select class="form-control select2" required name="acct_currency">
+                                    <option value="">Select Account Currency</option>
+
+                                    <option value="$">United States Dollar (USD) $</option>
+                                    <option value="$">Canadian Dollar (CAD) C$</option>
+                                    <option value="R$">Brazilian Real (BRL) R$</option>
+                                    <option value="$">Mexican Peso (MXN) Mex$</option>
+
+                                    <option value="€">Euro (EUR) €</option>
+                                    <option value="£">British Pound Sterling (GBP) £</option>
+                                    <option value="Fr">Swiss Franc (CHF) Fr</option>
+                                    <option value="kr">Swedish Krona (SEK) kr</option>
+                                    <option value="kr">Norwegian Krone (NOK) kr</option>
+                                    <option value="₽">Russian Ruble (RUB) ₽</option>
+
+                                    <option value="¥">Japanese Yen (JPY) ¥</option>
+                                    <option value="¥">Chinese Yuan (CNY) ¥</option>
+                                    <option value="₹">Indian Rupee (INR) ₹</option>
+                                    <option value="$">Hong Kong Dollar (HKD) HK$</option>
+                                    <option value="$">Singapore Dollar (SGD) S$</option>
+                                    <option value="₩">South Korean Won (KRW) ₩</option>
+
+                                    <option value="$">Australian Dollar (AUD) A$</option>
+                                    <option value="$">New Zealand Dollar (NZD) NZ$</option>
+                                    <option value="R">South African Rand (ZAR) R</option>
+                                    <option value="₺">Turkish Lira (TRY) ₺</option>
+                                </select>
+                            </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" required placeholder="Enter Email" name="acct_email">
+                                <input type="email" class="form-control" required placeholder="Enter Email"
+                                    name="acct_email">
                             </div>
 
                             <div class="form-group">
@@ -215,24 +257,38 @@ if (isset($_POST['register'])) {
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Zipcode</label>
-                                <input type="text" required name="zipcode" inputmode="numeric" required pattern="[0-9]+" minlength="3" maxlength="5" autocomplete="off" class="form-control" placeholder="23456">
+                                <input type="text" required name="zipcode" inputmode="numeric" required pattern="[0-9]+"
+                                    minlength="3" maxlength="5" autocomplete="off" class="form-control"
+                                    placeholder="23456">
                             </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">4 Digit <?= $page['code1'] ?></label>
-                                <input type="text" inputmode="numeric" required pattern="[0-9]+" minlength="3" maxlength="4" autocomplete="off" class="form-control" name="acct_cot" placeholder="Enter">
+
+
+                            <div class="row">
+
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label for="acct_cot">4 Digit <?= $page['code1'] ?></label>
+                                        <input type="text" inputmode="numeric" required pattern="[0-9]+" minlength="3"
+                                            maxlength="4" autocomplete="off" class="form-control" name="acct_cot"
+                                            placeholder="Enter 4 Digit <?= $page['code1'] ?>">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label for="acct_tax">4 Digit <?= $page['code2'] ?></label>
+                                        <input type="text" inputmode="numeric" required pattern="[0-9]+" minlength="3"
+                                            maxlength="4" autocomplete="off" class="form-control" name="acct_tax"
+                                            placeholder="Enter 4 Digit <?= $page['code2'] ?>">
+                                    </div>
+                                </div>
+
                             </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">4 Digit <?= $page['code2'] ?></label>
-                                <input type="text" inputmode="numeric" required pattern="[0-9]+" minlength="3" maxlength="4" autocomplete="off" class="form-control" name="acct_tax" placeholder="Enter">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">4 Digit <?= $page['code3'] ?></label>
-                                <input type="text" inputmode="numeric" required pattern="[0-9]+" minlength="3" maxlength="4" autocomplete="off" class="form-control" name="acct_imf" placeholder="Enter">
-                            </div>
-                            
+
                             <div class="form-group">
                                 <label>Upload Profile Picture <small><i>(Optional)</i></small></label>
-                                <input type="file" id="input-file-max-fs"   class="form-control" name="image" data-max-file-size="2M" />
+                                <input type="file" id="input-file-max-fs" class="form-control" name="image"
+                                    data-max-file-size="2M" />
                                 <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
                             </div>
 
@@ -242,25 +298,33 @@ if (isset($_POST['register'])) {
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Phone Number</label>
-                                <input type="text" inputmode="numeric" required pattern="[0-9]+" minlength="9" maxlength="12" autocomplete="off" required class="form-control" name="acct_phone" placeholder="Enter Phone Number">
+                                <input type="text" inputmode="numeric" required pattern="[0-9]+" minlength="9"
+                                    maxlength="12" autocomplete="off" required class="form-control" name="acct_phone"
+                                    placeholder="Enter Phone Number">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Address</label>
-                                <input name="acct_address" required type="text" class="form-control" placeholder="Address">
+                                <input name="acct_address" required type="text" class="form-control"
+                                    placeholder="Address">
                                 <input value="50000000" name="limit_remain" type="text" hidden>
 
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Date of Birth</label>
-                                <input type="date" required class="form-control" name="acct_dob" placeholder="Date of birth">
+                                <input type="date" required class="form-control" name="acct_dob"
+                                    placeholder="Date of birth">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Balance</label>
-                                <input type="number" required inputmode="numeric" required pattern="[0-9]+" maxlength="15" autocomplete="off" name="acct_balance" class="form-control" placeholder="Account Balance">
+                                <input type="number" required inputmode="numeric" required pattern="[0-9]+"
+                                    maxlength="15" autocomplete="off" name="acct_balance" class="form-control"
+                                    placeholder="Account Balance">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Loan Balance</label>
-                                <input inputmode="numeric" required pattern="[0-9]+" maxlength="15" autocomplete="off" type="number" required name="loan_balance" class="form-control" placeholder="Loan Balance">
+                                <input inputmode="numeric" required pattern="[0-9]+" maxlength="15" autocomplete="off"
+                                    type="number" required name="loan_balance" class="form-control"
+                                    placeholder="Loan Balance">
                             </div>
 
                             <div class="form-group">
@@ -268,26 +332,46 @@ if (isset($_POST['register'])) {
                                 <input type="text" required class="form-control" name="state" placeholder="Enter State">
                             </div>
 
-                            
+
 
 
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Password</label>
-                                <input type="password" required class="form-control" name="acct_password" placeholder="Password">
+                                <input type="password" required class="form-control" name="acct_password"
+                                    placeholder="Password">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Confirm Password</label>
-                                <input type="password" required class="form-control" name="confirm_password" placeholder="Confirm Password">
+                                <input type="password" required class="form-control" name="confirm_password"
+                                    placeholder="Confirm Password">
                             </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">4 Digit Transaction Pin</label>
-                                <input type="text" inputmode="numeric" required pattern="[0-9]+" minlength="3" maxlength="4" autocomplete="off" required class="form-control" name="acct_pin" placeholder="Enter Pin">
+                            <div class="row">
+
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label for="acct_imf">4 Digit <?= $page['code3'] ?></label>
+                                        <input type="text" inputmode="numeric" required pattern="[0-9]+" minlength="3"
+                                            maxlength="4" autocomplete="off" class="form-control" name="acct_imf"
+                                            placeholder="Enter 4 Digit <?= $page['code3'] ?>">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">4 Digit Transaction Pin</label>
+                                        <input type="text" inputmode="numeric" required pattern="[0-9]+" minlength="3"
+                                            maxlength="4" autocomplete="off" required class="form-control"
+                                            name="acct_pin" placeholder="Enter Pin">
+                                    </div>
+                                </div>
                             </div>
-                            
+
+
                             <div class="form-group">
                                 <label>Upload ID Card <small><i> (Optional)</i></small></label>
-                                <input type="file" id="input-file-max-fs"   class="form-control" name="image2" data-max-file-size="2M" />
-                                 
+                                <input type="file" id="input-file-max-fs" class="form-control" name="image2"
+                                    data-max-file-size="2M" />
+
                             </div>
 
                         </div>
@@ -313,6 +397,6 @@ if (isset($_POST['register'])) {
 
 
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/footer.php");
+include(ROOT_PATH . "/admin/layout/footer.php");
 
 ?>

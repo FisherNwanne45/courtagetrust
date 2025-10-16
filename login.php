@@ -1,8 +1,8 @@
 <?php
-
-
+require_once __DIR__ . '/config.php';
+require_once ROOT_PATH . '/include/config.php';
 $pageName  = "Login";
-include_once($_SERVER['DOCUMENT_ROOT'] . "/auth/loghead.php");
+include_once(ROOT_PATH . "/auth/loghead.php");
 if (@$_SESSION['acct_no']) {
     header("Location:./user/dashboard.php");
 }
@@ -145,7 +145,7 @@ if (isset($_POST['emaillogin'])) {
                     <div class="section mt-3">
                         <div class="card">
                             <div class="card-body ">
-                                <h1 style="text-align: center;"><a href="/"><img
+                                <h1 style="text-align: center;"><a href="<?php echo $url; ?>"><img
                                             class="justify-content-center align-items-center" style="max-width:300px;"
                                             src="<?= $web_url ?>/admin/assets/images/logo/<?= $page['image'] ?>"> </a>
                                 </h1>
@@ -283,6 +283,6 @@ if (isset($_POST['emaillogin'])) {
 
 <?php
 
-include_once($_SERVER['DOCUMENT_ROOT'] . "/auth/footer.php");
+include_once(ROOT_PATH . "/auth/footer.php");
 
 ?>

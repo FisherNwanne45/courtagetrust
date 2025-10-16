@@ -55,7 +55,7 @@
     <!-- End of Segment Pixel -->
 
 
-    <div id="notice-android" class="notice appbanner">
+    <!--<div id="notice-android" class="notice appbanner">
         <div style="position:relative">
             <div class="noticeHtml inner-content">
                 <div class="apps">
@@ -104,6 +104,7 @@
             </div>
         </div>
     </div>
+    -->
     <div class="page">
         <header>
             <nav id="primary">

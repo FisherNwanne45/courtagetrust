@@ -1,7 +1,8 @@
 <?php
 
 $pageName  = "My Cards";
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
+require_once __DIR__ . '/../config.php';
+include(ROOT_PATH . "/user/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -9,7 +10,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
 // Bank Script Developer - Use For Educational Purpose Only
 
 // Other scripts Available
-require_once($_SERVER['DOCUMENT_ROOT'] . "/include/Function/cardFunction.php");
+require_once(ROOT_PATH . "/include/Function/cardFunction.php");
 
 $user_id = userDetails('id');
 
@@ -45,7 +46,7 @@ if (isset($_POST['hold_card'])) {
                               </div>
                             ";
     } else {
-        toast_alert('danger', 'Something went wrong!');
+        // toast_alert('danger', 'Something went wrong!');
     }
 }
 
@@ -82,7 +83,7 @@ if (isset($_POST['active_card'])) {
                               </div>
                             ";
     } else {
-        toast_alert('danger', 'Something went wrong!');
+        //  toast_alert('danger', 'Something went wrong!');
     }
 }
 
@@ -97,25 +98,25 @@ if (isset($_POST['active_card'])) {
         <!--</a>-->
         <a href="<?= $web_url ?>/user/settings.php" class="headerButton">
             <?php
-    // Fetch the image name from the database
-    $user_image = $row['acct_image']; // Assuming $row contains the user data from the database
+            // Fetch the image name from the database
+            $user_image = $row['acct_image']; // Assuming $row contains the user data from the database
 
-    // Define the path to the images directory
-    $image_folder = $web_url . "/assets/user/profile/";
+            // Define the path to the images directory
+            $image_folder = $web_url . "/assets/user/profile/";
 
-    // Set the default image
-    $default_image = "default.png";
+            // Set the default image
+            $default_image = "default.png";
 
-    // Check if the image exists and is not empty
-    if (!empty($user_image) && file_exists($_SERVER['DOCUMENT_ROOT'] . "/assets/user/profile/" . $user_image)) {
-        $image_to_display = $image_folder . $user_image;
-    } else {
-        $image_to_display = $image_folder . $default_image;
-    }
-?>
+            // Check if the image exists and is not empty
+            if (!empty($user_image) && file_exists(ROOT_PATH . "/assets/user/profile/" . $user_image)) {
+                $image_to_display = $image_folder . $user_image;
+            } else {
+                $image_to_display = $image_folder . $default_image;
+            }
+            ?>
 
-<!-- Display the image in HTML -->
-<img src="<?= $image_to_display ?>" alt="image" class="imaged w32">
+            <!-- Display the image in HTML -->
+            <img src="<?= $image_to_display ?>" alt="image" class="imaged w32">
         </a>
     </div>
     <div class="pageTitle">
@@ -178,7 +179,8 @@ if (isset($_POST['active_card'])) {
                 <div class="card-block bg-dark mb-2">
                     <div class="card-main">
                         <div class="card-button dropdown">
-                            <img src="<? $web_url ?>/assets/images/mastercard.png" alt="img" class="image-block imaged w48 lazy animate">
+                            <img src="<? $web_url ?>/assets/images/mastercard.png" alt="img"
+                                class="image-block imaged w48 lazy animate">
 
                         </div>
                         <div class="balance">
@@ -208,8 +210,10 @@ if (isset($_POST['active_card'])) {
                 <div class="section mt-2">
                     <center>
                         <div class="card-body pb-1">
-                            <a href="#" class="btn btn-outline-warning me-1 mb-1" data-bs-toggle="modal" data-bs-target="#CardActionSheet">Request Card</a>
-                            <a href="<?= $web_url ?>/user/support.php" type="button" class="btn btn-outline-info me-1 mb-1">Need Help?</a>
+                            <a href="#" class="btn btn-outline-warning me-1 mb-1" data-bs-toggle="modal"
+                                data-bs-target="#CardActionSheet">Request Card</a>
+                            <a href="<?= $web_url ?>/user/support.php" type="button"
+                                class="btn btn-outline-info me-1 mb-1">Need Help?</a>
 
                         </div>
                     </center>
@@ -309,8 +313,10 @@ if (isset($_POST['active_card'])) {
                 <div class="section mt-2">
                     <center>
                         <div class="card-body pb-1">
-                            <a href="<?= $web_url ?>/user/deposit.php" type="button" class="btn btn-outline-warning me-1 mb-1">Top-up</a>
-                            <a href="<?= $web_url ?>/user/pay.php" type="button" class="btn btn-outline-info me-1 mb-1">Withdraw</a>
+                            <a href="<?= $web_url ?>/user/deposit.php" type="button"
+                                class="btn btn-outline-warning me-1 mb-1">Top-up</a>
+                            <a href="<?= $web_url ?>/user/pay.php" type="button"
+                                class="btn btn-outline-info me-1 mb-1">Withdraw</a>
                             <button type="submit" class="btn btn-outline-dark me-1 mb-1" name="lock">Lock</button>
                         </div>
                     </center>
@@ -429,7 +435,8 @@ if (isset($_POST['active_card'])) {
                 <div class="card-block bg-dark mb-2">
                     <div class="card-main">
                         <div class="card-button dropdown">
-                            <img src="<? $web_url ?>/assets/images/mastercard.png" alt="img" class="image-block imaged w48 lazy animate">
+                            <img src="<? $web_url ?>/assets/images/mastercard.png" alt="img"
+                                class="image-block imaged w48 lazy animate">
 
                         </div>
                         <div class="balance">
@@ -465,8 +472,10 @@ if (isset($_POST['active_card'])) {
                             <form method="POST">
                                 <div class="card-body pb-1">
 
-                                    <button type="submit" name="hold_card" class="btn btn-outline-danger me-1 mb-1">Deactivate</button>
-                                    <a href="<?= $web_url ?>/user/support.php" type="button" class="btn btn-outline-dark me-1 mb-1">Need Help?</a>
+                                    <button type="submit" name="hold_card"
+                                        class="btn btn-outline-danger me-1 mb-1">Deactivate</button>
+                                    <a href="<?= $web_url ?>/user/support.php" type="button"
+                                        class="btn btn-outline-dark me-1 mb-1">Need Help?</a>
                                 </div>
                             </form>
                         </center>
@@ -488,9 +497,11 @@ if (isset($_POST['active_card'])) {
 
                             <div class="card-body pb-1">
 
-                                <a href="<?= $web_url ?>/user/support.php" type="submit" class="btn btn-outline-danger me-1 mb-1">Pending</a>
+                                <a href="<?= $web_url ?>/user/support.php" type="submit"
+                                    class="btn btn-outline-danger me-1 mb-1">Pending</a>
 
-                                <a href="<?= $web_url ?>/user/support.php" type="button" class="btn btn-outline-dark me-1 mb-1">Need Help?</a>
+                                <a href="<?= $web_url ?>/user/support.php" type="button"
+                                    class="btn btn-outline-dark me-1 mb-1">Need Help?</a>
                             </div>
                             </form>
                         </center>
@@ -516,8 +527,10 @@ if (isset($_POST['active_card'])) {
                             <form method="POST">
                                 <div class="card-body pb-1">
 
-                                    <button type="submit" name="active_card" class="btn btn-outline-primary me-1 mb-1">Activate</button>
-                                    <a href="<?= $web_url ?>/user/support.php" type="button" class="btn btn-outline-dark me-1 mb-1">Need Help?</a>
+                                    <button type="submit" name="active_card"
+                                        class="btn btn-outline-primary me-1 mb-1">Activate</button>
+                                    <a href="<?= $web_url ?>/user/support.php" type="button"
+                                        class="btn btn-outline-dark me-1 mb-1">Need Help?</a>
                                 </div>
                             </form>
                         </center>
@@ -663,8 +676,10 @@ if (isset($_POST['active_card'])) {
                 <div class="section mt-2">
                     <center>
                         <div class="card-body pb-1">
-                            <a href="<?= $web_url ?>/user/deposit.php" type="button" class="btn btn-outline-warning me-1 mb-1">Top-up</a>
-                            <a href="<?= $web_url ?>/user/pay.php" type="button" class="btn btn-outline-info me-1 mb-1">Withdraw</a>
+                            <a href="<?= $web_url ?>/user/deposit.php" type="button"
+                                class="btn btn-outline-warning me-1 mb-1">Top-up</a>
+                            <a href="<?= $web_url ?>/user/pay.php" type="button"
+                                class="btn btn-outline-info me-1 mb-1">Withdraw</a>
                             <button type="submit" class="btn btn-outline-dark me-1 mb-1" name="lock">Lock</button>
                         </div>
                     </center>
@@ -800,7 +815,9 @@ if (isset($_POST['active_card'])) {
                             <div class="form-group basic">
                                 <div class="input-wrapper">
                                     <label for="">Transaction Pin <small class="text-danger">(required)</small></label>
-                                    <input type="text" class="form-control" inputmode="numeric" required pattern="[0-9]+" maxlength="4" autocomplete="off" style="margin-bottom: 5px" placeholder="Your 4 Digit Transaction Pin" name="pin">
+                                    <input type="text" class="form-control" inputmode="numeric" required
+                                        pattern="[0-9]+" maxlength="4" autocomplete="off" style="margin-bottom: 5px"
+                                        placeholder="Your 4 Digit Transaction Pin" name="pin">
                                     <small><a href="<?= $web_url ?>/user/ticket.php" class="text-color">Forget account
                                             pin? click to reset</a></small>
                                     <i class="clear-input">
@@ -812,7 +829,8 @@ if (isset($_POST['active_card'])) {
 
 
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary btn-block mt-10 btn-lg" name="card_generate" id="">Request Card - <?= $currency ?><?= $page['cardfee'] ?>
+                                <button type="submit" class="btn btn-primary btn-block mt-10 btn-lg"
+                                    name="card_generate" id="">Request Card - <?= $currency ?><?= $page['cardfee'] ?>
                                     Fee</button>
                             </div>
 
@@ -830,8 +848,8 @@ if (isset($_POST['active_card'])) {
     <!-- * Card Action Sheet -->
 
     <?php
-    include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/bottom.php");
+    include(ROOT_PATH . "/user/layout/bottom.php");
 
-    include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/footer.php");
+    include(ROOT_PATH . "/user/layout/footer.php");
 
     ?>

@@ -1,10 +1,8 @@
 <?php
-
-
-
+require_once __DIR__ . '/../config.php';
 $pageName  = "Login";
 
-include_once($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/headerlogin.php");
+include_once(ROOT_PATH . "/admin/layout/headerlogin.php");
 
 
 
@@ -37,7 +35,8 @@ include_once($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/headerlogin.php");
           </div>
           <!-- /.col -->
           <div class="col-xs-4">
-            <button type="submit" name="admin_login" class="btn btn-primary btn-block btn-flat">Sign In</button>
+            <button type="submit" name="admin_login" class="btn btn-primary btn-block btn-flat">Sign
+              In</button>
           </div>
           <!-- /.col -->
         </div>
@@ -52,6 +51,6 @@ include_once($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/headerlogin.php");
 
 
   <?php
-  include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/footerlogin.php");
+  include(ROOT_PATH . "/admin/layout/footerlogin.php");
 
   ?>

@@ -1,6 +1,7 @@
 <?php
+require_once __DIR__ . '/../config.php';
 $pageName  = "Transaction Preview";
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
+include(ROOT_PATH . "/user/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -8,7 +9,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
 // Bank Script Developer - Use For Educational Purpose Only
 
 // Other scripts Available
-require_once($_SERVER['DOCUMENT_ROOT'] . "/include/Transfer/DomesticFunction.php");
+require_once(ROOT_PATH . "/include/Transfer/DomesticFunction.php");
 
 if (!$_SESSION['is_dom_transfer']) {
     header("Location:./dashboard.php");
@@ -106,21 +107,30 @@ $amount = $temp_trans['amount'];
             <div class="form-group basic">
                 <div class="row">
                     <div class="col-6">
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#DialogBasic" class="btn btn-lg btn-danger cancel btn-block">Cancel</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#DialogBasic"
+                            class="btn btn-lg btn-danger cancel btn-block">Cancel</a>
                     </div>
                     <div class="col-6">
                         <form method="POST">
                             <input type="number" value="<?= $temp_trans['amount'] ?>" name="amount" hidden id="amount">
-                            <input type="text" value="<?= $temp_trans['bank_name'] ?>" name="bank_name" hidden id="bank_name">
-                            <input type="text" value="<?= $temp_trans['account_name'] ?>" name="account_name" hidden id="account_name">
-                            <input type="number" value="<?= $temp_trans['account_number'] ?>" name="account_number" hidden id="account_number">
-                            <input type="text" value="<?= $temp_trans['account_type'] ?>" name="account_type" hidden id="account_type">
-                            <input type="text" value="<?= $temp_trans['trans_type'] ?>" name="trans_type" hidden id="trans_type">
-                            <input type="text" value="<?= $temp_trans['bank_country'] ?>" name="bank_country" hidden id="bank_country">
-                            <input type="number" value="<?= $temp_trans['user_id'] ?>" name="user_id" id="user_id" hidden>
+                            <input type="text" value="<?= $temp_trans['bank_name'] ?>" name="bank_name" hidden
+                                id="bank_name">
+                            <input type="text" value="<?= $temp_trans['account_name'] ?>" name="account_name" hidden
+                                id="account_name">
+                            <input type="number" value="<?= $temp_trans['account_number'] ?>" name="account_number"
+                                hidden id="account_number">
+                            <input type="text" value="<?= $temp_trans['account_type'] ?>" name="account_type" hidden
+                                id="account_type">
+                            <input type="text" value="<?= $temp_trans['trans_type'] ?>" name="trans_type" hidden
+                                id="trans_type">
+                            <input type="text" value="<?= $temp_trans['bank_country'] ?>" name="bank_country" hidden
+                                id="bank_country">
+                            <input type="number" value="<?= $temp_trans['user_id'] ?>" name="user_id" id="user_id"
+                                hidden>
 
 
-                            <button class="btn btn-lg btn-primary btn-block" type="submit" name="domestic-preview">Proceed</button>
+                            <button class="btn btn-lg btn-primary btn-block" type="submit"
+                                name="domestic-preview">Proceed</button>
 
                         </form>
 
@@ -158,6 +168,6 @@ $amount = $temp_trans['amount'];
     <!-- * Dialog Basic -->
 
     <?php
-    include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/footer.php");
+    include(ROOT_PATH . "/user/layout/footer.php");
 
     ?>

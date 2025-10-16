@@ -1,7 +1,7 @@
 <?php
-
+require_once __DIR__ . '/../config.php';
 $pageName  = "SMTP Settings";
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/header.php");
+include(ROOT_PATH . "/admin/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -9,13 +9,13 @@ include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/header.php");
 // Bank Script Developer - Use For Educational Purpose Only
 
 // Other scripts Available
-// include($_SERVER['DOCUMENT_ROOT']."/admin/include/adminFunction.php");
+// include(ROOT_PATH."/admin/include/adminFunction.php");
 //require_once("./include/adminloginFunction.php");
 
-    $sql = "SELECT * FROM smtp_setting WHERE id ='1'";
-    $stmt = $conn->prepare($sql);
-    $stmt->execute();
-    $rowsmtp = $stmt->fetch(PDO::FETCH_ASSOC);
+$sql = "SELECT * FROM smtp_setting WHERE id ='1'";
+$stmt = $conn->prepare($sql);
+$stmt->execute();
+$rowsmtp = $stmt->fetch(PDO::FETCH_ASSOC);
 
 
 
@@ -61,10 +61,8 @@ if (isset($_POST['save_smtpsettings'])) {
               </strong></center>
          </div>
        ";
-
-
     } else {
-        toast_alert('error', 'Sorry something went wrong');
+        //  toast_alert('error', 'Sorry something went wrong');
     }
 }
 
@@ -92,12 +90,15 @@ if (isset($_POST['save_smtpsettings'])) {
             <form method="POST">
                 <div class="box-header with-border">
                     <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
+                                class="fa fa-minus"></i></button>
                     </div>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
-                    <p>How to get SMTP Credentials from cPanel ? <a href="https://www.labelhosting.com/knowledgebase.php?action=displayarticle&id=116" target="_blank">View Guide</a></p><br>
+                    <p>How to get SMTP Credentials from cPanel ? <a
+                            href="https://www.labelhosting.com/knowledgebase.php?action=displayarticle&id=116"
+                            target="_blank">View Guide</a></p><br>
                     <div class="row">
 
                         <?php if (isset($msg1)) echo $msg1; ?>
@@ -105,45 +106,51 @@ if (isset($_POST['save_smtpsettings'])) {
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Display Name</label>
-                                <input type="text" class="form-control" name="display_name" required value="<?= $rowsmtp['display_name'] ?>" placeholder="Display Name">
-                                
+                                <input type="text" class="form-control" name="display_name" required
+                                    value="<?= $rowsmtp['display_name'] ?>" placeholder="Display Name">
+
                             </div>
                             <!-- /.form-group -->
                             <div class="form-group">
                                 <label>STMP Host</label>
-                                <input type="text" class="form-control" name="host" required value="<?= $rowsmtp['host'] ?>" placeholder="STMP Host">
+                                <input type="text" class="form-control" name="host" required
+                                    value="<?= $rowsmtp['host'] ?>" placeholder="STMP Host">
                                 <p>incoming server url</p>
                             </div>
-                            
+
                             <div class="form-group">
                                 <label>SMTP Secure</label>
-                                <input type="text" class="form-control" name="smtp_auth" required value="<?= $rowsmtp['smtp_auth'] ?>" placeholder="SMTP Secure">
+                                <input type="text" class="form-control" name="smtp_auth" required
+                                    value="<?= $rowsmtp['smtp_auth'] ?>" placeholder="SMTP Secure">
                                 <p>ssl/tls</p>
                             </div>
-                           
-                           
 
-                            
+
+
+
 
                             <!-- /.form-group -->
                         </div>
                         <!-- /.col -->
                         <div class="col-md-6">
-                             <div class="form-group">
+                            <div class="form-group">
                                 <label>SMTP Port</label>
-                                <input type="text" class="form-control" name="port" required value="<?= $rowsmtp['port'] ?>" placeholder="SMTP Port">
+                                <input type="text" class="form-control" name="port" required
+                                    value="<?= $rowsmtp['port'] ?>" placeholder="SMTP Port">
                                 <p>465/587</p>
                             </div>
-                             <div class="form-group">
+                            <div class="form-group">
                                 <label>SMTP Username</label>
-                                <input type="text" class="form-control" name="username" required value="<?= $rowsmtp['username'] ?>" placeholder="SMTP Username">
+                                <input type="text" class="form-control" name="username" required
+                                    value="<?= $rowsmtp['username'] ?>" placeholder="SMTP Username">
                                 <p>Email address</p>
                             </div>
 
-                            
+
                             <div class="form-group">
                                 <label>SMTP Password</label>
-                                <input type="text" class="form-control" name="password" required value="<?= $rowsmtp['password'] ?>" placeholder="SMTP Password">
+                                <input type="text" class="form-control" name="password" required
+                                    value="<?= $rowsmtp['password'] ?>" placeholder="SMTP Password">
                                 <p>Email Password</p>
                             </div>
 
@@ -160,7 +167,7 @@ if (isset($_POST['save_smtpsettings'])) {
         </div>
 
 
-      <br>
+        <br>
         <!-- /.box -->
 
 
@@ -173,6 +180,6 @@ if (isset($_POST['save_smtpsettings'])) {
 
 
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/footer.php");
+include(ROOT_PATH . "/admin/layout/footer.php");
 
 ?>

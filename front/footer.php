@@ -30,7 +30,8 @@
                                 <div class="call">
                                     Call us directly
                                     <a class="phone" href="#">+<?= $page['url_tel'] ?></a>
-                                    <a class="email" href="mailto:<?= $page['url_email'] ?>"><?= $page['url_email'] ?></a>
+                                    <a class="email"
+                                        href="mailto:<?= $page['url_email'] ?>"><?= $page['url_email'] ?></a>
                                 </div>
 
                                 <div id="google_translate_element" style="height:0px!important;">
@@ -155,7 +156,8 @@
 <script language="javascript">
     document.onmousedown = disableclick;
     status = "Right Click Disabled";
-    Function disableclick(e) {
+
+    function disableclick(e) {
         if (event.button == 2) {
             alert(status);
             return false;

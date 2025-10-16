@@ -1,7 +1,7 @@
 <?php
-
+require_once __DIR__ . '/../config.php';
 $pageName  = "All Digital Payment";
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/header.php");
+include(ROOT_PATH . "/admin/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -25,7 +25,7 @@ if (isset($_POST['crypto_save'])) {
     if (true) {
         toast_alert('success', 'Payment Add Successfully', 'Success');
     } else {
-        toast_alert('error', 'Something Went Wrong');
+        //  toast_alert('error', 'Something Went Wrong');
     }
 }
 
@@ -89,7 +89,8 @@ if (isset($_POST['crypto_save'])) {
                                             <td><?= $row['wallet_address'] ?></td>
                                             <td><?= $row['created_at'] ?></td>
                                             <td class="text-center">
-                                                <a href="./delete_payments.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Del</a>
+                                                <a href="./delete_payments.php?id=<?php echo $row['id']; ?>"
+                                                    class="btn btn-danger">Del</a>
 
 
                                             </td>
@@ -140,7 +141,8 @@ if (isset($_POST['crypto_save'])) {
                     </p>
 
                     <p>
-                        <input type="text" class="form-control" name="wallet_address" require placeholder="Payment Details">
+                        <input type="text" class="form-control" name="wallet_address" require
+                            placeholder="Payment Details">
                     </p>
                 </div>
                 <div class="modal-footer">
@@ -157,6 +159,6 @@ if (isset($_POST['crypto_save'])) {
 
 
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/footer.php");
+include(ROOT_PATH . "/admin/layout/footer.php");
 
 ?>

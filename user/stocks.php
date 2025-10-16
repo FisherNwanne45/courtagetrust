@@ -1,7 +1,7 @@
 <?php
-
+require_once __DIR__ . '/../config.php';
 $pageName  = "Stocks Investments";
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
+include(ROOT_PATH . "/user/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -210,7 +210,8 @@ if (isset($_POST['stock-preview'])) {
                 ?>
 
                     <div class="section mt-3 mb-3">
-                        <a href="<?= $web_url ?>/user/transaction.php" class="btn btn-lg btn-block btn-primary">Load More</a>
+                        <a href="<?= $web_url ?>/user/transaction.php" class="btn btn-lg btn-block btn-primary">Load
+                            More</a>
                     </div>
 
                 <?php
@@ -246,12 +247,16 @@ if (isset($_POST['stock-preview'])) {
                             <div class="img-wrapper">
                                 <h2><?= $resultstocks['stock_name'] ?></h2>
                             </div>
-                            <div class="price"><?= $currency ?><?php echo number_format($amountstocks, 2, '.', ','); ?></div>
+                            <div class="price"><?= $currency ?><?php echo number_format($amountstocks, 2, '.', ','); ?>
+                            </div>
                             <form method="POST">
-                                <input type="text" hidden value="<?php echo number_format($amountstocks, 2, '.', ','); ?>" name="amount" hidden>
-                                <input type="text" hidden value="<?= $resultstocks['stock_name'] ?>" name="stock_name" hidden>
+                                <input type="text" hidden value="<?php echo number_format($amountstocks, 2, '.', ','); ?>"
+                                    name="amount" hidden>
+                                <input type="text" hidden value="<?= $resultstocks['stock_name'] ?>" name="stock_name"
+                                    hidden>
                                 <p>+<?= $resultstocks['stock_percentage'] ?>% Percentage</p>
-                                <button type="submit" name="stock-preview" class="btn btn-primary btn-block btn-sm">BUY NOW</button>
+                                <button type="submit" name="stock-preview" class="btn btn-primary btn-block btn-sm">BUY
+                                    NOW</button>
                             </form>
                         </div>
                     </div>
@@ -271,8 +276,8 @@ if (isset($_POST['stock-preview'])) {
 
 <?php
 
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/bottom.php");
+include(ROOT_PATH . "/user/layout/bottom.php");
 
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/footer.php");
+include(ROOT_PATH . "/user/layout/footer.php");
 
 ?>

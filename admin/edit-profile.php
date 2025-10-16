@@ -1,10 +1,7 @@
 <?php
-
-
-
-
+require_once __DIR__ . '/../config.php';
 $pageName  = "Edit Admin Profile";
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/header.php");
+include(ROOT_PATH . "/admin/layout/header.php");
 
 $adminName = $admin['firstname'] . " " . $admin['lastname'];
 
@@ -44,7 +41,7 @@ if (isset($_POST['profile'])) {
          </div>
        ";
     } else {
-        toast_alert('error', 'Sorry something went wrong');
+        //  toast_alert('error', 'Sorry something went wrong');
     }
 }
 
@@ -73,7 +70,7 @@ if (isset($_POST['change_password'])) {
         if (true) {
             toast_alert('success', 'Your Password Change Successfully !', 'Approved');
         } else {
-            toast_alert('error', 'Sorry Something Went Wrong');
+            // toast_alert('error', 'Sorry Something Went Wrong');
         }
     }
 }
@@ -113,7 +110,8 @@ if (isset($_POST['change_password'])) {
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Email address</label>
-                                <input type="email" name="admin_email" class="form-control" placeholder="<?= $admin['admin_email'] ?>" required>
+                                <input type="email" name="admin_email" class="form-control"
+                                    placeholder="<?= $admin['admin_email'] ?>" required>
                             </div>
                         </div>
                         <!-- /.box-body -->
@@ -139,21 +137,25 @@ if (isset($_POST['change_password'])) {
                         <div class="box-body">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Old Password</label>
-                                <input type="password" class="form-control" name="old_password" placeholder="Old Password" value="">
+                                <input type="password" class="form-control" name="old_password"
+                                    placeholder="Old Password" value="">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">New Password</label>
-                                <input type="password" class="form-control" name="new_password" placeholder="New Password" value="">
+                                <input type="password" class="form-control" name="new_password"
+                                    placeholder="New Password" value="">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Confirm Password</label>
-                                <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password">
+                                <input type="password" class="form-control" name="confirm_password"
+                                    placeholder="Confirm Password">
                             </div>
                         </div>
                         <!-- /.box-body -->
 
                         <div class="box-footer">
-                            <button type="submit" name="change_password" class="btn btn-primary">Change Password</button>
+                            <button type="submit" name="change_password" class="btn btn-primary">Change
+                                Password</button>
                         </div>
                     </form>
                 </div>
@@ -170,6 +172,6 @@ if (isset($_POST['change_password'])) {
 
 
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/footer.php");
+include(ROOT_PATH . "/admin/layout/footer.php");
 
 ?>

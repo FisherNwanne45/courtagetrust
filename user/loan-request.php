@@ -1,6 +1,7 @@
 <?php
+require_once __DIR__ . '/../config.php';
 $pageName  = "Loan Request";
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
+include(ROOT_PATH . "/user/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -8,7 +9,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
 // Bank Script Developer - Use For Educational Purpose Only
 
 // Other scripts Available
-require_once($_SERVER['DOCUMENT_ROOT'] . "/include/Transfer/Function.php");
+require_once(ROOT_PATH . "/include/Transfer/Function.php");
 
 
 
@@ -107,7 +108,8 @@ if (isset($_POST['loan-submit'])) {
                 <div class="form-group basic">
                     <div class="input-wrapper">
                         <label class="label">Naration/Purpose</label>
-                        <textarea type="text" class="form-control" rows="5" name="loan_remarks" id="loan_remarks" placeholder="Naration/Purpose"></textarea>
+                        <textarea type="text" class="form-control" rows="5" name="loan_remarks" id="loan_remarks"
+                            placeholder="Naration/Purpose"></textarea>
                     </div>
                 </div>
                 <br>
@@ -117,10 +119,12 @@ if (isset($_POST['loan-submit'])) {
                 <div class="form-group basic">
                     <div class="row">
                         <div class="col-6">
-                            <a href="<?= $web_url ?>/user/loan.php" class="btn btn-lg btn-danger cancel btn-block">Go Back</a>
+                            <a href="<?= $web_url ?>/user/loan.php" class="btn btn-lg btn-danger cancel btn-block">Go
+                                Back</a>
                         </div>
                         <div class="col-6">
-                            <button type="submit" class="btn btn-lg btn-primary btn-block" name="loan-submit">Proceed</button>
+                            <button type="submit" class="btn btn-lg btn-primary btn-block"
+                                name="loan-submit">Proceed</button>
                         </div>
                     </div>
                 </div>
@@ -138,7 +142,7 @@ if (isset($_POST['loan-submit'])) {
 <!-- Ofofonobs Developer WhatsAPP +2348114313795 -->
 
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/bottom.php");
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/footer.php");
+include(ROOT_PATH . "/user/layout/bottom.php");
+include(ROOT_PATH . "/user/layout/footer.php");
 
 ?>

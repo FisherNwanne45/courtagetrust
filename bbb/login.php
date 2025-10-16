@@ -2,7 +2,7 @@
 
 
 $pageName  = "Login";
-include_once($_SERVER['DOCUMENT_ROOT'] . "/auth/loghead.php");
+include_once(ROOT_PATH . "/auth/loghead.php");
 if (@$_SESSION['acct_no']) {
     header("Location:./user/dashboard.php");
 }
@@ -283,6 +283,6 @@ if (isset($_POST['emaillogin'])) {
 
 <?php
 
-include_once($_SERVER['DOCUMENT_ROOT'] . "/auth/footer.php");
+include_once(ROOT_PATH . "/auth/footer.php");
 
 ?>

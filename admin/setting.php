@@ -1,7 +1,7 @@
 <?php
-
+require_once __DIR__ . '/../config.php';
 $pageName  = "Settings";
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/header.php");
+include(ROOT_PATH . "/admin/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -9,7 +9,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/header.php");
 // Bank Script Developer - Use For Educational Purpose Only
 
 // Other scripts Available
-// include($_SERVER['DOCUMENT_ROOT']."/admin/include/adminFunction.php");
+// include(ROOT_PATH."/admin/include/adminFunction.php");
 //require_once("./include/adminloginFunction.php");
 
 
@@ -38,13 +38,14 @@ if (isset($_POST['upload_picture'])) {
         if (true) {
             toast_alert("success", "Your Image Uploaded Successfully", "Thanks!");
         } else {
-            echo "invalid";
+            //  echo "invalid";
         }
     }
 }
 
 if (isset($_POST['save_settings'])) {
     $url_name = $_POST['url_name'];
+    $url_link = $_POST['url_link'];
     $url_tel = $_POST['url_tel'];
     $url_email = $_POST['url_email'];
     $cardfee = $_POST['cardfee'];
@@ -65,10 +66,11 @@ if (isset($_POST['save_settings'])) {
     $currency = $_POST['currency'];
     $stocks = $_POST['stocks'];
     $id = "1";
-    $sql = "UPDATE settings SET url_name=:url_name,url_tel=:url_tel,url_email=:url_email,cardfee=:cardfee,code1=:code1,code2=:code2,code3=:code3,url_address=:url_address,domesticfee=:domesticfee,wirefee=:wirefee, loanlimit=:loanlimit, domesticlimit=:domesticlimit,wirelimit=:wirelimit,billing_code=:billing_code,cot_code=:cot_code,tax_code=:tax_code,imf_code=:imf_code,twillio_status=:twillio_status,currency=:currency,stocks=:stocks WHERE id=:id";
+    $sql = "UPDATE settings SET url_name=:url_name,url_link=:url_link,url_tel=:url_tel,url_email=:url_email,cardfee=:cardfee,code1=:code1,code2=:code2,code3=:code3,url_address=:url_address,domesticfee=:domesticfee,wirefee=:wirefee, loanlimit=:loanlimit, domesticlimit=:domesticlimit,wirelimit=:wirelimit,billing_code=:billing_code,cot_code=:cot_code,tax_code=:tax_code,imf_code=:imf_code,twillio_status=:twillio_status,currency=:currency,stocks=:stocks WHERE id=:id";
     $stmt = $conn->prepare($sql);
     $stmt->execute([
         'url_name' => $url_name,
+        'url_link' => $url_link,
         'url_tel' => $url_tel,
         'url_email' => $url_email,
         'cardfee' => $cardfee,
@@ -117,7 +119,7 @@ if (isset($_POST['save_settings'])) {
 
         //  toast_alert('success','Settings updated successfully','Approved');
     } else {
-        toast_alert('error', 'Sorry something went wrong');
+        //   toast_alert('error', 'Sorry something went wrong');
     }
 }
 
@@ -145,7 +147,8 @@ if (isset($_POST['save_settings'])) {
             <form method="POST">
                 <div class="box-header with-border">
                     <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
+                                class="fa fa-minus"></i></button>
                     </div>
                 </div>
                 <!-- /.box-header -->
@@ -157,57 +160,82 @@ if (isset($_POST['save_settings'])) {
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>System Name</label>
-                                <input type="text" class="form-control" name="url_name" value="<?= $page['url_name'] ?>" placeholder="<?= $page['url_name'] ?> ">
+                                <input type="text" class="form-control" name="url_name" value="<?= $page['url_name'] ?>"
+                                    placeholder="<?= $page['url_name'] ?> ">
+                            </div>
+                            <div class="form-group">
+                                <label>Website Url</label>
+                                <input type="text" class="form-control" name="url_link" value="<?= $page['url_link'] ?>"
+                                    placeholder="Website Url">
                             </div>
                             <!-- /.form-group -->
                             <div class="form-group">
                                 <label>Request Card fee</label>
-                                <input type="text" class="form-control" name="cardfee" value="<?= $page['cardfee'] ?>" placeholder="Card Fee">
+                                <input type="text" class="form-control" name="cardfee" value="<?= $page['cardfee'] ?>"
+                                    placeholder="Card Fee">
                             </div>
-                            <div class="form-group">
-                                <label>Wire Transfer fee</label>
-                                <input type="text" class="form-control" name="wirefee" value="<?= $page['wirefee'] ?>" placeholder="Wire Transfer Fee">
+                            <div class="row">
+
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label>Wire Transfer fee</label>
+                                        <input type="text" class="form-control" name="wirefee"
+                                            value="<?= $page['wirefee'] ?>" placeholder="Wire Transfer Fee">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label>Domestic Transfer fee</label>
+                                        <input type="text" class="form-control" name="domesticfee"
+                                            value="<?= $page['domesticfee'] ?>" placeholder="Domestic Transfer Fee">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label>Domestic Transfer fee</label>
-                                <input type="text" class="form-control" name="domesticfee" value="<?= $page['domesticfee'] ?>" placeholder="Domestic Transfer Fee">
-                            </div>
+
 
                             <div class="form-group">
                                 <label>Domestic Transfer Limit</label>
-                                <input type="text" class="form-control" name="domesticlimit" value="<?= $page['domesticlimit'] ?>" placeholder="Domestic Transfer Limit">
+                                <input type="text" class="form-control" name="domesticlimit"
+                                    value="<?= $page['domesticlimit'] ?>" placeholder="Domestic Transfer Limit">
                             </div>
                             <div class="form-group">
                                 <label>Wire Transfer Limit</label>
-                                <input type="text" class="form-control" name="wirelimit" value="<?= $page['wirelimit'] ?>" placeholder="Wire Transfer Limit">
+                                <input type="text" class="form-control" name="wirelimit"
+                                    value="<?= $page['wirelimit'] ?>" placeholder="Wire Transfer Limit">
                             </div>
 
                             <!-- Billing Code Option -->
-<div class="form-group">
-    <label>Billing Code Option</label>
-    <select class="form-control select2" name="billing_code" style="width: 100%;">
-        <option value="">Select Option</option>
-        <option value="1" <?php echo ($page['billing_code'] === '1') ? 'selected' : ''; ?>>On</option>
-        <option value="0" <?php echo ($page['billing_code'] === '0') ? 'selected' : ''; ?>>Off</option>
-    </select>
-</div>
-
-<!-- COT Code Option -->
-<div class="form-group">
-                                <label>First Code Name</label>
-                                <input type="text" class="form-control" name="code1" value="<?= $page['code1'] ?>" placeholder="<?= $page['code1'] ?>">
+                            <div class="form-group">
+                                <label>Billing Code Option</label>
+                                <select class="form-control select2" name="billing_code" style="width: 100%;">
+                                    <option value="">Select Option</option>
+                                    <option value="1" <?php echo ($page['billing_code'] === '1') ? 'selected' : ''; ?>>
+                                        On</option>
+                                    <option value="0" <?php echo ($page['billing_code'] === '0') ? 'selected' : ''; ?>>
+                                        Off</option>
+                                </select>
                             </div>
-                            
-                            
+
+                            <!-- COT Code Option -->
+                            <div class="form-group">
+                                <label>First Code Name</label>
+                                <input type="text" class="form-control" name="code1" value="<?= $page['code1'] ?>"
+                                    placeholder="<?= $page['code1'] ?>">
+                            </div>
+
+
                             <div class="form-group">
                                 <label>2nd Code Name</label>
-                                <input type="text" class="form-control" name="code2" value="<?= $page['code2'] ?>" placeholder="<?= $page['code2'] ?>">
+                                <input type="text" class="form-control" name="code2" value="<?= $page['code2'] ?>"
+                                    placeholder="<?= $page['code2'] ?>">
                             </div>
-                            
-                            
+
+
                             <div class="form-group">
                                 <label>3rd Code Name</label>
-                                <input type="text" class="form-control" name="code3" value="<?= $page['code3'] ?>" placeholder="<?= $page['code3'] ?>">
+                                <input type="text" class="form-control" name="code3" value="<?= $page['code3'] ?>"
+                                    placeholder="<?= $page['code3'] ?>">
                             </div>
 
 
@@ -217,41 +245,52 @@ if (isset($_POST['save_settings'])) {
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>System Email</label>
-                                <input type="email" class="form-control" name="url_email" value="<?= $page['url_email'] ?>" placeholder="<?= $page['url_email'] ?> ">
+                                <input type="email" class="form-control" name="url_email"
+                                    value="<?= $page['url_email'] ?>" placeholder="<?= $page['url_email'] ?> ">
                             </div>
                             <div class="form-group">
                                 <label>System Phone</label>
-                                <input type="text" class="form-control" name="url_tel" value="<?= $page['url_tel'] ?>" placeholder="<?= $page['url_tel'] ?>">
+                                <input type="text" class="form-control" name="url_tel" value="<?= $page['url_tel'] ?>"
+                                    placeholder="<?= $page['url_tel'] ?>">
                             </div>
-                            
+
                             <div class="form-group">
                                 <label>System Address</label>
-                                <input type="text" class="form-control" name="url_address" value="<?= $page['url_address'] ?>" placeholder="<?= $page['url_address'] ?>">
+                                <input type="text" class="form-control" name="url_address"
+                                    value="<?= $page['url_address'] ?>" placeholder="<?= $page['url_address'] ?>">
                             </div>
 
                             <div class="form-group">
                                 <label>System Currency</label>
-                                <input type="text" class="form-control" name="currency" value="<?= $page['currency'] ?>" placeholder="System Currency">
+                                <input type="text" class="form-control" name="currency" value="<?= $page['currency'] ?>"
+                                    placeholder="System Currency">
                             </div>
 
                             <div class="form-group">
                                 <label>Loan Limit</label>
-                                <input type="text" class="form-control" name="loanlimit" value="<?= $page['loanlimit'] ?>" placeholder="Loan Limit">
+                                <input type="text" class="form-control" name="loanlimit"
+                                    value="<?= $page['loanlimit'] ?>" placeholder="Loan Limit">
                             </div>
 
                             <div class="form-group">
                                 <label>Stock Interest (USD)</label>
-                                <input type="text" class="form-control" name="stocks" value="<?= $page['stocks'] ?>" placeholder="0.00">
+                                <input type="text" class="form-control" name="stocks" value="<?= $page['stocks'] ?>"
+                                    placeholder="0.00">
                             </div>
 
                             <div class="form-group">
-    <label>Twillio Config Option</label>
-    <select class="form-control select2" disabled name="twillio_status" style="width: 100%;">
-        <option value="">Select Option</option>
-        <option value="1" <?php echo ($page['twillio_status'] === '1') ? 'selected' : ''; ?>>On</option>
-        <option value="0" <?php echo ($page['twillio_status'] === '0') ? 'selected' : ''; ?>>Off</option>
-    </select>
-</div>
+                                <label>Twillio Config Option</label>
+                                <select class="form-control select2" disabled name="twillio_status"
+                                    style="width: 100%;">
+                                    <option value="">Select Option</option>
+                                    <option value="1"
+                                        <?php echo ($page['twillio_status'] === '1') ? 'selected' : ''; ?>>On
+                                    </option>
+                                    <option value="0"
+                                        <?php echo ($page['twillio_status'] === '0') ? 'selected' : ''; ?>>Off
+                                    </option>
+                                </select>
+                            </div>
 
 
                             <!-- <div class="form-group">
@@ -262,36 +301,48 @@ if (isset($_POST['save_settings'])) {
                                     <option value="0">Off</option>
                                 </select>
                             </div> -->
-                            
-                            
+
+
                             <div class="form-group">
-    <label><?= $page['code1'] ?> Code Option</label>
-    <select class="form-control select2" name="cot_code" style="width: 100%;">
-        <option value="">Select Option</option>
-        <option value="1" <?php echo ($page['cot_code'] === '1') ? 'selected' : ''; ?>>On</option>
-        <option value="0" <?php echo ($page['cot_code'] === '0') ? 'selected' : ''; ?>>Off</option>
-    </select>
-</div>
+                                <label><?= $page['code1'] ?> Code Option</label>
+                                <select class="form-control select2" name="cot_code" style="width: 100%;">
+                                    <option value="">Select Option</option>
+                                    <option value="1" <?php echo ($page['cot_code'] === '1') ? 'selected' : ''; ?>>
+                                        On
+                                    </option>
+                                    <option value="0" <?php echo ($page['cot_code'] === '0') ? 'selected' : ''; ?>>
+                                        Off
+                                    </option>
+                                </select>
+                            </div>
 
                             <!-- TAX Code Option -->
-<div class="form-group">
-    <label><?= $page['code2'] ?> Code Option</label>
-    <select class="form-control select2" name="tax_code" style="width: 100%;">
-        <option value="">Select Option</option>
-        <option value="1" <?php echo ($page['tax_code'] === '1') ? 'selected' : ''; ?>>On</option>
-        <option value="0" <?php echo ($page['tax_code'] === '0') ? 'selected' : ''; ?>>Off</option>
-    </select>
-</div>
+                            <div class="form-group">
+                                <label><?= $page['code2'] ?> Code Option</label>
+                                <select class="form-control select2" name="tax_code" style="width: 100%;">
+                                    <option value="">Select Option</option>
+                                    <option value="1" <?php echo ($page['tax_code'] === '1') ? 'selected' : ''; ?>>
+                                        On
+                                    </option>
+                                    <option value="0" <?php echo ($page['tax_code'] === '0') ? 'selected' : ''; ?>>
+                                        Off
+                                    </option>
+                                </select>
+                            </div>
 
-<!-- IMF Code Option -->
-<div class="form-group">
-    <label><?= $page['code3'] ?> Code Option</label>
-    <select class="form-control select2" name="imf_code" style="width: 100%;">
-        <option value="">Select Option</option>
-        <option value="1" <?php echo ($page['imf_code'] === '1') ? 'selected' : ''; ?>>On</option>
-        <option value="0" <?php echo ($page['imf_code'] === '0') ? 'selected' : ''; ?>>Off</option>
-    </select>
-</div>
+                            <!-- IMF Code Option -->
+                            <div class="form-group">
+                                <label><?= $page['code3'] ?> Code Option</label>
+                                <select class="form-control select2" name="imf_code" style="width: 100%;">
+                                    <option value="">Select Option</option>
+                                    <option value="1" <?php echo ($page['imf_code'] === '1') ? 'selected' : ''; ?>>
+                                        On
+                                    </option>
+                                    <option value="0" <?php echo ($page['imf_code'] === '0') ? 'selected' : ''; ?>>
+                                        Off
+                                    </option>
+                                </select>
+                            </div>
 
 
 
@@ -334,6 +385,6 @@ if (isset($_POST['save_settings'])) {
 
 
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/footer.php");
+include(ROOT_PATH . "/admin/layout/footer.php");
 
 ?>

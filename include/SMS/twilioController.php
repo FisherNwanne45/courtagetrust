@@ -1,5 +1,6 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . "/include/vendor/autoload.php";
+require_once __DIR__ . '/../../config.php';
+require_once ROOT_PATH . "/include/vendor/autoload.php";
 
 use Twilio\Rest\Client;
 

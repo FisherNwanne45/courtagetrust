@@ -1,6 +1,7 @@
 <?php
+require_once __DIR__ . '/../config.php';
 $pageName  = "View Loan";
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/header.php");
+include(ROOT_PATH . "/admin/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -80,7 +81,7 @@ if (isset($_POST['accept'])) {
           </div>
         ";
     } else {
-        toast_alert('error', 'Sorry Something Went Wrong');
+        //  toast_alert('error', 'Sorry Something Went Wrong');
     }
 }
 
@@ -138,7 +139,7 @@ if (isset($_POST['decline'])) {
           </div>
         ";
     } else {
-        toast_alert('error', 'Sorry Something Went Wrong');
+        //    toast_alert('error', 'Sorry Something Went Wrong');
     }
 }
 
@@ -186,7 +187,7 @@ if (isset($_POST['hold'])) {
           </div>
         ";
     } else {
-        toast_alert('error', 'Sorry Something Went Wrong');
+        //   toast_alert('error', 'Sorry Something Went Wrong');
     }
 }
 
@@ -268,7 +269,10 @@ if (isset($_POST['hold'])) {
                                                     <div class="col-md-12">
                                                         <label for="" class="text-center text-info">Copy This Text for
                                                             Message inbox </label>
-                                                        <textarea class="form-control mb-4 text-danger" rows="2" id="textarea-copy" placeholder="Loan Description" style="resize: none" value="" readonly>Dear <?= $fullName ?>  This is to inform you that your loan of <?= $currency . $result['amount'] ?> have been Approved Successfully Thanks</textarea>
+                                                        <textarea class="form-control mb-4 text-danger" rows="2"
+                                                            id="textarea-copy" placeholder="Loan Description"
+                                                            style="resize: none" value=""
+                                                            readonly>Dear <?= $fullName ?>  This is to inform you that your loan of <?= $currency . $result['amount'] ?> have been Approved Successfully Thanks</textarea>
                                                     </div>
                                                     <div class="col-md-12">
                                                         <div class="box-body pad">
@@ -278,11 +282,14 @@ if (isset($_POST['hold'])) {
 
                                                         <div class="box-footer">
                                                             <div class="box-footer">
-                                                                <button type="submit" name="accept" class="btn btn-success">Accept</button>
+                                                                <button type="submit" name="accept"
+                                                                    class="btn btn-success">Accept</button>
 
-                                                                <button type="submit" name="hold" class="btn btn-warning">Hold</button>
+                                                                <button type="submit" name="hold"
+                                                                    class="btn btn-warning">Hold</button>
 
-                                                                <button type="submit" name="decline" class="btn btn-danger">Decline</button>
+                                                                <button type="submit" name="decline"
+                                                                    class="btn btn-danger">Decline</button>
 
 
                                                             </div>
@@ -314,6 +321,6 @@ if (isset($_POST['hold'])) {
 
 
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/footer.php");
+include(ROOT_PATH . "/admin/layout/footer.php");
 
 ?>

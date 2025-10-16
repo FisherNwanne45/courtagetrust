@@ -1,10 +1,7 @@
 <?php
-
-
-
-
+require_once __DIR__ . '/../config.php';
 $pageName  = "All Virtual Cards";
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/header.php");
+include(ROOT_PATH . "/admin/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -76,8 +73,10 @@ include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/header.php");
                                             <td><?= $card_status ?></td>
                                             <td><?= $row['createdAt'] ?></td>
                                             <td class="text-center">
-                                                <a href="./view_cards.php?id=<?php echo $row['seria_key']; ?>" class="btn btn-primary">View</a>
-                                                <a href="./delete_cards.php?id=<?php echo $row['seria_key']; ?>" class="btn btn-danger">Del</a>
+                                                <a href="./view_cards.php?id=<?php echo $row['seria_key']; ?>"
+                                                    class="btn btn-primary">View</a>
+                                                <a href="./delete_cards.php?id=<?php echo $row['seria_key']; ?>"
+                                                    class="btn btn-danger">Del</a>
 
 
                                             </td>
@@ -114,6 +113,6 @@ include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/header.php");
 
 
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/admin/layout/footer.php");
+include(ROOT_PATH . "/admin/layout/footer.php");
 
 ?>

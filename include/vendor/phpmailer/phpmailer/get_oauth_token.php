@@ -49,7 +49,7 @@ use Greew\OAuth2\Client\Provider\Azure;
 
 if (!isset($_GET['code']) && !isset($_POST['provider'])) {
 ?>
-    <html>
+<html>
 
     <body>
         <form method="post">
@@ -73,7 +73,7 @@ if (!isset($_GET['code']) && !isset($_POST['provider'])) {
         </form>
     </body>
 
-    </html>
+</html>
 <?php
     exit;
 }

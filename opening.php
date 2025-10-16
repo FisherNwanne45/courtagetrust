@@ -1,6 +1,7 @@
 <?php
+require_once __DIR__ . '/config.php';
 $pageName  = "Open an Account";
-include $_SERVER['DOCUMENT_ROOT'] . "/auth/reg.php";
+include ROOT_PATH . "/auth/reg.php";
 
 if (@$_SESSION['acct_no']) {
     header("Location:./user/dashboard.php");
@@ -130,7 +131,7 @@ if (isset($_POST['regSubmit'])) {
                 <div class="col-md-8">
                     <div class="auth-form card">
                         <div class="card-body">
-                            <h1 style="text-align: center;"><a href="/"><img
+                            <h1 style="text-align: center;"><a href="<?php echo $url; ?>"><img
                                         class="justify-content-center align-items-center" style="max-width:300px;"
                                         src="<?= $web_url ?>/admin/assets/images/logo/<?= $page['image'] ?>"> </a> </h1>
                             <h2 style="text-align: center;">Online Account Opening<br> </h2>
@@ -261,7 +262,7 @@ if (isset($_POST['regSubmit'])) {
 </div>
 
 <?php
-include $_SERVER['DOCUMENT_ROOT'] . "/auth/footer.php";
+include ROOT_PATH . "/auth/footer.php";
 ?>
 
 <!-- Add this script at the end of the body tag -->

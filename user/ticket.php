@@ -1,6 +1,7 @@
 <?php
+require_once __DIR__ . '/../config.php';
 $pageName  = "New Ticket";
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/header.php");
+include(ROOT_PATH . "/user/layout/header.php");
 
 // Ofofonobs Developer WhatsAPP +2348114313795
 
@@ -83,7 +84,8 @@ if (isset($_POST['ticket-submit'])) {
                         <div class="form-group basic animated">
                             <div class="input-wrapper">
                                 <label class="label" for="email2">E-mail</label>
-                                <input type="email" class="form-control" name="email" placeholder="Your Email Address" disabled value="<?= $row['acct_email'] ?>">
+                                <input type="email" class="form-control" name="email" placeholder="Your Email Address"
+                                    disabled value="<?= $row['acct_email'] ?>">
                                 <i class="clear-input">
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
@@ -93,7 +95,8 @@ if (isset($_POST['ticket-submit'])) {
                         <div class="form-group basic animated">
                             <div class="input-wrapper">
                                 <label class="label" for="textarea2">Message</label>
-                                <textarea rows="5" name="ticket_message" class="form-control" required placeholder="Ticket Message"></textarea>
+                                <textarea rows="5" name="ticket_message" class="form-control" required
+                                    placeholder="Ticket Message"></textarea>
                                 <i class="clear-input">
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
@@ -121,8 +124,8 @@ if (isset($_POST['ticket-submit'])) {
 <!-- Ofofonobs Developer WhatsAPP +2348114313795 -->
 
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/bottom.php");
+include(ROOT_PATH . "/user/layout/bottom.php");
 
-include($_SERVER['DOCUMENT_ROOT'] . "/user/layout/footer.php");
+include(ROOT_PATH . "/user/layout/footer.php");
 
 ?>

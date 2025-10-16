@@ -18,8 +18,8 @@ namespace Composer\Autoload;
  *     $loader = new \Composer\Autoload\ClassLoader();
  *
  *     // register classes with namespaces
- *     $loader->add('Symfony\Component', $_SERVER['DOCUMENT_ROOT'].'/component');
- *     $loader->add('Symfony',           $_SERVER['DOCUMENT_ROOT'].'/framework');
+ *     $loader->add('Symfony\Component', ROOT_PATH.'/component');
+ *     $loader->add('Symfony',           ROOT_PATH.'/framework');
  *
  *     // activate the autoloader
  *     $loader->register();

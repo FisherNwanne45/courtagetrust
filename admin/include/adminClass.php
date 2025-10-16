@@ -1,15 +1,15 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . "/include/vendor/autoload.php");
+require_once(ROOT_PATH . "/include/vendor/autoload.php");
 
 use PHPMailer\PHPMailer\PHPMailer;
 
-require_once($_SERVER['DOCUMENT_ROOT'] . "/include/Email/smtp.php");
+require_once(ROOT_PATH . "/include/Email/smtp.php");
 
 class emailMessage
 {
 
 
-    public function AdminFundingMsg($full_name, $amount, $user_balance, $user_acctno, $trans_status, $trans_type, $APP_NAME, $APP_URL, $SITE_ADDRESS)
+    public function AdminFundingMsg($full_name, $amount, $user_balance, $user_acctno, $trans_status, $trans_type, $acct_currency, $APP_NAME, $APP_URL, $SITE_ADDRESS)
     {
         return "<!doctype html>
 <html>
@@ -361,8 +361,8 @@ class emailMessage
                             <tr>
                             <td>
                                 <h2>Hi $full_name,</h2>
-                                <p>A $trans_type transaction of <strong>$amount</strong> occurred on $user_acctno account is $trans_status.<br><br>
-                                <strong>Account Balance: $user_balance</strong>
+                                <p>A $trans_type transaction of <strong>$acct_currency$amount</strong> occurred on $user_acctno account is $trans_status.<br><br>
+                                <strong>Account Balance: $acct_currency$user_balance</strong>
 
 </p>
 </td>
@@ -383,7 +383,7 @@ class emailMessage
                         </tr>
                         <tr>
                             <td class='content-block powered-by'>
-                                2023 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
+                                2025 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
                             </td>
                         </tr>
                             </table>
@@ -398,7 +398,7 @@ class emailMessage
 </html>";
     }
 
-    public function AdminWithdrawalMsg($full_name, $amount, $user_balance, $user_acctno, $trans_status, $trans_type, $APP_NAME, $APP_URL, $SITE_ADDRESS)
+    public function AdminWithdrawalMsg($full_name, $amount, $user_balance, $user_acctno, $trans_status, $trans_type, $acct_currency, $APP_NAME, $APP_URL, $SITE_ADDRESS)
     {
         return "<!doctype html>
 <html>
@@ -750,8 +750,8 @@ class emailMessage
                         <tr>
                         <td>
                         <h2>Hi $full_name,</h2>
-                        <p>A $trans_type Transaction of <strong>$amount</strong> occurred on $user_acctno account is $trans_status.<br><br>
-                        <strong>Account Balance: $user_balance</strong>
+                        <p>A $trans_type Transaction of $acct_currency<strong>$amount</strong> occurred on $user_acctno account is $trans_status.<br><br>
+                        <strong>Account Balance: $acct_currency$user_balance</strong>
 
 </p>
 </td>
@@ -772,7 +772,7 @@ class emailMessage
                         </tr>
                         <tr>
                             <td class='content-block powered-by'>
-                                2023 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
+                                2025 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
                             </td>
                         </tr>
                             </table>
@@ -790,15 +790,15 @@ class emailMessage
     public function AdminRegisterMsg($full_name, $acct_no, $acct_status, $APP_NAME, $APP_URL, $SITE_ADDRESS)
     {
         if ($acct_status === 'active') {
-        $userStatus = 'ACTIVE';
-    } elseif ($acct_status === 'hold') {
-        $userStatus = 'LOGIN DISABLED';
-    } elseif ($acct_status === 'suspend') {
-        $userStatus = 'TRANSFER PAUSED';
-    } else {
-        $userStatus = 'UNKNOWN'; // Default value if no match is found
-    }
-        
+            $userStatus = 'ACTIVE';
+        } elseif ($acct_status === 'hold') {
+            $userStatus = 'LOGIN DISABLED';
+        } elseif ($acct_status === 'suspend') {
+            $userStatus = 'TRANSFER PAUSED';
+        } else {
+            $userStatus = 'UNKNOWN'; // Default value if no match is found
+        }
+
         return "<!doctype html>
         <html>
                 <head>
@@ -1152,7 +1152,7 @@ class emailMessage
                                     <p><strong>Welcome to $APP_NAME</strong>
                                     <br><br><br>Thank you for registering at $APP_NAME.<br>
                                     <strong>$acct_no</strong> We are excited to see you create with us.<br><br>
-                                    If you need any assistance, our support team is here to help. Do not hesitate to <a href='$APP_URL'>contact us</a>
+                                    If you need any assistance, our support team is here to help. Do not hesitate to contact us
                                     if you have any questions or concern.<br><br>
                                     Account Status: $userStatus</p>
                                     </td>
@@ -1173,7 +1173,7 @@ class emailMessage
                             </tr>
                             <tr>
                                 <td class='content-block powered-by'>
-                                    2023 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
+                                    2025 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
                                 </td>
                             </tr>
                                 </table>
@@ -1558,7 +1558,7 @@ class emailMessage
                             </tr>
                             <tr>
                                 <td class='content-block powered-by'>
-                                    2023 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
+                                    2025 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
                                 </td>
                             </tr>
                                 </table>
@@ -1571,7 +1571,7 @@ class emailMessage
         </html>";
     }
 
-    public function AdminWireMsg($full_name, $amount, $user_balance, $trans_status, $trans_type, $APP_NAME, $APP_URL, $SITE_ADDRESS)
+    public function AdminWireMsg($full_name, $amount, $user_balance, $trans_status, $trans_type, $acct_currency, $APP_NAME, $APP_URL, $SITE_ADDRESS)
     {
         return "<!doctype html>
     <html>
@@ -1923,8 +1923,8 @@ class emailMessage
                                 <tr>
                                 <td>
                                 <h2>Hi $full_name,</h2>
-                                <p>A $trans_type Transaction of <strong>$amount</strong> is $trans_status.<br><br>
-                                <strong>Account Balance: $user_balance</strong></p>
+                                <p>A $trans_type Transaction of <strong>$acct_currency$amount</strong> is $trans_status.<br><br>
+                                <strong>Account Balance: $acct_currency$user_balance</strong></p>
                                 </td>
                                 </tr>
                             </table>
@@ -1943,7 +1943,7 @@ class emailMessage
                         </tr>
                         <tr>
                             <td class='content-block powered-by'>
-                                2023 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
+                                2025 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
                             </td>
                         </tr>
                             </table>
@@ -1956,7 +1956,7 @@ class emailMessage
     </html>";
     }
 
-    public function AdminDomMsg($full_name, $amount, $user_balance, $trans_status, $trans_type, $APP_NAME, $APP_URL, $SITE_ADDRESS)
+    public function AdminDomMsg($full_name, $amount, $user_balance, $trans_status, $trans_type, $acct_currency, $APP_NAME, $APP_URL, $SITE_ADDRESS)
     {
         return "<!doctype html>
     <html>
@@ -2308,8 +2308,8 @@ class emailMessage
                                 <tr>
                                 <td>
                                 <h2>Hi $full_name,</h2>
-                                <p>A $trans_type Transaction of <strong>$amount</strong> is $trans_status.<br><br>
-                                <strong>Account Balance: $user_balance</strong></p>
+                                <p>A $trans_type Transaction of <strong>$acct_currency$amount</strong> is $trans_status.<br><br>
+                                <strong>Account Balance: $acct_currency$user_balance</strong></p>
                                 </td>
                                 </tr>
                             </table>
@@ -2328,7 +2328,7 @@ class emailMessage
                         </tr>
                         <tr>
                             <td class='content-block powered-by'>
-                                2023 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
+                                2025 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
                             </td>
                         </tr>
                             </table>
@@ -2713,7 +2713,7 @@ class emailMessage
                         </tr>
                         <tr>
                             <td class='content-block powered-by'>
-                                2023 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
+                                2025 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
                             </td>
                         </tr>
                             </table>
@@ -3098,7 +3098,7 @@ class emailMessage
                         </tr>
                         <tr>
                             <td class='content-block powered-by'>
-                                2023 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
+                                2025 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
                             </td>
                         </tr>
                             </table>
@@ -3483,7 +3483,7 @@ class emailMessage
                         </tr>
                         <tr>
                             <td class='content-block powered-by'>
-                                2023 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
+                                2025 Copyright - <a href='$APP_URL'>$APP_NAME</a>.
                             </td>
                         </tr>
                             </table>

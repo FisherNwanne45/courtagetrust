@@ -1,8 +1,9 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . "/include/config.php");
-require_once($_SERVER['DOCUMENT_ROOT'] . "/include/Function/userClass.php");
-require_once($_SERVER['DOCUMENT_ROOT'] . "/include/Function/Function.php");
-require_once $_SERVER['DOCUMENT_ROOT'] . "/include/SMS/twilioController.php";
+require_once __DIR__ . '/../../config.php';
+require_once(ROOT_PATH . "/include/config.php");
+require_once(ROOT_PATH . "/include/Function/userClass.php");
+require_once(ROOT_PATH . "/include/Function/Function.php");
+require_once ROOT_PATH . "/include/SMS/twilioController.php";
 
 $conn = dbConnect();
 $message = new message();

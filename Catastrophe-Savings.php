@@ -279,21 +279,21 @@
                     <tr>
                         <td>
                             <h2>Are you financially prepared for the next storm?</h2>
-                            <p>Open a Mississippi TAX FREE First Catastrophe Savings and you can be!</p>
+                            <p>Open a <?php echo $country; ?> TAX FREE First Catastrophe Savings and you can be!</p>
                             <ul>
-                                <li>Minimum Account opening is $1,000.00.</li>
+                                <li>Minimum Account opening is <?php echo $curr; ?>1,000.00.</li>
                                 <li>Maximum balance is based on your insurance and deductible.<sup>3</sup></li>
                             </ul>
-                            <p>A Catastrophe Savings Account (CSA) is a tax-advantaged regular savings account or money market account. It must be established by a Mississippi Income taxpayer to assist with post catastrophe losses or to self-insure all or a portion of one&rsquo;s home.</p>
+                            <p>A Catastrophe Savings Account (CSA) is a tax-advantaged regular savings account or money market account. It must be established by a <?php echo $country; ?> Income taxpayer to assist with post catastrophe losses or to self-insure all or a portion of one&rsquo;s home.</p>
                             <ul class="List-Checkmark">
-                                <li>Contributions and distributions are excluded from Mississippi Taxable Income.<sup>1</sup></li>
+                                <li>Contributions and distributions are excluded from <?php echo $country; ?> Taxable Income.<sup>1</sup></li>
                                 <li>Funds can be used to pay insurance deductibles, catastrophic event damages to your home and/or self-insured losses to your primary residence home.<sup>2</sup></li>
-                                <li>Deposit up to a maximum of $15,000.00, based on your qualified insurance deductible.<sup>3</sup></li>
-                                <li>Self-Insured Homeowners can deposit up to a maximum of $350,000.00 based on the value of your home.<sup>3</sup></li>
+                                <li>Deposit up to a maximum of <?php echo $curr; ?>15,000.00, based on your qualified insurance deductible.<sup>3</sup></li>
+                                <li>Self-Insured Homeowners can deposit up to a maximum of <?php echo $curr; ?>350,000.00 based on the value of your home.<sup>3</sup></li>
                             </ul>
                             <p class="Disclaimer"><sup>1</sup> Consult your tax advisor for tax benefit.</p>
-                            <p class="Disclaimer"><sup>2</sup> The funds in a CSA may be used to pay an insurance deductible under an insurance policy that covers the taxpayer's legal residence in Mississippi, if that policy covers hurricane, flood, windstorm or other "Catastrophic Event" damage. It can also be used to pay for "Catastrophic Event" damage to the taxpayer's legal residence in Mississippi that is not covered by the policy of insurance that covers the taxpayer's legal residence for such damage after the deductible under such policy has been paid and to pay self-insured losses for the tax-payer's legal residence from a hurricane, flood, windstorm, or other "Catastrophic Event".</p>
-                            <p class="Disclaimer"><sup>3</sup> If your qualified insurance deductible is less than or equal to $1000, then the total amount that may be contributed to a CSA can't be more than $2000.00.&nbsp; If your qualified insurance deductible is greater than $1000.00, then the total amount that may be contributed will be $15,000.00 or twice the amount of your deductible, whichever is less.&nbsp; If you are self-insured for all or any part of your insurance policy, and can't, or choose not to obtain insurance on your legal residence, then the total amount that may be contributed to a CSA will be the lesser or $350,000.00 or the value of your legal residence.</p>
+                            <p class="Disclaimer"><sup>2</sup> The funds in a CSA may be used to pay an insurance deductible under an insurance policy that covers the taxpayer's legal residence in <?php echo $country; ?>, if that policy covers hurricane, flood, windstorm or other "Catastrophic Event" damage. It can also be used to pay for "Catastrophic Event" damage to the taxpayer's legal residence in <?php echo $country; ?> that is not covered by the policy of insurance that covers the taxpayer's legal residence for such damage after the deductible under such policy has been paid and to pay self-insured losses for the tax-payer's legal residence from a hurricane, flood, windstorm, or other "Catastrophic Event".</p>
+                            <p class="Disclaimer"><sup>3</sup> If your qualified insurance deductible is less than or equal to <?php echo $curr; ?>1000, then the total amount that may be contributed to a CSA can't be more than <?php echo $curr; ?>2000.00.&nbsp; If your qualified insurance deductible is greater than <?php echo $curr; ?>1000.00, then the total amount that may be contributed will be <?php echo $curr; ?>15,000.00 or twice the amount of your deductible, whichever is less.&nbsp; If you are self-insured for all or any part of your insurance policy, and can't, or choose not to obtain insurance on your legal residence, then the total amount that may be contributed to a CSA will be the lesser or <?php echo $curr; ?>350,000.00 or the value of your legal residence.</p>
                         </td>
                     </tr>
                 </tbody>
@@ -332,12 +332,12 @@
                     <h3>Get Started</h3>
                     <ul>
                         <li><a href="Mortgage-Team.php#Apply-Now">Mortgage Application</a></li>
-                        <li><a href="Personal%20New%20Acct%20Application3f4b.pdf?documentId=57415" target="_blank">New Account Application</a></li>
-                        <li><a href="fillable%20switchkit434d.pdf?documentId=57331" target="_blank">Switch Kit</a></li>
+                        <li><a href="opening.php" target="_blank">New Account Application</a></li>
+                        <li><a href="opening.php" target="_blank">Switch Kit</a></li>
                     </ul>
                 </div>
                 <div class="awards">
-                    <img src="images/logo-best-places-to-work-mississippi.png" alt="Best Places to Work in Mississippi Award"> <img src="images/logo-american-banker-2018.png" alt="American Banker Best Bank to Work For Award 2018">
+                    <img src="images/logo-best-places-to-work-mississippi.png" alt="Best Places to Work in <?php echo $country; ?> Award"> <img src="images/logo-american-banker-2018.png" alt="American Banker Best Bank to Work For Award 2018">
                 </div>
                 <?php echo $livechat; ?>
                 <div class="copyright">
@@ -349,10 +349,10 @@
                             if (theYear < 1900)
                                 theYear = theYear + 1900
                             document.write(theYear)
-                        </script> <?php echo $name; ?>. All Rights Reserved. Member FDIC.
+                        </script> <?php echo $name; ?>. All Rights Reserved.
                     </p>
                     <div id="logos">
-                        <p><i class="icon-fdic"></i><i class="icon-ehl"></i></p>
+                        <p><!--<i class="icon-fdic"></i><i class="icon-ehl"></i> --></p>
                     </div>
                 </div>
             </div>

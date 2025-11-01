@@ -306,23 +306,23 @@
                                 <tbody>
                                     <tr>
                                         <td>3"x5"</td>
-                                        <td>$18.00</td>
+                                        <td><?php echo $curr; ?>18.00</td>
                                     </tr>
                                     <tr>
                                         <td>3"x10"</td>
-                                        <td>$30.00</td>
+                                        <td><?php echo $curr; ?>30.00</td>
                                     </tr>
                                     <tr>
                                         <td>5"x10"</td>
-                                        <td>$42.00</td>
+                                        <td><?php echo $curr; ?>42.00</td>
                                     </tr>
                                     <tr>
                                         <td>7"x10"</td>
-                                        <td>$60.00*</td>
+                                        <td><?php echo $curr; ?>60.00*</td>
                                     </tr>
                                     <tr>
                                         <td>10"x10"</td>
-                                        <td>$100.00*</td>
+                                        <td><?php echo $curr; ?>100.00*</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -388,15 +388,15 @@
                     <h3>Get Started</h3>
                     <ul>
                         <li><a href="Mortgage-Team.php#Apply-Now">Mortgage Application</a></li>
-                        <li><a href="Personal%20New%20Acct%20Application3f4b.pdf?documentId=57415"
+                        <li><a href="opening.php"
                                 target="_blank">New Account Application</a></li>
-                        <li><a href="fillable%20switchkit434d.pdf?documentId=57331" target="_blank">Switch Kit</a>
+                        <li><a href="opening.php" target="_blank">Switch Kit</a>
                         </li>
                     </ul>
                 </div>
                 <div class="awards">
                     <img src="images/logo-best-places-to-work-mississippi.png"
-                        alt="Best Places to Work in Mississippi Award"> <img
+                        alt="Best Places to Work in <?php echo $country; ?> Award"> <img
                         src="images/logo-american-banker-2018.png"
                         alt="American Banker Best Bank to Work For Award 2018">
                 </div>
@@ -410,10 +410,10 @@
                             if (theYear < 1900)
                                 theYear = theYear + 1900
                             document.write(theYear)
-                        </script> <?php echo $name; ?>. All Rights Reserved. Member FDIC.
+                        </script> <?php echo $name; ?>. All Rights Reserved.
                     </p>
                     <div id="logos">
-                        <p><i class="icon-fdic"></i><i class="icon-ehl"></i></p>
+                        <p><!--<i class="icon-fdic"></i><i class="icon-ehl"></i> --></p>
                     </div>
                 </div>
             </div>

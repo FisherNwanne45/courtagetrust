@@ -1,4 +1,3 @@
-
 <!-- Deposit Action Sheet -->
 <div class="modal fade action-sheet" id="depositActionSheet" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
@@ -40,7 +39,7 @@
                                                 style="margin-bottom: 10px; margin-top: 10px; text-align: left">Account
                                                 No:</span>
                                             <h1 class="title text-color2">
-                                                <?= $row['acct_no']?><a href="#" data-account="<?= $row['acct_no']?>"
+                                                <?= $row['acct_no'] ?><a href="#" data-account="<?= $row['acct_no'] ?>"
                                                     class="account" data-toggle="tooltip" title="Tap to copy"
                                                     style="color: #fff">
                                                     <ion-icon ios="ios-copy" md="md-copy"></ion-icon>
@@ -74,7 +73,7 @@
                                                 style="margin-bottom: 10px; margin-top: 10px; text-align: left">Account
                                                 No:</span>
                                             <h1 class="title text-color2">
-                                                XXXX-XXX-XXXX<a href="#" data-account="<?= $row['acct_no']?>"
+                                                XXXX-XXX-XXXX<a href="#" data-account="<?= $row['acct_no'] ?>"
                                                     class="account" data-toggle="tooltip" title="Tap to copy"
                                                     style="color: #fff">
                                                     <ion-icon ios="ios-copy" md="md-copy"></ion-icon>
@@ -155,7 +154,7 @@
                                         <a href="#" class="item">
                                             <div class="in">
                                                 <div>Maximum Balance</div>
-                                                <div>$300,000</div>
+                                                <div><?php echo $curr; ?>300,000</div>
                                             </div>
                                         </a>
                                     </li>
@@ -163,7 +162,7 @@
                                         <a href="#" class="item">
                                             <div class="in">
                                                 <div>Sending (per transaction)</div>
-                                                <div>$20,000</div>
+                                                <div><?php echo $curr; ?>20,000</div>
                                             </div>
                                         </a>
                                     </li>
@@ -179,7 +178,7 @@
                                         <a href="#" class="item">
                                             <div class="in">
                                                 <div>Single Withdrawal</div>
-                                                <div>$20,000</div>
+                                                <div><?php echo $curr; ?>20,000</div>
                                             </div>
                                         </a>
                                     </li>
@@ -211,7 +210,7 @@
                                         <a href="#" class="item">
                                             <div class="in">
                                                 <div>Sending (per transaction)</div>
-                                                <div>$50,000</div>
+                                                <div><?php echo $curr; ?>50,000</div>
                                             </div>
                                         </a>
                                     </li>
@@ -227,7 +226,7 @@
                                         <a href="#" class="item">
                                             <div class="in">
                                                 <div>Single Withdrawal</div>
-                                                <div>$50,000</div>
+                                                <div><?php echo $curr; ?>50,000</div>
                                             </div>
                                         </a>
                                     </li>
@@ -274,25 +273,25 @@
 
 
 <script>
-var data = <?= @json_encode($data); ?>;
-console.log(data);
+    var data = <?= @json_encode($data); ?>;
+    console.log(data);
 
-function crypto_type(id) {
-    for (var i = 0; i < data.length; i++) {
-        if (id == data[i].id) {
-            $("#wallet_address").val(data[i].wallet_address);
+    function crypto_type(id) {
+        for (var i = 0; i < data.length; i++) {
+            if (id == data[i].id) {
+                $("#wallet_address").val(data[i].wallet_address);
+            }
         }
     }
-}
 </script>
 
 
 <script>
-//  Preloader
-jQuery(window).on("load", function() {
-    $("#preloader").fadeOut(2000);
-    $("#main-wrapper").addClass("show");
-});
+    //  Preloader
+    jQuery(window).on("load", function() {
+        $("#preloader").fadeOut(2000);
+        $("#main-wrapper").addClass("show");
+    });
 </script>
 
 <script src="<?= $web_url ?>/assets/panel/js/main.js"></script>
@@ -317,10 +316,10 @@ jQuery(window).on("load", function() {
 
 <?= $tawk ?>
 <script>
-var style_url, url, token;
-style_url = "<?=$web_url.'/assets/panel/css/'?>";
-url = "{{url('/')}}";
-token = "{{Session::token()}}";
+    var style_url, url, token;
+    style_url = "<?= $web_url . '/assets/panel/css/' ?>";
+    url = "{{url('/')}}";
+    token = "{{Session::token()}}";
 </script>
 
 </body>

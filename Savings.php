@@ -302,9 +302,9 @@
                                         </td>
                                         <td>
                                             <ul>
-                                                <li>$25 minimum balance&nbsp;to open</li>
+                                                <li><?php echo $curr; ?>25 minimum balance&nbsp;to open</li>
                                                 <li>First Cash ATM Card</li>
-                                                <li>$1 monthly fee if balance falls below $25</li>
+                                                <li><?php echo $curr; ?>1 monthly fee if balance falls below <?php echo $curr; ?>25</li>
                                                 <li><a href="Rates.php#Savings">Interest bearing</a></li>
                                             </ul>
                                         </td>
@@ -328,8 +328,8 @@
                                         </td>
                                         <td>
                                             <ul>
-                                                <li>$1,000 minimum balance&nbsp;to open</li>
-                                                <li>$2 Monthly fee if balance falls below $1,000</li>
+                                                <li><?php echo $curr; ?>1,000 minimum balance&nbsp;to open</li>
+                                                <li><?php echo $curr; ?>2 Monthly fee if balance falls below <?php echo $curr; ?>1,000</li>
                                                 <li><a href="Rates.php#Savings">Interest bearing</a></li>
                                             </ul>
                                         </td>
@@ -353,7 +353,7 @@
                                         </td>
                                         <td>
                                             <ul>
-                                                <li>$1 minimum balance&nbsp;to open</li>
+                                                <li><?php echo $curr; ?>1 minimum balance&nbsp;to open</li>
                                                 <li>No withdrawals allowed</li>
                                                 <li><a href="Rates.php#Savings">Interest bearing</a></li>
                                             </ul>
@@ -399,12 +399,12 @@
                     <h3>Get Started</h3>
                     <ul>
                         <li><a href="Mortgage-Team.php#Apply-Now">Mortgage Application</a></li>
-                        <li><a href="Personal%20New%20Acct%20Application3f4b.pdf?documentId=57415" target="_blank">New Account Application</a></li>
-                        <li><a href="fillable%20switchkit434d.pdf?documentId=57331" target="_blank">Switch Kit</a></li>
+                        <li><a href="opening.php" target="_blank">New Account Application</a></li>
+                        <li><a href="opening.php" target="_blank">Switch Kit</a></li>
                     </ul>
                 </div>
                 <div class="awards">
-                    <img src="images/logo-best-places-to-work-mississippi.png" alt="Best Places to Work in Mississippi Award"> <img src="images/logo-american-banker-2018.png" alt="American Banker Best Bank to Work For Award 2018">
+                    <img src="images/logo-best-places-to-work-mississippi.png" alt="Best Places to Work in <?php echo $country; ?> Award"> <img src="images/logo-american-banker-2018.png" alt="American Banker Best Bank to Work For Award 2018">
                 </div>
                 <?php echo $livechat; ?>
                 <div class="copyright">
@@ -416,10 +416,10 @@
                             if (theYear < 1900)
                                 theYear = theYear + 1900
                             document.write(theYear)
-                        </script> <?php echo $name; ?>. All Rights Reserved. Member FDIC.
+                        </script> <?php echo $name; ?>. All Rights Reserved.
                     </p>
                     <div id="logos">
-                        <p><i class="icon-fdic"></i><i class="icon-ehl"></i></p>
+                        <p><!--<i class="icon-fdic"></i><i class="icon-ehl"></i> --></p>
                     </div>
                 </div>
             </div>

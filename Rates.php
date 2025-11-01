@@ -327,22 +327,22 @@
                                     <tr>
                                         <td>Legacy Checking</td>
                                         <td>6.00%</td>
-                                        <td>$25.00</td>
+                                        <td><?php echo $curr; ?>25.00</td>
                                         <td>$00.01</td>
                                         <td>5.85%</td>
                                     </tr>
                                     <tr>
                                         <td>First4Me Checking</td>
                                         <td>5.00%</td>
-                                        <td>$25.00</td>
+                                        <td><?php echo $curr; ?>25.00</td>
                                         <td>$00.01</td>
                                         <td>4.89%</td>
                                     </tr>
                                     <tr>
                                         <td>First Choice Money Market</td>
                                         <td>0.25%</td>
-                                        <td>$10,000.00</td>
-                                        <td>$10,000.00</td>
+                                        <td><?php echo $curr; ?>10,000.00</td>
+                                        <td><?php echo $curr; ?>10,000.00</td>
                                         <td>0.25%</td>
                                     </tr>
                                 </tbody>
@@ -362,29 +362,29 @@
                                     <tr>
                                         <td>First Catastrophe Savings</td>
                                         <td>0.25%</td>
-                                        <td>$1,000.00</td>
-                                        <td>$1,000.00</td>
+                                        <td><?php echo $curr; ?>1,000.00</td>
+                                        <td><?php echo $curr; ?>1,000.00</td>
                                         <td>0.25%</td>
                                     </tr>
                                     <tr>
                                         <td>Passbook Savings</td>
                                         <td>0.02%</td>
-                                        <td>$25.00</td>
-                                        <td>$20.00</td>
+                                        <td><?php echo $curr; ?>25.00</td>
+                                        <td><?php echo $curr; ?>20.00</td>
                                         <td>0.02%</td>
                                     </tr>
                                     <tr>
                                         <td>Christmas Club</td>
                                         <td>0.02%</td>
-                                        <td>$1.00</td>
-                                        <td>$20.00</td>
+                                        <td><?php echo $curr; ?>1.00</td>
+                                        <td><?php echo $curr; ?>20.00</td>
                                         <td>0.02%</td>
                                     </tr>
                                     <tr>
                                         <td>Money Fund</td>
                                         <td>0.05%</td>
-                                        <td>$1,000.00</td>
-                                        <td>$20.00</td>
+                                        <td><?php echo $curr; ?>1,000.00</td>
+                                        <td><?php echo $curr; ?>20.00</td>
                                         <td>0.05%</td>
                                     </tr>
                                 </tbody>
@@ -446,7 +446,7 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <p class="Disclaimer">&nbsp;*Minimum Balance to Open and Earn APY is $1,000.00</p>
+                            <p class="Disclaimer">&nbsp;*Minimum Balance to Open and Earn APY is <?php echo $curr; ?>1,000.00</p>
                             <table class="Table-Style" style="width: 100%;">
                                 <caption><a id="Jumbo-CD"></a>Jumbo Certificate of Deposit Rates**</caption>
                                 <thead>
@@ -489,7 +489,7 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <p class="Disclaimer">&nbsp;**Minimum to Open and Earn APY is $100,000.00</p>
+                            <p class="Disclaimer">&nbsp;**Minimum to Open and Earn APY is <?php echo $curr; ?>100,000.00</p>
                             <table class="Table-Style" style="width: 100%;">
                                 <thead>
                                     <tr>
@@ -505,43 +505,43 @@
                                     <tr>
                                         <td>IRA Access Fund</td>
                                         <td>0.02%</td>
-                                        <td>$1,000.00</td>
-                                        <td>$500.00</td>
+                                        <td><?php echo $curr; ?>1,000.00</td>
+                                        <td><?php echo $curr; ?>500.00</td>
                                         <td>0.02%</td>
                                     </tr>
                                     <tr>
                                         <td>6 Month IRA CD</td>
                                         <td>0.15%</td>
-                                        <td>$1,000.00</td>
-                                        <td>$1,000.00</td>
+                                        <td><?php echo $curr; ?>1,000.00</td>
+                                        <td><?php echo $curr; ?>1,000.00</td>
                                         <td>0.15%</td>
                                     </tr>
                                     <tr>
                                         <td>1 Year IRA CD</td>
                                         <td>0.20%</td>
-                                        <td>$1,000.00</td>
-                                        <td>$1,000.00</td>
+                                        <td><?php echo $curr; ?>1,000.00</td>
+                                        <td><?php echo $curr; ?>1,000.00</td>
                                         <td>0.20%</td>
                                     </tr>
                                     <tr>
                                         <td>18 Month IRA CD</td>
                                         <td>0.30%</td>
-                                        <td>$1,000.00</td>
-                                        <td>$1,000.00</td>
+                                        <td><?php echo $curr; ?>1,000.00</td>
+                                        <td><?php echo $curr; ?>1,000.00</td>
                                         <td>0.30%</td>
                                     </tr>
                                     <tr>
                                         <td>3 Year IRA CD</td>
                                         <td>0.40%</td>
-                                        <td>$1,000.00</td>
-                                        <td>$1,000.00</td>
+                                        <td><?php echo $curr; ?>1,000.00</td>
+                                        <td><?php echo $curr; ?>1,000.00</td>
                                         <td>0.40%</td>
                                     </tr>
                                     <tr>
                                         <td>5 Year IRA CD</td>
                                         <td>0.60%</td>
-                                        <td>$1,000.00</td>
-                                        <td>$1,000.00</td>
+                                        <td><?php echo $curr; ?>1,000.00</td>
+                                        <td><?php echo $curr; ?>1,000.00</td>
                                         <td>0.60%</td>
                                     </tr>
                                 </tbody>
@@ -584,12 +584,12 @@
                     <h3>Get Started</h3>
                     <ul>
                         <li><a href="Mortgage-Team.php#Apply-Now">Mortgage Application</a></li>
-                        <li><a href="Personal%20New%20Acct%20Application3f4b.pdf?documentId=57415" target="_blank">New Account Application</a></li>
-                        <li><a href="fillable%20switchkit434d.pdf?documentId=57331" target="_blank">Switch Kit</a></li>
+                        <li><a href="opening.php" target="_blank">New Account Application</a></li>
+                        <li><a href="opening.php" target="_blank">Switch Kit</a></li>
                     </ul>
                 </div>
                 <div class="awards">
-                    <img src="images/logo-best-places-to-work-mississippi.png" alt="Best Places to Work in Mississippi Award"> <img src="images/logo-american-banker-2018.png" alt="American Banker Best Bank to Work For Award 2018">
+                    <img src="images/logo-best-places-to-work-mississippi.png" alt="Best Places to Work in <?php echo $country; ?> Award"> <img src="images/logo-american-banker-2018.png" alt="American Banker Best Bank to Work For Award 2018">
                 </div>
                 <?php echo $livechat; ?>
                 <div class="copyright">
@@ -601,10 +601,10 @@
                             if (theYear < 1900)
                                 theYear = theYear + 1900
                             document.write(theYear)
-                        </script> <?php echo $name; ?>. All Rights Reserved. Member FDIC.
+                        </script> <?php echo $name; ?>. All Rights Reserved.
                     </p>
                     <div id="logos">
-                        <p><i class="icon-fdic"></i><i class="icon-ehl"></i></p>
+                        <p><!--<i class="icon-fdic"></i><i class="icon-ehl"></i> --></p>
                     </div>
                 </div>
             </div>

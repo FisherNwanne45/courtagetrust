@@ -16,7 +16,8 @@
             }, 'google_translate_element');
         }
     </script>
-    <script type="text/javascript" src="translate.google.com/translate_a/fa0d8a0d8.txt?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript"
+        src="translate.google.com/translate_a/fa0d8a0d8.txt?cb=googleTranslateElementInit"></script>
 
 
     <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
@@ -113,10 +114,14 @@
                     <div>
                         <a href="index.php" class="mobile-logo">
 
-                            <img src="<?php echo $url; ?>/admin/assets/images/logo/<?php echo $image; ?>" alt=" <?php echo $name; ?> Logo"><span class="visuallyhidden"> <?php echo $name; ?> Logo</span></a>
+                            <img src="<?php echo $url; ?>/admin/assets/images/logo/<?php echo $image; ?>"
+                                alt=" <?php echo $name; ?> Logo"><span class="visuallyhidden"> <?php echo $name; ?>
+                                Logo</span></a>
                         <div>
-                            <a href="javascript:void(0)" id="loginopen" class="Button1 fa-lock login-button"><span>Login</span></a>
-                            <a href="javascript:void(0)" id="menuopen" class="fa-bars"><span class="visuallyhidden">Menu</span></a>
+                            <a href="javascript:void(0)" id="loginopen"
+                                class="Button1 fa-lock login-button"><span>Login</span></a>
+                            <a href="javascript:void(0)" id="menuopen" class="fa-bars"><span
+                                    class="visuallyhidden">Menu</span></a>
                         </div>
                     </div>
 
@@ -158,10 +163,13 @@
                                 </div>
                             </li>
                         </ul>
-                    </div> <!--/toolbar-wrapper-->
+                    </div>
+                    <!--/toolbar-wrapper-->
                     <ul>
 
-                        <li id="logo"><a href="index.php"><img src="<?php echo $url; ?>/admin/assets/images/logo/<?php echo $image; ?>" alt=" <?php echo $name; ?> Logo"></a></li>
+                        <li id="logo"><a href="index.php"><img
+                                    src="<?php echo $url; ?>/admin/assets/images/logo/<?php echo $image; ?>"
+                                    alt=" <?php echo $name; ?> Logo"></a></li>
                         <li>
                             <a href="javascript:void(0)"><span>Deposit</span> Accounts</a>
                             <div>
@@ -221,7 +229,8 @@
                                     <h3>Additional Services</h3>
                                     <ul>
                                         <li><a href="Additional-Services.php">Safe Deposit Box</a></li>
-                                        <li><a href="Additional-Services.php#Telephone-Banking">Telephone Banking</a></li>
+                                        <li><a href="Additional-Services.php#Telephone-Banking">Telephone
+                                                Banking</a></li>
                                         <li><a href="Additional-Services.php#Lost-Card">Lost or Stolen Card</a></li>
                                     </ul>
                                 </div>
@@ -282,8 +291,10 @@
                         function SiteMigrationAlert(TVSURL) {
                             var Notice = "This website provides these links as a convenience. ";
                             Notice += "This website has no control over the linked websites or the content therein. ";
-                            Notice += "As such, This website has no liability arising out of linking to these websites ";
-                            Notice += "and the existence of such links does not constitute endorsement by this website.";
+                            Notice +=
+                                "As such, This website has no liability arising out of linking to these websites ";
+                            Notice +=
+                                "and the existence of such links does not constitute endorsement by this website.";
 
                             if (confirm(Notice)) {
                                 window.open(TVSURL);
@@ -298,7 +309,8 @@
 
                         <!--Begin Send To Friend-->
                         <a href="mailto:?subject=financial calculators" id="tvcMailToLinkId">
-                            <img src="../www.timevaluecalculators.com/timevaluecalculators/images/email_icon.png" title="Email this to a friend" alt="Email page">
+                            <img src="https://www.timevaluecalculators.com/timevaluecalculators/images/email_icon.png"
+                                title="Email this to a friend" alt="Email page">
                         </a>
                         <script language="JavaScript" type="text/javascript">
                             var tvcMailToSubject;
@@ -306,48 +318,343 @@
                             var tvcQueryString = unescape(document.location.search);
                             var tvcMailToLinkElement = document.getElementById('tvcMailToLinkId');
                             if (tvcMailToLinkElement) {
-                                if (tvcQueryString.indexOf("CALCULATORID") == -1) /* If we are displaying the list of calculators, just put the current location in the body. */ {
+                                if (tvcQueryString.indexOf("CALCULATORID") == -
+                                    1
+                                ) /* If we are displaying the list of calculators, just put the current location in the body. */ {
                                     tvcMailToSubject = 'financial calculators';
-                                    tvcMailToBody = 'Hello,%0A%0ATake a look at these online financial calculators.%0A%0A' + escape(document.location.href + '\n\n');
+                                    tvcMailToBody =
+                                        'Hello,%0A%0ATake a look at these online financial calculators.%0A%0A' + escape(
+                                            document.location.href + '\n\n');
                                 } else /* If we are displaying a calculator, add the actual calculation to the body. */ {
                                     tvcMailToSubject = 'financial calculation';
-                                    tvcMailToBody = 'Hello,%0A%0ATake a look at this online financial calculation.%0A%0A' + escape(document.location.href + '\n\n');
+                                    tvcMailToBody =
+                                        'Hello,%0A%0ATake a look at this online financial calculation.%0A%0A' + escape(
+                                            document.location.href + '\n\n');
                                 }
-                                tvcMailToLinkElement.href = 'mailto:?subject=' + tvcMailToSubject + '&body=' + tvcMailToBody;
+                                tvcMailToLinkElement.href = 'mailto:?subject=' + tvcMailToSubject + '&body=' +
+                                    tvcMailToBody;
                             }
                         </script>
                         <!--End Send To Friend-->
 
                         <!--Begin Print This-->
                         <a href="javascript:window.print();" id="tvcPrintThisLinkId">
-                            <img src="../www.timevaluecalculators.com/timevaluecalculators/images/print_icon.png" title="Print this page" alt="Print page">
+                            <img src="https://www.timevaluecalculators.com/timevaluecalculators/images/print_icon.png"
+                                title="Print this page" alt="Print page">
                         </a>
                         <!--End Print This-->
                     </div>
                     <!--Begin Calculators Main Content-->
-                    <link rel="StyleSheet" type="text/css" href="../www.timevaluecalculators.com/timevaluecalculators/Includes/tvcDefaultStyles.css">
-                    <script language="JavaScript" src="../www.timevaluecalculators.com/timevaluecalculators/Includes/tvcClientSideFunctions.js" type="text/javascript"></script>
-                    <div id="tvcMainCalculatorDivId" class="cTimeValue">
-                        <script type="text/javascript" language="JavaScript">
-                            TEMPLATE_ID = "alliedtrustb.com_1";
-                            CALCULATORID = "";
-                            PASSTHROUGH = "";
-                            /* If you need to modify our calculator HTML after it has loaded, define a function and assign it to tvcAfterCalculatorsHaveLoadedFnc.  */
-                            /* For example: tvcAfterCalculatorsHaveLoadedFnc = yourCallbackFnc() { var ele = document.getElementById('tvcPC01TitleId'); if (ele !== null) {ele.innerHTML = "How much can I afford?"; }} */
+                    <style>
+                        /* Loan Calculator Widget - scoped styles */
+                        .loan-widget {
+                            font-family: system-ui, Arial, sans-serif;
+                            color: #222;
+                            background: #fff;
+                            border: 1px solid #ddd;
+                            border-radius: 8px;
+                            padding: 16px;
+                            max-width: 900px;
+                        }
 
-                            var tvcScriptElement = document.createElement('script');
-                            var tvcCalculatorHtml = "";
-                            var tvcHttp;
-                            if (document.location.href.substring(0, 5) == "https") {
-                                tvcHttp = "https:///";
-                            } else {
-                                tvcHttp = "http://";
-                            }
-                            tvcScriptElement.src = tvcHttp + "www.TimeValueCalculators.com/timevaluecalculators/Calculator2.aspx?version=" + Math.random() + "&" + createQueryString();
-                            tvcScriptElement.onload = tvcOnceLoaded;
-                            document.getElementById('tvcMainCalculatorDivId').appendChild(tvcScriptElement);
-                        </script>
+                        .loan-widget .row {
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 10px;
+                            margin-bottom: 10px;
+                        }
+
+                        .loan-widget .col {
+                            flex: 1;
+                            min-width: 160px;
+                        }
+
+                        .loan-widget label {
+                            display: block;
+                            font-size: 0.85rem;
+                            margin-bottom: 4px;
+                            color: #555;
+                        }
+
+                        .loan-widget input[type=number],
+                        .loan-widget input[type=date],
+                        .loan-widget select {
+                            width: 100%;
+                            padding: 8px;
+                            border: 1px solid #ccc;
+                            border-radius: 6px;
+                            font-size: 0.95rem;
+                        }
+
+                        .loan-widget button {
+                            padding: 8px 14px;
+                            border: none;
+                            border-radius: 6px;
+                            cursor: pointer;
+                            font-weight: 600;
+                        }
+
+                        .loan-widget button.primary {
+                            background: #007bff;
+                            color: #fff;
+                        }
+
+                        .loan-widget button.secondary {
+                            background: #f0f0f0;
+                            color: #333;
+                        }
+
+                        .loan-widget .summary {
+                            margin-top: 12px;
+                            background: #f9f9f9;
+                            border-radius: 6px;
+                            padding: 10px;
+                        }
+
+                        .loan-widget .kpi-item {
+                            display: flex;
+                            justify-content: space-between;
+                            padding: 4px 0;
+                        }
+
+                        .loan-widget .big {
+                            font-weight: 700;
+                        }
+
+                        .loan-widget canvas {
+                            width: 100%;
+                            height: 200px;
+                            background: #fafafa;
+                            border: 1px solid #eee;
+                            border-radius: 6px;
+                        }
+
+                        .loan-widget table {
+                            width: 100%;
+                            border-collapse: collapse;
+                            font-size: 0.85rem;
+                        }
+
+                        .loan-widget th,
+                        .loan-widget td {
+                            padding: 6px;
+                            border-bottom: 1px solid #eee;
+                            text-align: right;
+                        }
+
+                        .loan-widget th:first-child,
+                        .loan-widget td:first-child {
+                            text-align: left;
+                        }
+                    </style>
+
+                    <div class="loan-widget">
+                        <div class="row">
+                            <div class="col">
+                                <label for="amount">Loan amount</label>
+                                <input id="amount" type="number" step="0.01" min="0" value="250000" />
+                            </div>
+                            <div class="col">
+                                <label for="rate">Annual interest rate (%)</label>
+                                <input id="rate" type="number" step="0.01" min="0" value="3.5" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="term">Term (years)</label>
+                                <input id="term" type="number" step="1" min="1" value="30" />
+                            </div>
+                            <div class="col">
+                                <label for="paymentsPerYear">Payments per year</label>
+                                <select id="paymentsPerYear">
+                                    <option value="12">Monthly (12)</option>
+                                    <option value="26">Bi-weekly (26)</option>
+                                    <option value="52">Weekly (52)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="extra">Extra payment per period</label>
+                                <input id="extra" type="number" step="0.01" min="0" value="0" />
+                            </div>
+                            <div class="col">
+                                <label for="start">Start date</label>
+                                <input id="start" type="date" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <button id="calc" class="primary">Calculate</button>
+                            <button id="reset" class="secondary">Reset</button>
+                        </div>
+
+                        <div class="summary">
+                            <div class="kpi-item"><span>Periodic payment</span><span id="periodic"
+                                    class="big">—</span></div>
+                            <div class="kpi-item"><span>Total paid</span><span id="totalPaid">—</span></div>
+                            <div class="kpi-item"><span>Total interest</span><span id="totalInterest">—</span></div>
+                            <div class="kpi-item"><span>Number of payments</span><span id="numPayments">—</span>
+                            </div>
+                        </div>
+
+                        <canvas id="chart"></canvas>
+                        <div style="margin-top:8px;">
+                            <button id="showTable" class="secondary">Show amortization</button>
+                            <button id="downloadCsv" class="primary">Download schedule</button>
+                        </div>
+                        <div id="tableWrap" style="display:none; overflow:auto; max-height:200px; margin-top:8px;">
+                            <table id="amortTable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Date</th>
+                                        <th>Payment</th>
+                                        <th>Principal</th>
+                                        <th>Interest</th>
+                                        <th>Balance</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
                     </div>
+
+                    <script>
+                        const $ = id => document.getElementById(id);
+                        const fmt = v => v.toLocaleString(undefined, {
+                            minimumFractionDigits: 2,
+                            maximumFractionDigits: 2
+                        });
+
+                        function validateInputs() {
+                            const amount = Math.max(0, Number($('amount').value) || 0);
+                            const rate = Math.max(0, Number($('rate').value) || 0);
+                            const term = Math.max(1, Math.floor(Number($('term').value) || 1));
+                            const ppy = Number($('paymentsPerYear').value) || 12;
+                            const extra = Math.max(0, Number($('extra').value) || 0);
+                            return {
+                                amount,
+                                rate,
+                                term,
+                                ppy,
+                                extra
+                            };
+                        }
+
+                        function generateSchedule({
+                            principal,
+                            annualRatePct,
+                            years,
+                            paymentsPerYear,
+                            extra,
+                            startDate
+                        }) {
+                            const periods = years * paymentsPerYear;
+                            const r = annualRatePct / 100 / paymentsPerYear;
+                            const schedule = [];
+                            let balance = principal;
+                            let payment = r === 0 ? principal / periods : principal * (r / (1 - Math.pow(1 + r, -
+                                periods)));
+
+                            const start = startDate ? new Date(startDate) : new Date();
+                            for (let i = 1; i <= periods && balance > 0; i++) {
+                                const interest = balance * r;
+                                let principalPaid = payment - interest + extra;
+                                if (principalPaid > balance) principalPaid = balance;
+                                const totalPayment = principalPaid + interest;
+                                balance -= principalPaid;
+                                const date = new Date(start);
+                                date.setMonth(start.getMonth() + (12 / paymentsPerYear) * (i - 1));
+                                schedule.push({
+                                    i,
+                                    date: date.toISOString().slice(0, 10),
+                                    payment: totalPayment,
+                                    principal: principalPaid,
+                                    interest,
+                                    balance: Math.max(0, balance)
+                                });
+                            }
+                            return {
+                                schedule,
+                                payment: payment + extra
+                            };
+                        }
+
+                        function drawChart(points) {
+                            const c = $('chart');
+                            const ctx = c.getContext('2d');
+                            const w = c.width = c.clientWidth;
+                            const h = c.height = c.clientHeight;
+                            ctx.clearRect(0, 0, w, h);
+                            if (!points.length) return;
+                            const max = Math.max(...points);
+                            ctx.beginPath();
+                            points.forEach((p, i) => {
+                                const x = (w * i) / (points.length - 1);
+                                const y = h * (1 - p / max);
+                                i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+                            });
+                            ctx.strokeStyle = '#007bff';
+                            ctx.lineWidth = 2;
+                            ctx.stroke();
+                        }
+
+                        function renderResults({
+                            schedule,
+                            payment
+                        }) {
+                            const totalPaid = schedule.reduce((s, r) => s + r.payment, 0);
+                            const totalInterest = schedule.reduce((s, r) => s + r.interest, 0);
+                            $('periodic').textContent = fmt(payment);
+                            $('totalPaid').textContent = fmt(totalPaid);
+                            $('totalInterest').textContent = fmt(totalInterest);
+                            $('numPayments').textContent = schedule.length;
+                            drawChart(schedule.map(s => s.balance));
+
+                            $('showTable').onclick = () => {
+                                const tbody = $('amortTable').querySelector('tbody');
+                                tbody.innerHTML = schedule.map(r =>
+                                    `<tr><td>${r.i}</td><td>${r.date}</td><td>${fmt(r.payment)}</td><td>${fmt(r.principal)}</td><td>${fmt(r.interest)}</td><td>${fmt(r.balance)}</td></tr>`
+                                ).join('');
+                                $('tableWrap').style.display = $('tableWrap').style.display === 'none' ? 'block' :
+                                    'none';
+                            };
+                            $('downloadCsv').onclick = () => {
+                                let csv = 'Period,Date,Payment,Principal,Interest,Balance\n';
+                                schedule.forEach(r => csv +=
+                                    `${r.i},${r.date},${r.payment.toFixed(2)},${r.principal.toFixed(2)},${r.interest.toFixed(2)},${r.balance.toFixed(2)}\n`
+                                );
+                                const blob = new Blob([csv], {
+                                    type: 'text/csv'
+                                });
+                                const a = document.createElement('a');
+                                a.href = URL.createObjectURL(blob);
+                                a.download = 'amortization.csv';
+                                a.click();
+                            };
+                        }
+
+                        $('calc').onclick = () => {
+                            const vals = validateInputs();
+                            renderResults(generateSchedule({
+                                principal: vals.amount,
+                                annualRatePct: vals.rate,
+                                years: vals.term,
+                                paymentsPerYear: vals.ppy,
+                                extra: vals.extra,
+                                startDate: $('start').value
+                            }));
+                        };
+
+                        $('reset').onclick = () => {
+                            ['amount', 'rate', 'term', 'extra'].forEach(id => $(`${id}`).value = '');
+                            $('periodic').textContent = $('totalPaid').textContent = $('totalInterest')
+                                .textContent = $('numPayments').textContent = '—';
+                            $('amortTable').querySelector('tbody').innerHTML = '';
+                            $('tableWrap').style.display = 'none';
+                            drawChart([]);
+                        };
+                    </script>
                     <!--End Calculators Main Content-->
                     <!--End Calculators Script-->
 
@@ -380,12 +687,15 @@
                     <h3>Get Started</h3>
                     <ul>
                         <li><a href="Mortgage-Team.php#Apply-Now">Mortgage Application</a></li>
-                        <li><a href="Personal%20New%20Acct%20Application3f4b.pdf?documentId=57415" target="_blank">New Account Application</a></li>
-                        <li><a href="fillable%20switchkit434d.pdf?documentId=57331" target="_blank">Switch Kit</a></li>
+                        <li><a href="opening.php" target="_blank">New Account Application</a></li>
+                        <li><a href="opening.php" target="_blank">Switch Kit</a></li>
                     </ul>
                 </div>
                 <div class="awards">
-                    <img src="images/logo-best-places-to-work-mississippi.png" alt="Best Places to Work in Mississippi Award"> <img src="images/logo-american-banker-2018.png" alt="American Banker Best Bank to Work For Award 2018">
+                    <img src="images/logo-best-places-to-work-mississippi.png"
+                        alt="Best Places to Work in <?php echo $country; ?> Award"> <img
+                        src="images/logo-american-banker-2018.png"
+                        alt="American Banker Best Bank to Work For Award 2018">
                 </div>
                 <?php echo $livechat; ?>
                 <div class="copyright">
@@ -397,16 +707,19 @@
                             if (theYear < 1900)
                                 theYear = theYear + 1900
                             document.write(theYear)
-                        </script> <?php echo $name; ?>. All Rights Reserved. Member FDIC.
+                        </script> <?php echo $name; ?>. All Rights Reserved.
                     </p>
                     <div id="logos">
-                        <p><i class="icon-fdic"></i><i class="icon-ehl"></i></p>
+                        <p>
+                            <!--<i class="icon-fdic"></i><i class="icon-ehl"></i> -->
+                        </p>
                     </div>
                 </div>
             </div>
         </footer>
     </div>
-    <a href="#top" id="gototop" class="fa fa-chevron-up downscale"><span class="visuallyhidden">Back to Top</span></a>
+    <a href="#top" id="gototop" class="fa fa-chevron-up downscale"><span class="visuallyhidden">Back to
+            Top</span></a>
     <script type="text/javascript" src="js/vendor/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="js/fiserv-plugins.js"></script>
     <script src="js/slideshow.js"></script>

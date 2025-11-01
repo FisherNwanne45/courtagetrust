@@ -300,7 +300,7 @@
                                 </tbody>
                             </table>
                             <h3>We&rsquo;ve made switching banks easy. Download our SwitchKit today.</h3>
-                            <p><a class="Button1" href="fillable%20switchkit434d.pdf?documentId=57331" target="_blank">SWITCH NOW</a></p>
+                            <p><a class="Button1" href="opening.php" target="_blank">SWITCH NOW</a></p>
                             <p>&nbsp;</p>
                         </td>
                     </tr>
@@ -319,12 +319,12 @@
                                         </td>
                                         <td>
                                             <ul>
-                                                <li>$25 minimum balance to open</li>
+                                                <li><?php echo $curr; ?>25 minimum balance to open</li>
                                                 <li>For ages 16 to 23</li>
                                                 <li>FREE photo debit card</li>
-                                                <li>Chance to win $500 scholarship</li>
+                                                <li>Chance to win <?php echo $curr; ?>500 scholarship</li>
                                                 <li>Save on out-of-network ATM fees</li>
-                                                <li>Earn 5% APY on balances up to $500</li>
+                                                <li>Earn 5% APY on balances up to <?php echo $curr; ?>500</li>
                                                 <li><a href="Checking%20Disclosures919e.pdf?documentId=60991">Disclosures</a></li>
                                             </ul>
                                         </td>
@@ -348,7 +348,7 @@
                                         </td>
                                         <td>
                                             <ul>
-                                                <li>$100 minimum balance to open</li>
+                                                <li><?php echo $curr; ?>100 minimum balance to open</li>
                                                 <li>FREE debit card</li>
                                                 <li>No minimum balance required</li>
                                                 <li>FREE checks</li>
@@ -374,12 +374,12 @@
                                         </td>
                                         <td>
                                             <ul>
-                                                <li>$25 minimum balance&nbsp;to open</li>
+                                                <li><?php echo $curr; ?>25 minimum balance&nbsp;to open</li>
                                                 <li>FREE photo debit card</li>
                                                 <li>No minimum balance required</li>
                                                 <li>FREE checks</li>
                                                 <li>Save on out-of-network ATM fees</li>
-                                                <li>Earn 6% APY on balances up to $600</li>
+                                                <li>Earn 6% APY on balances up to <?php echo $curr; ?>600</li>
                                                 <li>Coupon to waive one overdraft fee</li>
                                                 <li>No monthly service charge with direct deposit</li>
                                                 <li><a href="Checking%20Disclosures919e.pdf?documentId=60991">Disclosures</a></li>
@@ -405,11 +405,11 @@
                                         </td>
                                         <td>
                                             <ul>
-                                                <li>$10,000 minimum balance to open</li>
+                                                <li><?php echo $curr; ?>10,000 minimum balance to open</li>
                                                 <li>FREE debit card</li>
                                                 <li>FREE checks</li>
                                                 <li>Earn .25% APY</li>
-                                                <li>Minimum balance of $10,000 to avoid monthly service charge</li>
+                                                <li>Minimum balance of <?php echo $curr; ?>10,000 to avoid monthly service charge</li>
                                                 <li><a href="Checking%20Disclosures919e.pdf?documentId=60991">Disclosures</a></li>
                                             </ul>
                                         </td>
@@ -455,12 +455,12 @@
                     <h3>Get Started</h3>
                     <ul>
                         <li><a href="Mortgage-Team.php#Apply-Now">Mortgage Application</a></li>
-                        <li><a href="Personal%20New%20Acct%20Application3f4b.pdf?documentId=57415" target="_blank">New Account Application</a></li>
-                        <li><a href="fillable%20switchkit434d.pdf?documentId=57331" target="_blank">Switch Kit</a></li>
+                        <li><a href="opening.php" target="_blank">New Account Application</a></li>
+                        <li><a href="opening.php" target="_blank">Switch Kit</a></li>
                     </ul>
                 </div>
                 <div class="awards">
-                    <img src="images/logo-best-places-to-work-mississippi.png" alt="Best Places to Work in Mississippi Award"> <img src="images/logo-american-banker-2018.png" alt="American Banker Best Bank to Work For Award 2018">
+                    <img src="images/logo-best-places-to-work-mississippi.png" alt="Best Places to Work in <?php echo $country; ?> Award"> <img src="images/logo-american-banker-2018.png" alt="American Banker Best Bank to Work For Award 2018">
                 </div>
                 <?php echo $livechat; ?>
                 <div class="copyright">
@@ -472,10 +472,10 @@
                             if (theYear < 1900)
                                 theYear = theYear + 1900
                             document.write(theYear)
-                        </script> <?php echo $name; ?>. All Rights Reserved. Member FDIC.
+                        </script> <?php echo $name; ?>. All Rights Reserved.
                     </p>
                     <div id="logos">
-                        <p><i class="icon-fdic"></i><i class="icon-ehl"></i></p>
+                        <p><!--<i class="icon-fdic"></i><i class="icon-ehl"></i> --></p>
                     </div>
                 </div>
             </div>

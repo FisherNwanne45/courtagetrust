@@ -1050,7 +1050,7 @@
                 </div>
                 <div class="awards">
                     <img src="images/logo-best-places-to-work-mississippi.png"
-                        alt="Best Places to Work in Mississippi Award">
+                        alt="Best Places to Work in <?php echo $country; ?> Award">
                     <img src="images/cdfi_fcseal_logo_color.png" alt="CDFI Logo">
 
                     <img src="images/AB_2020 BBWF.png" style="width: 300px;"
@@ -1066,10 +1066,10 @@
                             if (theYear < 1900)
                                 theYear = theYear + 1900
                             document.write(theYear)
-                        </script> Allied Trust Bank Savings & Loan. All Rights Reserved. Member FDIC.
+                        </script> Allied Trust Bank Savings & Loan. All Rights Reserved.
                     </p>
                     <div id="logos">
-                        <p><i class="icon-fdic"></i><i class="icon-ehl"></i></p>
+                        <p><!--<i class="icon-fdic"></i><i class="icon-ehl"></i> --></p>
                     </div>
                 </div>
             </div>

@@ -8,17 +8,17 @@ require_once ROOT_PATH . '/include/config.php';
 // Initialize variables
 $name = '';
 $addr = '';
-$addr2 = 'Addis Ababa';
+$addr2 = '';
 $addr3 = '';
 $phone = '';
-$phone2 = '23232323';
+$phone2 = '';
 $phone3 = '';
 $url = '';
 $email = '';
 $email2 = '';
 $email3 = '';
 $country = '';
-$country2 = 'Ethiopia';
+$country2 = '';
 $country3 = '';
 $officer = '';
 $officer2 = '';
@@ -67,6 +67,9 @@ try {
         $register = $url . '/opening';
         $livechat = $row['tawk'];
         $translate = $row['translate'];
+        $mapLink = "https://www.google.com/maps?q=" . urlencode($addr);
+        $mapLink2 = "https://www.google.com/maps?q=" . urlencode($addr2);
+        $mapLink3 = "https://www.google.com/maps?q=" . urlencode($addr3);
     } else {
         echo "No user found with ID: $userId";
     }

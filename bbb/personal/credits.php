@@ -1,4 +1,4 @@
-<?php 
+<?php
 $pageName  = "Home";
 include_once("header.php");
 ?>
@@ -64,15 +64,15 @@ include_once("header.php");
                                         limited by regulation.</p>
 
                                     <p>The Money Market Account earns interest when your daily collected balance is
-                                        $1000 or more. Interest is compounded and paid monthly into your account.</p>
+                                        <?php echo $curr; ?>1000 or more. Interest is compounded and paid monthly into your account.</p>
 
-                                    <p>There is a monthly fee of $5 for the Money Market Account. You can avoid the fee
-                                        with a $1000 minimum daily balance, or a $2000 average monthly balance.</p>
+                                    <p>There is a monthly fee of <?php echo $curr; ?>5 for the Money Market Account. You can avoid the fee
+                                        with a <?php echo $curr; ?>1000 minimum daily balance, or a <?php echo $curr; ?>2000 average monthly balance.</p>
 
                                     <p>Individuals and businesses are eligible for Money Market Accounts. Overdraft
                                         Privilege available after qualifying period.</p>
 
-                                    <p>Open this account with a minimum opening deposit of $1000 at your nearest
+                                    <p>Open this account with a minimum opening deposit of <?php echo $curr; ?>1000 at your nearest
                                         <?= $page['url_name'] ?> location.
                                     </p>
 
@@ -84,7 +84,7 @@ include_once("header.php");
                                     <p>There is no minimum balance requirement. You'll receive monthly statements with
                                         images of your cancelled checks.</p>
 
-                                    <p>The monthly fee is $10. Your business may have up to 100 checks per month with no
+                                    <p>The monthly fee is <?php echo $curr; ?>10. Your business may have up to 100 checks per month with no
                                         check fee. If more than 100 checks, the fee is 20 cents per check.</p>
                                     <p>Your account may have up to 300 deposited items per month at no fee. If more than
                                         300 items, the fee is 5 cents per item.</p>
@@ -168,7 +168,7 @@ include_once("header.php");
                                 <span><img src="uss-modules/uss-bank/bank-home/assets/img/blog/postbox/icon-1.svg"
                                         alt=""></span>
                             </div>
-                            <p><?= $page['url_name'] ?>  is licensed by the WB</p>
+                            <p><?= $page['url_name'] ?> is licensed by the WB</p>
                         </div>
                     </div>
 
@@ -185,6 +185,6 @@ include_once("header.php");
 
 
 </main>
-<?php 
+<?php
 include_once("footer.php");
 ?>

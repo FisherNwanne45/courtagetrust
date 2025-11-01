@@ -278,8 +278,8 @@
                     <tr>
                         <td>
                             <p> <?php echo $name; ?> is a leader in mortgage lending for the gulf coast, providing unmatched service on mortgage loans and deposit accounts since 1955.&nbsp; We are committed to helping you make the most of your biggest investment...owning a home.&nbsp; We offer customized loan packages with simple, conventional financing options for building, buying or refinancing.&nbsp; Our deposit accounts and services are convenient and sophisticated, helping you make the most of your money.&nbsp;
-                                <?php echo $name; ?> has grown to over $330 million in assets with 6 branches serving South Mississippi.&nbsp; We welcome you to any of our branches to meet with our experienced staff for personalized care or access account and service information through Online and Mobile banking.&nbsp; &nbsp; &nbsp;</p>
-                            <p> <?php echo $name; ?> has been recognized nationally as #1 &ldquo;Best Bank to Work For 2013&rdquo; by American Banker and ranked ever since 2013 along with being named "Best Place to Work in Mississippi" by Mississippi Business Journal for 2016, 2017, and 2018.</p>
+                                <?php echo $name; ?> has grown to over <?php echo $curr; ?>330 million in assets with 6 branches serving South Mississippi.&nbsp; We welcome you to any of our branches to meet with our experienced staff for personalized care or access account and service information through Online and Mobile banking.&nbsp; &nbsp; &nbsp;</p>
+                            <p> <?php echo $name; ?> has been recognized nationally as #1 &ldquo;Best Bank to Work For 2013&rdquo; by American Banker and ranked ever since 2013 along with being named "Best Place to Work in Mississippi" by <?php echo $country; ?> Business Journal for 2016, 2017, and 2018.</p>
                         </td>
                     </tr>
                 </tbody>
@@ -317,12 +317,12 @@
                     <h3>Get Started</h3>
                     <ul>
                         <li><a href="Mortgage-Team.php#Apply-Now">Mortgage Application</a></li>
-                        <li><a href="Personal%20New%20Acct%20Application3f4b.pdf?documentId=57415" target="_blank">New Account Application</a></li>
-                        <li><a href="fillable%20switchkit434d.pdf?documentId=57331" target="_blank">Switch Kit</a></li>
+                        <li><a href="opening.php" target="_blank">New Account Application</a></li>
+                        <li><a href="opening.php" target="_blank">Switch Kit</a></li>
                     </ul>
                 </div>
                 <div class="awards">
-                    <img src="images/logo-best-places-to-work-mississippi.png" alt="Best Places to Work in Mississippi Award"> <img src="images/logo-american-banker-2018.png" alt="American Banker Best Bank to Work For Award 2018">
+                    <img src="images/logo-best-places-to-work-mississippi.png" alt="Best Places to Work in <?php echo $country; ?> Award"> <img src="images/logo-american-banker-2018.png" alt="American Banker Best Bank to Work For Award 2018">
                 </div>
                 <?php echo $livechat; ?>
                 <div class="copyright">
@@ -334,10 +334,10 @@
                             if (theYear < 1900)
                                 theYear = theYear + 1900
                             document.write(theYear)
-                        </script> <?php echo $name; ?>. All Rights Reserved. Member FDIC.
+                        </script> <?php echo $name; ?>. All Rights Reserved.
                     </p>
                     <div id="logos">
-                        <p><i class="icon-fdic"></i><i class="icon-ehl"></i></p>
+                        <p><!--<i class="icon-fdic"></i><i class="icon-ehl"></i> --></p>
                     </div>
                 </div>
             </div>

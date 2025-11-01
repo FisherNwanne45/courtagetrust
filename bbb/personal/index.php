@@ -1,4 +1,4 @@
-<?php 
+<?php
 $pageName  = "Home";
 include_once("header.php");
 ?>
@@ -419,7 +419,7 @@ include_once("header.php");
                                 </div>
                                 <div class="tp-service-item-content">
                                     <h4 class="tp-service-item-title"><a>Get <?= $page['url_name'] ?> Loan</a></h4>
-                                    <p>Secure a consumer loan of up to $10,000 online. Apply from your mobile or
+                                    <p>Secure a consumer loan of up to <?php echo $curr; ?>10,000 online. Apply from your mobile or
                                         computer, on the first day.</p>
                                 </div>
                                 <div class="tp-service-item-thumb">
@@ -654,6 +654,6 @@ include_once("header.php");
 
 </main>
 
-<?php 
+<?php
 include_once("footer.php");
 ?>

@@ -237,6 +237,13 @@ if (isset($_GET['dormant'])) {
                             <p><?= $result['created_at'] ?></p>
                         </div>
                     </div>
+                    <div class="mid">
+                        <h5><?= $result['description'] ?></h5>
+                        <h5><?= $result['account_name'] ?></h5>
+                        <p> Ref #: <?= $result['refrence_id'] ?></p>
+
+
+                    </div>
                     <div class="right">
                         <?php
                         if ($result['transaction_type'] === 'credit') {

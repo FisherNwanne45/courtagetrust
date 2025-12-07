@@ -255,7 +255,7 @@
 
         <!-- main is required to evaluate the article length. -->
         <main>
-            <table class="Subsection-Table" style="background-image: url('ContentImageHandlerc99a.jpg');">
+            <table class="Subsection-Table" style="background-image: url('images/ContentImageHandlerc99a.jpg');">
                 <tbody>
                     <tr>
                         <td>

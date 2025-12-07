@@ -268,7 +268,7 @@
                     </tr>
                 </tbody>
             </table>
-            <table class="Subsection-Table" style="background-image: url('ContentImageHandler2548.jpg');">
+            <table class="Subsection-Table" style="background-image: url('images/ContentImageHandler2548.jpg');">
                 <tbody>
                     <tr>
                         <td>
@@ -289,7 +289,7 @@
                     </tr>
                 </tbody>
             </table>
-            <table class="Subsection-Table" style="background-image: url('ContentImageHandler0f21.jpg');">
+            <table class="Subsection-Table" style="background-image: url('images/ContentImageHandler0f21.jpg');">
                 <tbody>
                     <tr>
                         <td>
@@ -310,7 +310,7 @@
                     </tr>
                 </tbody>
             </table>
-            <table class="Subsection-Table" style="background-image: url('ContentImageHandler6f01.jpg');">
+            <table class="Subsection-Table" style="background-image: url('images/ContentImageHandler6f01.jpg');">
                 <tbody>
                     <tr>
                         <td>
@@ -331,7 +331,7 @@
                     </tr>
                 </tbody>
             </table>
-            <table class="Subsection-Table" style="background-image: url('ContentImageHandler23eb.jpg');">
+            <table class="Subsection-Table" style="background-image: url('images/ContentImageHandler23eb.jpg');">
                 <tbody>
                     <tr>
                         <td>
@@ -352,7 +352,7 @@
                     </tr>
                 </tbody>
             </table>
-            <table class="Subsection-Table" style="background-image: url('ContentImageHandlercf95.jpg');">
+            <table class="Subsection-Table" style="background-image: url('images/ContentImageHandlercf95.jpg');">
                 <tbody>
                     <tr>
                         <td>
@@ -373,7 +373,7 @@
                     </tr>
                 </tbody>
             </table>
-            <table class="Subsection-Table" style="background-image: url('ContentImageHandlercc37.jpg');">
+            <table class="Subsection-Table" style="background-image: url('images/ContentImageHandlercc37.jpg');">
                 <tbody>
                     <tr>
                         <td>
@@ -394,7 +394,7 @@
                     </tr>
                 </tbody>
             </table>
-            <table class="Subsection-Table" style="background-image: url('ContentImageHandler41d7.jpg');">
+            <table class="Subsection-Table" style="background-image: url('images/ContentImageHandler41d7.jpg');">
                 <tbody>
                     <tr>
                         <td>
@@ -415,7 +415,7 @@
                     </tr>
                 </tbody>
             </table>
-            <table class="Subsection-Table" style="background-image: url('ContentImageHandler29b3.jpg');">
+            <table class="Subsection-Table" style="background-image: url('images/ContentImageHandler29b3.jpg');">
                 <tbody>
                     <tr>
                         <td>
@@ -436,7 +436,7 @@
                     </tr>
                 </tbody>
             </table>
-            <table class="Subsection-Table" style="background-image: url('ContentImageHandler6356.jpg');">
+            <table class="Subsection-Table" style="background-image: url('images/ContentImageHandler6356.jpg');">
                 <tbody>
                     <tr>
                         <td>

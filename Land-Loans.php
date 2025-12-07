@@ -255,7 +255,7 @@
 
         <!-- main is required to evaluate the article length. -->
         <main>
-            <table class="Subsection-Table" style="background-image: url('ContentImageHandler7b76.jpg');">
+            <table class="Subsection-Table" style="background-image: url('images/ContentImageHandler7b76.jpg');">
                 <tbody>
                     <tr>
                         <td>
@@ -293,21 +293,21 @@
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <p style="text-align: center;"><img src="ContentImageHandlera7b2.png?ImageId=124212" alt="Mortgage Team Icon" border="0"></p>
+                                            <p style="text-align: center;"><img src="images/ContentImageHandlera7b2.png?ImageId=124212" alt="Mortgage Team Icon" border="0"></p>
                                             <h3 style="text-align: center;">Meet the Team</h3>
                                             <a href="Mortgage-Team.php" class="Grid-Button">Meet the Team</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <p style="text-align: center;"><img src="ContentImageHandlerdcd5.png?ImageId=124213" alt="Mortgage Apply Icon" border="0"></p>
+                                            <p style="text-align: center;"><img src="images/ContentImageHandlerdcd5.png?ImageId=124213" alt="Mortgage Apply Icon" border="0"></p>
                                             <h3 style="text-align: center;">Apply Now</h3>
                                             <a href="speedbumpcce9.php?link=https://secure.approvedfast.com/firstfederal/application/index" class="Grid-Button">Apply Now</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <p style="text-align: center;"><img src="ContentImageHandler3467.png?ImageId=124207" alt="Mortgage Build Icon" border="0"></p>
+                                            <p style="text-align: center;"><img src="images/ContentImageHandler3467.png?ImageId=124207" alt="Mortgage Build Icon" border="0"></p>
                                             <h3 style="text-align: center;"><a href="Construction.php">Building</a></h3>
                                             <a href="speedbumpd85f.php?link=Construction" class="Grid-Button">Building</a>
                                         </td>

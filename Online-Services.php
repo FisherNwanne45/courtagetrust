@@ -256,7 +256,7 @@
 
         <!-- main is required to evaluate the article length. -->
         <main>
-            <table class="Subsection-Table" style="background-image: url('ContentImageHandler904c.jpg');">
+            <table class="Subsection-Table" style="background-image: url('images/ContentImageHandler904c.jpg');">
                 <tbody>
                     <tr>
                         <td>
@@ -347,7 +347,7 @@
                                 <li>Make one-time payments or schedule recurring payments</li>
                                 <li>View payment history and set payment reminders</li>
                                 <li>Available in Mobile Banking</li>
-                                <li>Send money to friends and family with <img src="ContentImageHandler508e.png?ImageId=127283" alt="Popmoney" width="95" height="26" border="0"></li>
+                                <li>Send money to friends and family with <img src="images/ContentImageHandler508e.png?ImageId=127283" alt="Popmoney" width="95" height="26" border="0"></li>
                             </ul>
                         </td>
                     </tr>

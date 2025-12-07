@@ -312,7 +312,7 @@
                  <tbody>
                      <tr>
                          <td valign="top">
-                             <p><img src="ContentImageHandler3cb8.jpg?ImageId=123761" alt="People You Trust Slide"
+                             <p><img src="images/ContentImageHandler3cb8.jpg?ImageId=123761" alt="People You Trust Slide"
                                      border="0"></p>
                              <h2>Banking with people you know and trust makes a difference.</h2>
                              <p><a class="Button1" href="We-Care.php">Learn more</a></p>
@@ -324,7 +324,7 @@
                  <tbody>
                      <tr>
                          <td valign="top">
-                             <p><img src="ContentImageHandler716b.jpg?ImageId=123760" alt="Loan Options Slide"
+                             <p><img src="images/ContentImageHandler716b.jpg?ImageId=123760" alt="Loan Options Slide"
                                      border="0"></p>
                              <h2>For local servicing and customized loan options choose <?php echo $name; ?> .</h2>
                              <p><a class="Button1" href="Mortgage-Loans.php">LEARN MORE</a></p>
@@ -336,7 +336,7 @@
                  <tbody>
                      <tr>
                          <td valign="top">
-                             <p><img src="ContentImageHandler2f9c.jpg?ImageId=123762"
+                             <p><img src="images/ContentImageHandler2f9c.jpg?ImageId=123762"
                                      alt="One-on-One Attention Slide" border="0"></p>
                              <h2>The one-on-one attention makes banking simple and convenient.</h2>
                              <p><a class="Button1" href="Checking.php">Learn more</a></p>
@@ -348,9 +348,9 @@
                  <tbody>
                      <tr>
                          <td valign="top">
-                             <p><img src="ContentImageHandler1bfe.jpg?ImageId=126976" alt="Slide Card Valet"
+                             <p><img src="images/ContentImageHandler1bfe.jpg?ImageId=126976" alt="Slide Card Valet"
                                      border="0"></p>
-                             <p><img src="ContentImageHandler88b3.png?ImageId=151881" alt="First Alerts"
+                             <p><img src="images/ContentImageHandler88b3.png?ImageId=151881" alt="First Alerts"
                                      height="100px" border="0"></p>
                              <h2>Real Time Account Alerts...<br>delivered the way you want.</h2>
                              <p><a class="Button1" href="Online-Services.php#AlliedAlerts">Learn more</a></p>
@@ -471,7 +471,7 @@
                  </tr>
              </tbody>
          </table>
-         <table class="Subsection-Table" style="background-image: url('ContentImageHandler2db9.jpg');">
+         <table class="Subsection-Table" style="background-image: url('images/ContentImageHandler2db9.jpg');">
              <tbody>
                  <tr>
                      <td>
@@ -522,7 +522,7 @@
                  </tr>
              </tbody>
          </table>
-         <table class="Subsection-Table" style="background-image: url('ContentImageHandlerf65d.jpg');">
+         <table class="Subsection-Table" style="background-image: url('images/ContentImageHandlerf65d.jpg');">
              <tbody>
                  <tr>
                      <td>
@@ -531,7 +531,7 @@
                                  <tr>
                                      <td>
                                          <h2>First Free Checking with <img
-                                                 src="ContentImageHandler3d9b.png?ImageId=127236"
+                                                 src="images/ContentImageHandler3d9b.png?ImageId=127236"
                                                  alt="CardValet Small" width="227" height="41" border="0"></h2>
                                          <h3>A simple and sophisticated choice, because You&rsquo;re First With Us.
                                          </h3>

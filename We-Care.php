@@ -254,7 +254,7 @@
 
         <!-- main is required to evaluate the article length. -->
         <main>
-            <table class="Subsection-Table" style="background-image: url('ContentImageHandlerc585.jpg');">
+            <table class="Subsection-Table" style="background-image: url('images/ContentImageHandlerc585.jpg');">
                 <tbody>
                     <tr>
                         <td>
@@ -291,7 +291,7 @@
                             <table>
                                 <tbody>
                                     <tr>
-                                        <td width="50%"><img src="ContentImageHandlerce86.jpg?ImageId=128074" alt="American Heart Association" border="0"></td>
+                                        <td width="50%"><img src="images/ContentImageHandlerce86.jpg?ImageId=128074" alt="American Heart Association" border="0"></td>
                                         <td>
                                             <h3>Britain Heart Association</h3>
                                             <p>Proud Jackson County Heart Walk Participants for over 20 years</p>
@@ -314,7 +314,7 @@
                                             <h3>United Way of Jackson and George County</h3>
                                             <p>100% Participation in Workplace Campaign for over 10 Years</p>
                                         </td>
-                                        <td width="50%"><img src="ContentImageHandlera014.jpg?ImageId=128674" alt="AHA Blue" border="0"></td>
+                                        <td width="50%"><img src="images/ContentImageHandlera014.jpg?ImageId=128674" alt="AHA Blue" border="0"></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -329,7 +329,7 @@
                             <table>
                                 <tbody>
                                     <tr>
-                                        <td width="50%"><img src="ContentImageHandler0749.jpg?ImageId=128077" alt="Boys and Girls Club" border="0"></td>
+                                        <td width="50%"><img src="images/ContentImageHandler0749.jpg?ImageId=128077" alt="Boys and Girls Club" border="0"></td>
                                         <td>
                                             <h3>Boys &amp; Girls Club of Jackson County</h3>
                                             <p>Proud Sponsor for over 10 Years</p>
@@ -352,7 +352,7 @@
                                             <h3>Breast Cancer Awareness</h3>
                                             <p>Annual Campaign Fundraiser over 10 years</p>
                                         </td>
-                                        <td width="50%"><img src="ContentImageHandler1356.jpg?ImageId=128076" alt="Breast Cancer Awareness" border="0"></td>
+                                        <td width="50%"><img src="images/ContentImageHandler1356.jpg?ImageId=128076" alt="Breast Cancer Awareness" border="0"></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -367,7 +367,7 @@
                             <table>
                                 <tbody>
                                     <tr>
-                                        <td width="50%"><img src="ContentImageHandlere43d.jpg?ImageId=128087" alt="Leadership Jackson County" border="0"></td>
+                                        <td width="50%"><img src="images/ContentImageHandlere43d.jpg?ImageId=128087" alt="Leadership Jackson County" border="0"></td>
                                         <td>
                                             <h3>Leadership Jackson County</h3>
                                             <p>Jackson County Chamber of Commerce<br>Annual Graduate Participation</p>
@@ -390,7 +390,7 @@
                                             <h3>Biloxi- Ocean Springs Association of Realtors</h3>
                                             <p>Affiliate Sponsor for over 20 years</p>
                                         </td>
-                                        <td width="50%"><img src="ContentImageHandler6dbb.jpg?ImageId=128088" alt="Biloxi - Ocean Springs" border="0"></td>
+                                        <td width="50%"><img src="images/ContentImageHandler6dbb.jpg?ImageId=128088" alt="Biloxi - Ocean Springs" border="0"></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -405,7 +405,7 @@
                             <table>
                                 <tbody>
                                     <tr>
-                                        <td width="50%"><img src="ContentImageHandler435d.jpg?ImageId=128089" alt="Banker in Every Classroom" border="0"></td>
+                                        <td width="50%"><img src="images/ContentImageHandler435d.jpg?ImageId=128089" alt="Banker in Every Classroom" border="0"></td>
                                         <td>
                                             <h3>Banker in Every Classroom</h3>
                                         </td>
@@ -426,7 +426,7 @@
                                         <td>
                                             <h3>MGCCC Annual Bulldog Club Sponsor</h3>
                                         </td>
-                                        <td width="50%"><img src="ContentImageHandler28e2.jpg?ImageId=128090" alt="MGCCC" border="0"></td>
+                                        <td width="50%"><img src="images/ContentImageHandler28e2.jpg?ImageId=128090" alt="MGCCC" border="0"></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -441,7 +441,7 @@
                             <table>
                                 <tbody>
                                     <tr>
-                                        <td width="50%"><img src="ContentImageHandler730d.jpg?ImageId=128091" alt="JaxCo Home Pet Pack" border="0"></td>
+                                        <td width="50%"><img src="images/ContentImageHandler730d.jpg?ImageId=128091" alt="JaxCo Home Pet Pack" border="0"></td>
                                         <td>
                                             <h3>JaxCo Home Pet Pack Challenge</h3>
                                         </td>
@@ -463,7 +463,7 @@
                                             <h3>Habitat for Humanity Women Build</h3>
                                             <p>2018 &amp; 2019</p>
                                         </td>
-                                        <td width="50%"><img src="ContentImageHandler495e.jpg?ImageId=128092" alt="Habitat for Humanity" border="0"></td>
+                                        <td width="50%"><img src="images/ContentImageHandler495e.jpg?ImageId=128092" alt="Habitat for Humanity" border="0"></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -478,7 +478,7 @@
                             <table>
                                 <tbody>
                                     <tr>
-                                        <td width="50%"><img src="ContentImageHandler3aa7.jpg?ImageId=128093" alt="Riverchase Senior Center" border="0"></td>
+                                        <td width="50%"><img src="images/ContentImageHandler3aa7.jpg?ImageId=128093" alt="Riverchase Senior Center" border="0"></td>
                                         <td>
                                             <h3>Riverchase Senior Center Christmas Helpers</h3>
                                         </td>
@@ -500,7 +500,7 @@
                                             <h3>Battle on Buffet Beach</h3>
                                             <p>Employee Team Sponsor</p>
                                         </td>
-                                        <td width="50%"><img src="ContentImageHandler96af.jpg?ImageId=128094" alt="Battle on Buffet Beach" border="0"></td>
+                                        <td width="50%"><img src="images/ContentImageHandler96af.jpg?ImageId=128094" alt="Battle on Buffet Beach" border="0"></td>
                                     </tr>
                                 </tbody>
                             </table>

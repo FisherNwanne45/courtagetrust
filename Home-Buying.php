@@ -254,7 +254,7 @@
 
         <!-- main is required to evaluate the article length. -->
         <main>
-            <table class="Subsection-Table" style="background-image: url('ContentImageHandlerd3c2.jpg');">
+            <table class="Subsection-Table" style="background-image: url('images/ContentImageHandlerd3c2.jpg');">
                 <tbody>
                     <tr>
                         <td>
@@ -292,21 +292,21 @@
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <p style="text-align: center;"><img src="ContentImageHandlera7b2.png?ImageId=124212" alt="Mortgage Team Icon" border="0"></p>
+                                            <p style="text-align: center;"><img src="images/ContentImageHandlera7b2.png?ImageId=124212" alt="Mortgage Team Icon" border="0"></p>
                                             <h3 style="text-align: center;">Meet the Team</h3>
                                             <a href="Mortgage-Team.php" class="Grid-Button">Meet the Team</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <p style="text-align: center;"><img src="ContentImageHandlerdcd5.png?ImageId=124213" alt="Mortgage Apply Icon" border="0"></p>
+                                            <p style="text-align: center;"><img src="images/ContentImageHandlerdcd5.png?ImageId=124213" alt="Mortgage Apply Icon" border="0"></p>
                                             <h3 style="text-align: center;">Apply Now</h3>
                                             <a href="speedbumpcce9.php?link=https://secure.approvedfast.com/firstfederal/application/index" class="Grid-Button">Apply Now</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <p style="text-align: center;"><img src="ContentImageHandleraaf2.png?ImageId=124235" alt="Mortgage Calculator Icon" border="0">&nbsp;</p>
+                                            <p style="text-align: center;"><img src="images/ContentImageHandleraaf2.png?ImageId=124235" alt="Mortgage Calculator Icon" border="0">&nbsp;</p>
                                             <h3 style="text-align: center;">Mortgage Calculators</h3>
                                             <a href="Calculators.php" class="Grid-Button">Mortgage Calculators</a>
                                         </td>

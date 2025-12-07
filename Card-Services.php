@@ -255,7 +255,7 @@
 
         <!-- main is required to evaluate the article length. -->
         <main>
-            <table class="Subsection-Table" style="background-image: url('ContentImageHandlerc15a.jpg');">
+            <table class="Subsection-Table" style="background-image: url('images/ContentImageHandlerc15a.jpg');">
                 <tbody>
                     <tr>
                         <td>
@@ -278,7 +278,7 @@
                 <tbody>
                     <tr>
                         <td>
-                            <h2><a id="CardValet"></a><img src="ContentImageHandler3d9b.png?ImageId=127236" alt="CardValet Small" width="216" height="39" border="0"></h2>
+                            <h2><a id="CardValet"></a><img src="images/ContentImageHandler3d9b.png?ImageId=127236" alt="CardValet Small" width="216" height="39" border="0"></h2>
                             <p>Show fraud who&rsquo;s boss.&nbsp; Gain peace of mind knowing you control the cards in your wallet with the phone in your pocket.&nbsp; To register your <?php echo $name; ?> debit cards, go to your phone's app store and download the CardValet app.&nbsp; Once downloaded, open the app and select new user.&nbsp; Enter your 16 digit card number, then enter the additional details as requested.&nbsp; Log in and select your card from the home screen and you are ready to begin.</p>
                             <ul>
                                 <li>Get instant purchase alerts</li>

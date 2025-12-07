@@ -255,7 +255,7 @@
 
         <!-- main is required to evaluate the article length. -->
         <main>
-            <table class="Subsection-Table" style="background-image: url('ContentImageHandlereab0.jpg');">
+            <table class="Subsection-Table" style="background-image: url('images/ContentImageHandlereab0.jpg');">
                 <tbody>
                     <tr>
                         <td>
@@ -298,56 +298,56 @@
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <p style="text-align: center;"><img src="ContentImageHandler1b7d.png?ImageId=124206" alt="Mortgage Buy Icon" border="0"></p>
+                                            <p style="text-align: center;"><img src="images/ContentImageHandler1b7d.png?ImageId=124206" alt="Mortgage Buy Icon" border="0"></p>
                                             <h3 style="text-align: center;">Buying</h3>
                                             <a class="Grid-Button" href="Home-Buying.php">Home Buying</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <p style="text-align: center;"><img src="ContentImageHandler3467.png?ImageId=124207" alt="Mortgage Build Icon" border="0"></p>
+                                            <p style="text-align: center;"><img src="images/ContentImageHandler3467.png?ImageId=124207" alt="Mortgage Build Icon" border="0"></p>
                                             <h3 style="text-align: center;">Building</h3>
                                             <a class="Grid-Button" href="Construction.php">Building</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <p style="text-align: center;"><img src="ContentImageHandlerac54.png?ImageId=124208" alt="Mortgage Renovate Icon" border="0"></p>
+                                            <p style="text-align: center;"><img src="images/ContentImageHandlerac54.png?ImageId=124208" alt="Mortgage Renovate Icon" border="0"></p>
                                             <h3 style="text-align: center;">Renovating</h3>
                                             <a class="Grid-Button" href="Construction.php#Renovation">Renovating</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <p style="text-align: center;"><img src="ContentImageHandler4d75.png?ImageId=124209" alt="Mortgage Refinance Icon" border="0"></p>
+                                            <p style="text-align: center;"><img src="images/ContentImageHandler4d75.png?ImageId=124209" alt="Mortgage Refinance Icon" border="0"></p>
                                             <h3 style="text-align: center;">Refinance</h3>
                                             <a class="Grid-Button" href="Refinance-Equity.php">Refinance</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <p style="text-align: center;"><img src="ContentImageHandler0c1f.png?ImageId=124210" alt="Mortgage HELOC Icon" border="0"></p>
+                                            <p style="text-align: center;"><img src="images/ContentImageHandler0c1f.png?ImageId=124210" alt="Mortgage HELOC Icon" border="0"></p>
                                             <h3 style="text-align: center;">HELOC &amp; Equity Loans</h3>
                                             <a class="Grid-Button" href="Refinance-Equity.php#HELOC">HELOC &amp; Equity Loans</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <p style="text-align: center;"><img src="ContentImageHandlerdf0c.png?ImageId=124211" alt="Mortgage Land Icon" border="0"></p>
+                                            <p style="text-align: center;"><img src="images/ContentImageHandlerdf0c.png?ImageId=124211" alt="Mortgage Land Icon" border="0"></p>
                                             <h3 style="text-align: center;">Lot &amp; Land Loans</h3>
                                             <a class="Grid-Button" href="Land-Loans.php">Lot &amp; Land Loans</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <p style="text-align: center;"><img src="ContentImageHandlera7b2.png?ImageId=124212" alt="Mortgage Team Icon" border="0"></p>
+                                            <p style="text-align: center;"><img src="images/ContentImageHandlera7b2.png?ImageId=124212" alt="Mortgage Team Icon" border="0"></p>
                                             <h3 style="text-align: center;">Meet the Team</h3>
                                             <a class="Grid-Button" href="Mortgage-Team.php">Meet the Team</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <p style="text-align: center;"><img src="ContentImageHandlerdcd5.png?ImageId=124213" alt="Mortgage Apply Icon" border="0"></p>
+                                            <p style="text-align: center;"><img src="images/ContentImageHandlerdcd5.png?ImageId=124213" alt="Mortgage Apply Icon" border="0"></p>
                                             <h3 style="text-align: center;">Apply Now</h3>
                                             <a class="Grid-Button" href="Mortgage-Team.php#Apply-Now" target="_blank">Apply Now</a>
                                         </td>

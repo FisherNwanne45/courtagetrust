@@ -253,7 +253,7 @@
 
         <!-- main is required to evaluate the article length. -->
         <main>
-            <table class="Subsection-Table" style="background-image: url('ContentImageHandler3544.jpg');">
+            <table class="Subsection-Table" style="background-image: url('images/ContentImageHandler3544.jpg');">
                 <tbody>
                     <tr>
                         <td>
@@ -293,7 +293,7 @@
                                                 <li style="text-align: left;">No-fee withdrawals from <?php echo $name; ?> ATMs</li>
                                                 <li style="text-align: left;">Free Mastercard Debit Card with Chip Technology</li>
                                                 <li style="text-align: left;">Free Debit Card Fraud Protection</li>
-                                                <li style="text-align: left;"><a href="Card-Services.php#CardValet"><img src="ContentImageHandler3d9b.png?ImageId=127236" alt="CardValet Small" width="116" height="21" border="0"></a></li>
+                                                <li style="text-align: left;"><a href="Card-Services.php#CardValet"><img src="images/ContentImageHandler3d9b.png?ImageId=127236" alt="CardValet Small" width="116" height="21" border="0"></a></li>
                                             </ul>
                                         </td>
                                     </tr>

@@ -255,7 +255,7 @@
 
         <!-- main is required to evaluate the article length. -->
         <main>
-            <table class="Subsection-Table" style="background-image: url('ContentImageHandler7b5d.jpg');">
+            <table class="Subsection-Table" style="background-image: url('images/ContentImageHandler7b5d.jpg');">
                 <tbody>
                     <tr>
                         <td>
@@ -305,19 +305,19 @@
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <p style="text-align: center;"><img src="ContentImageHandlera7b2.png?ImageId=124212" alt="Mortgage Team Icon" border="0"></p>
+                                            <p style="text-align: center;"><img src="images/ContentImageHandlera7b2.png?ImageId=124212" alt="Mortgage Team Icon" border="0"></p>
                                             <h3 style="text-align: center;"><a href="Mortgage-Team.php">Meet the Team</a></h3>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <p style="text-align: center;"><img src="ContentImageHandlerdcd5.png?ImageId=124213" alt="Mortgage Apply Icon" border="0"></p>
+                                            <p style="text-align: center;"><img src="images/ContentImageHandlerdcd5.png?ImageId=124213" alt="Mortgage Apply Icon" border="0"></p>
                                             <h3 style="text-align: center;"><a href="Mortgage%20Loan%20Application6070.pdf?documentId=57412" target="_blank">Apply Now</a></h3>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <p style="text-align: center;"><img src="ContentImageHandleraaf2.png?ImageId=124235" alt="Mortgage Calculator Icon" border="0"></p>
+                                            <p style="text-align: center;"><img src="images/ContentImageHandleraaf2.png?ImageId=124235" alt="Mortgage Calculator Icon" border="0"></p>
                                             <h3 style="text-align: center;"><a href="Calculators.php">Mortgage Calculators</a></h3>
                                         </td>
                                     </tr>
